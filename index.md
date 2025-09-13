@@ -1,3 +1,6 @@
+---
+---
+<link rel="stylesheet" href="/custom.css">
 # CapturedOnFloppy
 
 Welcome to CapturedOnFloppy.com!
