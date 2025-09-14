@@ -1,12 +1,8 @@
----
-layout: none
-title: Camera Model Name
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }}</title>
+  <title>Sony MVC-FD5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -26,6 +22,9 @@ title: Camera Model Name
       font-family: Arial, Helvetica, sans-serif;
       letter-spacing: 0.07em;
       border-bottom: 4px solid #6699cc;
+    }
+    .banner .subtitle {
+      font-size:0.5em; color:#cce;
     }
     .navbar {
       background: #e0e8f0;
@@ -100,65 +99,65 @@ title: Camera Model Name
 <body>
   <div class="banner">
     Mavica Camera Club
-    <div style="font-size:0.5em; color:#cce;">Enthusiasts & Resources</div>
+    <div class="subtitle">Enthusiasts & Resources</div>
   </div>
 
   <nav class="navbar">
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/gallery.html">Gallery</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/Captured-On-Floppy/">Home</a>
+    <a href="/Captured-On-Floppy/about.html">About</a>
+    <a href="/Captured-On-Floppy/gallery.html">Gallery</a>
+    <a href="/Captured-On-Floppy/contact.html">Contact</a>
   </nav>
 
   <div class="main-content">
-    <h1>Camera Model Name</h1>
+    <h1>Sony MVC-FD5</h1>
 
     <div style="display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 1.5em;">
-      <img src="/assets/images/camera-front.jpg" alt="Camera Model front" style="max-width: 260px;">
-      <img src="/assets/images/camera-back.jpg" alt="Camera Model back" style="max-width: 260px;">
+      <img src="/Captured-On-Floppy/assets/images/camera-front.jpg" alt="Sony MVC-FD5 front" style="max-width: 260px;">
+      <img src="/Captured-On-Floppy/assets/images/camera-back.jpg" alt="Sony MVC-FD5 back" style="max-width: 260px;">
     </div>
 
     <h2>About the Camera</h2>
     <p>
-      Brief description of the camera, when it was released, its main feature, and why it’s interesting or important.
+      Brief description of the Sony MVC-FD5, when it was released, its main feature, and why it’s interesting or important.
     </p>
 
     <h2>Key Features</h2>
     <ul>
-      <li><strong>Year Released:</strong> 19XX</li>
-      <li><strong>Image Sensor:</strong> Type, resolution</li>
-      <li><strong>Lens:</strong> Focal length, optical zoom if any</li>
-      <li><strong>Storage:</strong> Floppy disk/CD/Memory Stick/etc.</li>
-      <li><strong>Image Format:</strong> JPEG/other</li>
-      <li><strong>Power:</strong> Battery type</li>
-      <li><strong>Notes:</strong> Unique facts or trivia</li>
+      <li><strong>Year Released:</strong> 1997</li>
+      <li><strong>Image Sensor:</strong> 1/4-inch CCD, 0.3MP</li>
+      <li><strong>Lens:</strong> 47mm equivalent, fixed focus</li>
+      <li><strong>Storage:</strong> 3.5" Floppy Disk</li>
+      <li><strong>Image Format:</strong> JPEG</li>
+      <li><strong>Power:</strong> Sony Infolithium battery</li>
+      <li><strong>Notes:</strong> First consumer Mavica floppy camera</li>
     </ul>
 
     <h2>Operation &amp; Experience</h2>
     <ul>
-      <li><strong>Image Quality:</strong> Your summary here</li>
-      <li><strong>Handling:</strong> Notes on using the camera</li>
-      <li><strong>Transfer:</strong> How easy it is to get images off the camera</li>
+      <li><strong>Image Quality:</strong> Typical late-90s VGA, soft but nostalgic</li>
+      <li><strong>Handling:</strong> Simple menu, point & shoot</li>
+      <li><strong>Transfer:</strong> Super easy with any floppy drive</li>
     </ul>
 
     <h2>Sample Image</h2>
-    <img src="/assets/images/sample-photo.jpg" alt="Sample photo taken with Camera Model" style="max-width: 360px;">
+    <img src="/Captured-On-Floppy/assets/images/sample-photo.jpg" alt="Sample photo taken with Sony MVC-FD5" style="max-width: 360px;">
 
     <h2>Technical Specifications</h2>
     <table>
       <tr><th>Feature</th><th>Details</th></tr>
-      <tr><td>Year Released</td><td>19XX</td></tr>
-      <tr><td>Sensor</td><td>Type, resolution</td></tr>
-      <tr><td>Lens</td><td>Specs</td></tr>
-      <tr><td>Storage</td><td>Type</td></tr>
-      <tr><td>Image Format</td><td>JPEG/other</td></tr>
-      <tr><td>Battery</td><td>Type</td></tr>
-      <tr><td>Weight</td><td>XXXg</td></tr>
+      <tr><td>Year Released</td><td>1997</td></tr>
+      <tr><td>Sensor</td><td>1/4-inch CCD, 0.3MP</td></tr>
+      <tr><td>Lens</td><td>47mm equivalent, fixed focus</td></tr>
+      <tr><td>Storage</td><td>3.5" Floppy Disk</td></tr>
+      <tr><td>Image Format</td><td>JPEG</td></tr>
+      <tr><td>Battery</td><td>Sony Infolithium</td></tr>
+      <tr><td>Weight</td><td>~590g (with battery)</td></tr>
     </table>
 
     <h2>Manual</h2>
     <p>
-      <a href="https://link-to-manual.pdf" target="_blank"><strong>Download the official manual (PDF)</strong></a>
+      <a href="https://www.sony.com/electronics/support/res/manuals/1234/mvc-fd5.pdf" target="_blank"><strong>Download the official manual (PDF)</strong></a>
     </p>
   </div>
 
@@ -167,4 +166,3 @@ title: Camera Model Name
   </footer>
 </body>
 </html>
-
