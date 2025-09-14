@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Captured On Floppy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f8f8ff;
+      color: #000;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+    .banner {
+      background: #003366;
+      color: #fff;
+      padding: 0.7em 0;
+      text-align: center;
+      font-size: 2em;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.07em;
+      border-bottom: 4px solid #6699cc;
+    }
+    /* Top nav bar (buttons, no dropdowns) */
+    .navbar {
+      background: #e0e8f0;
+      border-bottom: 2px solid #6699cc;
+      font-size: 1.1em;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 0.3em 0;
+    }
+    .navbar a {
+      display: inline-block;
+      color: #003366;
+      background: #d6e2f5;
+      text-decoration: none;
+      padding: 0.7em 2em;
+      margin: 0 0.2em;
+      font-weight: bold;
+      border: 1px solid #6699cc;
+      border-radius: 7px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .navbar a:hover, .navbar a:focus {
+      background: #c7daf5;
+      color: #000;
+      text-decoration: underline;
+    }
+    /* Layout table */
+    .layout-table {
+      width: 1100px;
+      margin: 2em auto;
+      border-collapse: separate;
+      border-spacing: 15px 0;
+    }
+    .sidebar {
+      background: #e8eef8;
+      border: 1px solid #b2c3e6;
+      padding: 1em 1.4em;
+      width: 220px;
+      min-width: 160px;
+      vertical-align: top;
+      font-size: 0.97em;
+    }
+    .main-content {
+      background: #fff;
+      border: 1px solid #b2c3e6;
+      padding: 1.7em 2em;
+      min-height: 400px;
+      font-size: 1.08em;
+      vertical-align: top;
+    }
+    .sidebar-title {
+      font-weight: bold;
+      color: #003366;
+      margin-bottom: 0.5em;
+      font-size: 1.07em;
+      text-align: center;
+    }
+    .camera-link {
+      color: #003399;
+      text-decoration: underline;
+      display: inline-block;
+      margin-bottom: 0.24em;
+    }
+    .camera-link:hover {
+      color: #000066;
+      background: #dbeafe;
+      text-decoration: underline;
+    }
+    .camera-year {
+      color: #666;
+      font-size: 0.96em;
+      margin-left: 0.7em;
+    }
+    .camera-brand {
+      color: #444;
+      font-weight: bold;
+      margin-right: 0.35em;
+    }
+    .camera-model {
+      color: #003399;
+      font-weight: normal;
+    }
+    footer {
+      background: #e0e8f0;
+      color: #003366;
+      text-align: center;
+      font-size: 0.95em;
+      padding: 1em 0 1.5em 0;
+      margin-top: 2em;
+      border-top: 2px solid #6699cc;
+    }
+    @media (max-width: 1200px) {
+      .layout-table { width: 99vw; }
+      .sidebar, .main-content { font-size: 0.97em; padding: 1em; }
+    }
+    @media (max-width: 850px) {
+      .layout-table, .navbar { width: 99vw; }
+      .sidebar, .main-content { width: 100% !important; }
+      .layout-table { display: block; }
+      .sidebar, .main-content { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+     Captured On Floppy Coming Soon
+     <div style="font-size:0.5em; color:#cce;">1997-2003 Floppy - Digital</div>
+  </div>
+
+  <!-- Top Navbar (no dropdowns) -->
+  <nav class="navbar">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/gallery.html">Gallery</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <!-- Table-based layout: sidebar left, main content, sidebar right -->
+  <table class="layout-table">
+    <tr>
+      <!-- Left Sidebar: All Mavica Models -->
+      <td class="sidebar">
+        <div class="sidebar-title">Sony Mavica Cameras</div>
+        <a class="camera-link" href="/cameras/mvc-fd5.html">MVC-FD5</a><span class="camera-year">1997</span><br>
+        <a class="camera-link" href="/mvc-fd7.html">MVC-FD7</a><span class="camera-year">1997</span><br>
+        <a class="camera-link" href="/mvc-fd51.html">MVC-FD51</a><span class="camera-year">1997</span><br>
+        <a class="camera-link" href="/mvc-fd71.html">MVC-FD71</a><span class="camera-year">1998</span><br>
+        <a class="camera-link" href="/mvc-fd73.html">MVC-FD73</a><span class="camera-year">1998</span><br>
+        <a class="camera-link" href="/mvc-fd75.html">MVC-FD75</a><span class="camera-year">1999</span><br>
+        <a class="camera-link" href="/mvc-fd81.html">MVC-FD81</a><span class="camera-year">1998</span><br>
+        <a class="camera-link" href="/mvc-fd83.html">MVC-FD83</a><span class="camera-year">1999</span><br>
+        <a class="camera-link" href="/mvc-fd85.html">MVC-FD85</a><span class="camera-year">1999</span><br>
+        <a class="camera-link" href="/mvc-fd87.html">MVC-FD87</a><span class="camera-year">2000</span><br>
+        <a class="camera-link" href="/mvc-fd88.html">MVC-FD88</a><span class="camera-year">2000</span><br>
+        <a class="camera-link" href="/mvc-fd90.html">MVC-FD90</a><span class="camera-year">2000</span><br>
+        <a class="camera-link" href="/mvc-fd91.html">MVC-FD91</a><span class="camera-year">1998</span><br>
+        <a class="camera-link" href="/mvc-fd92.html">MVC-FD92</a><span class="camera-year">1999</span><br>
+        <a class="camera-link" href="/mvc-fd95.html">MVC-FD95</a><span class="camera-year">1999</span><br>
+        <a class="camera-link" href="/mvc-fd97.html">MVC-FD97</a><span class="camera-year">1999</span><br>
+        <a class="camera-link" href="/mvc-fd100.html">MVC-FD100</a><span class="camera-year">2001</span><br>
+        <a class="camera-link" href="/mvc-fd200.html">MVC-FD200</a><span class="camera-year">2001</span><br>
+        <a class="camera-link" href="/mvc-prototypes.html">MVC-Prototypes</a><span class="camera-year">1987-1990</span><br>
+        <a class="camera-link" href="/mvc-slr.html">MVC-SLR</a><span class="camera-year">1990-1992</span><br>
+        <a class="camera-link" href="/mvc-cd1000.html">MVC-CD1000</a><span class="camera-year">2000</span><br>
+        <a class="camera-link" href="/mvc-cd200.html">MVC-CD200</a><span class="camera-year">2001</span><br>
+        <a class="camera-link" href="/mvc-300.html">MVC-300</a><span class="camera-year">2001</span><br>
+        <a class="camera-link" href="/mvc-cd250.html">MVC-CD250</a><span class="camera-year">2002</span><br>
+        <a class="camera-link" href="/mvc-cd400.html">MVC-CD400</a><span class="camera-year">2002</span><br>
+        <a class="camera-link" href="/mvc-cd350.html">MVC-CD350</a><span class="camera-year">2003</span><br>
+        <a class="camera-link" href="/mvc-cd500.html">MVC-CD500</a><span class="camera-year">2003-end</span><br>
+        <a class="camera-link camera-model" href="/sony-mavica-analog.html">Mavica Analog Series</a>
+        <span class="camera-year">1982–1986</span><br>
+      </td>
+      <!-- Main Content -->
+      <td class="main-content">
+        <h2>Welcome to Captured On Floppy</h2>
+        <p>This is the coming soon page for the classic digital camera archive. More content will be available soon!</p>
+      </td>
+      <!-- Right Sidebar: Transitional Cameras -->
+      <td class="sidebar">
+        <div class="sidebar-title">Transitional Cameras</div>
+        <!-- Analog Still Video Cameras (Video Floppy) -->
+        <span class="camera-brand">Sony</span>
+        
+
+        <span class="camera-brand">Canon</span>
+        <a class="camera-link camera-model" href="/canon-rc701.html">RC-701</a>
+        <span class="camera-year">1986</span><br>
+        <span class="camera-brand">Canon</span>
+        <a class="camera-link camera-model" href="/canon-rc250.html">RC-250 “Q-PIC”</a>
+        <span class="camera-year">1988</span><br>
+        <span class="camera-brand">Canon</span>
+        <a class="camera-link camera-model" href="/canon-rc760.html">RC-760</a>
+        <span class="camera-year">1990</span><br>
+
+        <span class="camera-brand">Panasonic</span>
+        <a class="camera-link camera-model" href="/panasonic-nvsj1.html">NV-SJ1</a>
+        <span class="camera-year">1987</span><br>
+        <span class="camera-brand">Panasonic</span>
+        <a class="camera-link camera-model" href="/panasonic-nvmx1.html">NV-MX1</a>
+        <span class="camera-year">1988</span><br>
+
+        <span class="camera-brand">Minolta</span>
+        <a class="camera-link camera-model" href="/minolta-sb70.html">Still Video Back SB-70</a>
+        <span class="camera-year">1988</span><br>
+        <span class="camera-brand">Minolta</span>
+        <a class="camera-link camera-model" href="/minolta-sb90.html">Still Video Back SB-90</a>
+        <span class="camera-year">1989</span><br>
+
+        <span class="camera-brand">Kyocera</span>
+        <a class="camera-link camera-model" href="/kyocera-kc3000.html">KC-3000</a>
+        <span class="camera-year">1989</span><br>
+
+        <span class="camera-brand">Konica</span>
+        <a class="camera-link camera-model" href="/konica-sva100.html">SV-A100</a>
+        <span class="camera-year">1989</span><br>
+
+        <!-- Experimental/Prototype/Not Mass Produced -->
+        <span class="camera-brand">Fujifilm</span>
+        <a class="camera-link camera-model" href="/fujix-es1.html">Fujix ES-1 (Prototype)</a>
+        <span class="camera-year">1985</span><br>
+        <span class="camera-brand">Olympus</span>
+        <a class="camera-link camera-model" href="/olympus-stillvideo.html">Still Video Back (Prototype)</a>
+        <span class="camera-year">1988</span><br>
+        <span class="camera-brand">Sanyo</span>
+        <a class="camera-link camera-model" href="/sanyo-svm100.html">Still Video Camera SV-M100 (Prototype)</a>
+        <span class="camera-year">1987</span><br>
+        <span class="camera-brand">Sharp</span>
+        <a class="camera-link camera-model" href="/sharp-stillvideo.html">Still Video Camera (Prototype)</a>
+        <span class="camera-year">1987</span><br>
+
+        <!-- Early Modular Digital/Removable Disk Devices -->
+        <span class="camera-brand">Sony</span>
+        <a class="camera-link camera-model" href="/sony-dkc-id1.html">DKC-ID1 (Digital Prototype)</a>
+        <span class="camera-year">early 1990s</span><br>
+        <span class="camera-brand">Agfa</span>
+        <a class="camera-link camera-model" href="/agfa-studiocam.html">StudioCam</a>
+        <span class="camera-year">early 1990s</span><br>
+        <span class="camera-brand">Kodak</span>
+        <a class="camera-link camera-model" href="/kodak-dcs100.html">DCS 100</a>
+        <span class="camera-year">1991</span><br>
+      </td>
+    </tr>
+  </table>
+
+  <footer>
+    &copy; 2025 Captured On Floppy &mdash; All rights reserved.
+  </footer>
+</body>
+</html>
