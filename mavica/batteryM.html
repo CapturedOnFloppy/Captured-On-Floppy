@@ -1,86 +1,366 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Sony Mavica Battery Cross Reference Guide</title>
-  <style>
-    body { font-family: "Times New Roman", Times, serif; color: #000; }
-    h1, caption { text-align: center; }
-    table {
-      border-collapse: collapse;
-      width: 80%;
-      margin: 2em auto;
-      font-size: 1em;
-    }
-    th, td {
-      border: 1px solid #888;
-      padding: 0.5em 1em;
-      text-align: center;
-      vertical-align: middle;
-    }
-    th {
-      background: #f0f0f0;
-    }
-    caption {
-      font-size: 1.2em;
-      margin-bottom: 0.5em;
-      font-weight: bold;
-    }
-    small {
-      font-size: 0.9em;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Sony Mavica Battery Cross Reference Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+background: #f8f8ff;
+color: #000;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 16px;
+margin: 0;
+padding: 0;
+}
+.banner {
+background: #003366;
+color: #fff;
+padding: 0.7em 0;
+text-align: center;
+font-size: 2em;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 0.07em;
+border-bottom: 4px solid #6699cc;
+}
+.banner .subtitle {
+font-size: 0.5em;
+color: #ccccee;
+}
+.navbar {
+background: #e0e8f0;
+border-bottom: 2px solid #6699cc;
+font-size: 1.1em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-align: center;
+padding: 0.3em 0;
+}
+.navbar a {
+display: inline-block;
+color: #003366;
+background: #d6e2f5;
+text-decoration: none;
+padding: 0.7em 2em;
+margin: 0 0.2em;
+font-weight: bold;
+border: 1px solid #6699cc;
+border-radius: 7px;
+transition: background 0.2s, color 0.2s;
+}
+.navbar a:hover, .navbar a:focus {
+background: #c7daf5;
+color: #000;
+text-decoration: underline;
+}
+.layout-table {
+width: 1100px;
+margin: 2em auto;
+border-collapse: separate;
+border-spacing: 15px 0;
+}
+.sidebar {
+background: #e8eef8;
+border: 1px solid #b2c3e6;
+padding: 1em 1.4em;
+width: 220px;
+min-width: 160px;
+vertical-align: top;
+font-size: 0.97em;
+}
+.main-content {
+background: #fff;
+border: 1px solid #b2c3e6;
+padding: 1.7em 2em;
+min-height: 400px;
+font-size: 1.08em;
+vertical-align: top;
+}
+.sidebar-title {
+font-weight: bold;
+color: #003366;
+margin-bottom: 0.5em;
+font-size: 1.07em;
+text-align: center;
+}
+.camera-link {
+color: #003399;
+text-decoration: underline;
+display: inline-block;
+margin-bottom: 0.24em;
+}
+.camera-link:hover {
+color: #000066;
+background: #dbeafe;
+text-decoration: underline;
+}
+.camera-year {
+color: #666;
+font-size: 0.96em;
+margin-left: 0.7em;
+}
+.camera-brand {
+color: #444;
+font-weight: bold;
+margin-right: 0.35em;
+}
+.camera-model {
+color: #003399;
+font-weight: normal;
+}
+footer {
+background: #e0e8f0;
+color: #003366;
+text-align: center;
+font-size: 0.95em;
+padding: 1em 0 1.5em 0;
+margin-top: 2em;
+border-top: 2px solid #6699cc;
+}
+@media (max-width: 1200px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content { font-size: 0.97em; padding: 1em; }
+}
+@media (max-width: 850px) {
+.layout-table, .navbar { width: 99vw; }
+.sidebar, .main-content { width: 100% !important; }
+.layout-table { display: block; }
+.sidebar, .main-content { display: block; }
+}
+/* Battery table styles override */
+.battery-table {
+border-collapse: collapse;
+width: 100%;
+margin: 2em auto;
+font-size: 1em;
+}
+.battery-table th, .battery-table td {
+border: 1px solid #888;
+padding: 0.5em 1em;
+text-align: center;
+vertical-align: middle;
+}
+.battery-table th {
+background: #f0f0f0;
+}
+.battery-table caption {
+font-size: 1.2em;
+margin-bottom: 0.5em;
+font-weight: bold;
+}
+.battery-disclaimer {
+text-align: center;
+font-size: 1em;
+margin: 2em 0 1em 0;
+color: #333;
+}
+</style>
 </head>
 <body>
-  <h1>
-    <big>Sony Mavica Battery Cross Reference Guide.</big><br><br>
-    <small>
-      Disclaimer: This information is based on my own use and research.<br>
-      It would be impossible to ensure they all work.<br>
-      As well as fit, as some will fit and function but are tight.&nbsp;<br><br>
-      Sony did very well making the Mavica compatible with chargers and batteries.<br>
-      But test before using.<br>
-      <span style="text-decoration: underline;">Being Sony No Longer Supports the Cameras</span><br>
-      <span style="text-decoration: underline;">Verification is Impossible</span>
-    </small>
-  </h1>
-  <table>
-    <caption>Sony Mavica &amp; CD Camera Battery and Charger Types</caption>
-    <thead>
-      <tr>
-        <th>Model</th>
-        <th>Specific Model</th>
-        <th>Battery Type(s)</th>
-        <th>Compatible Sony Chargers</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>FD5</td><td>MVC-FD5</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD7</td><td>MVC-FD7</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD51</td><td>MVC-FD51</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD71</td><td>MVC-FD71</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD81</td><td>MVC-FD81</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD91</td><td>MVC-FD91</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD73</td><td>MVC-FD73</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD83</td><td>MVC-FD83</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD88</td><td>MVC-FD88</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD85</td><td>MVC-FD85</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD90</td><td>MVC-FD90</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD95</td><td>MVC-FD95</td><td>NP-F330, NP-F530, NP-F550, NP-F570</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD75</td><td>MVC-FD75</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD87</td><td>MVC-FD87</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD92</td><td>MVC-FD92</td><td>NP-F330, NP-F530, NP-F550</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD97</td><td>MVC-FD97</td><td>NP-F330, NP-F530, NP-F550, NP-F570</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD100</td><td>MVC-FD100</td><td>NP-F330, NP-F530, NP-F550, NP-F570</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>FD200</td><td>MVC-FD200</td><td>NP-F330, NP-F530, NP-F550, NP-F570</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>CD1000</td><td>MVC-CD1000</td><td>NP-F550, NP-F570</td><td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td></tr>
-      <tr><td>CD200</td><td>DSC-CD200</td><td>NP-FM50</td><td>BC-VM10, BC-VM50, AC-VQ850M</td></tr>
-      <tr><td>CD300</td><td>DSC-CD300</td><td>NP-FM50</td><td>BC-VM10, BC-VM50, AC-VQ850M</td></tr>
-      <tr><td>CD250</td><td>DSC-CD250</td><td>NP-FM50</td><td>BC-VM10, BC-VM50, AC-VQ850M</td></tr>
-      <tr><td>CD400</td><td>DSC-CD400</td><td>NP-FM50</td><td>BC-VM10, BC-VM50, AC-VQ850M</td></tr>
-      <tr><td>CD350</td><td>DSC-CD350</td><td>NP-FM50</td><td>BC-VM10, BC-VM50, AC-VQ850M</td></tr>
-      <tr><td>CD500</td><td>DSC-CD500</td><td>NP-FM50</td><td>BC-VM10, BC-VM50, AC-VQ850M</td></tr>
-    </tbody>
-  </table>
+<div class="banner"> Captured On Floppy Coming Soon
+<div class="subtitle">1997-2003 Floppy - Digital</div>
+</div>
+<nav class="navbar"> </nav>
+<div style="text-align: center;"><nav class="navbar"><a
+href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
+href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a></nav></div>
+<nav class="navbar"> </nav>
+<table class="layout-table">
+<tbody>
+<tr>
+<!-- Left Sidebar --> <td class="sidebar">
+<div class="sidebar-title">Sony Mavica Resources</div>
+<a class="camera-link" href="/mavica/manual.html">MAVICAMANUALS</a><br>
+<br>
+<a class="camera-link" href="/mavica/specs.html">MAVICA FULL SPECS</a>
+<br>
+<br>
+<a href="/mavica/batteryM.html">BATTERY REFERENCE</a><br>
+</td>
+<!-- Main Content --> <td class="main-content">
+<div class="battery-disclaimer"> <strong>Sony Mavica Battery
+Cross Reference Guide.</strong><br>
+<small> Disclaimer: This information is based on my own use and
+research.<br>
+It would be impossible to ensure they all work.<br>
+As well as fit, as some will fit and function but are tight.<br>
+<br>
+Sony did very well making the Mavica compatible with chargers and
+batteries. But test before using.<br>
+<span style="text-decoration: underline;">Being Sony No Longer
+Supports the Cameras</span><br>
+<span style="text-decoration: underline;">Verification is
+Impossible</span> </small> </div>
+<table class="battery-table">
+<caption>Sony Mavica &amp; CD Camera Battery and Charger Types</caption>
+<thead> <tr>
+<th>Model</th>
+<th>Specific Model</th>
+<th>Battery Type(s)</th>
+<th>Compatible Sony Chargers</th>
+</tr>
+</thead> <tbody>
+<tr>
+<td>FD5</td>
+<td>MVC-FD5</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD7</td>
+<td>MVC-FD7</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD51</td>
+<td>MVC-FD51</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD71</td>
+<td>MVC-FD71</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD81</td>
+<td>MVC-FD81</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD91</td>
+<td>MVC-FD91</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD73</td>
+<td>MVC-FD73</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD83</td>
+<td>MVC-FD83</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD88</td>
+<td>MVC-FD88</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD85</td>
+<td>MVC-FD85</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD90</td>
+<td>MVC-FD90</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD95</td>
+<td>MVC-FD95</td>
+<td>NP-F330, NP-F530, NP-F550, NP-F570</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD75</td>
+<td>MVC-FD75</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD87</td>
+<td>MVC-FD87</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD92</td>
+<td>MVC-FD92</td>
+<td>NP-F330, NP-F530, NP-F550</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD97</td>
+<td>MVC-FD97</td>
+<td>NP-F330, NP-F530, NP-F550, NP-F570</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD100</td>
+<td>MVC-FD100</td>
+<td>NP-F330, NP-F530, NP-F550, NP-F570</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>FD200</td>
+<td>MVC-FD200</td>
+<td>NP-F330, NP-F530, NP-F550, NP-F570</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>CD1000</td>
+<td>MVC-CD1000</td>
+<td>NP-F550, NP-F570</td>
+<td>BC-V615, BC-V500, AC-VQ800, AC-VQ850</td>
+</tr>
+<tr>
+<td>CD200</td>
+<td>DSC-CD200</td>
+<td>NP-FM50</td>
+<td>BC-VM10, BC-VM50, AC-VQ850M</td>
+</tr>
+<tr>
+<td>CD300</td>
+<td>DSC-CD300</td>
+<td>NP-FM50</td>
+<td>BC-VM10, BC-VM50, AC-VQ850M</td>
+</tr>
+<tr>
+<td>CD250</td>
+<td>DSC-CD250</td>
+<td>NP-FM50</td>
+<td>BC-VM10, BC-VM50, AC-VQ850M</td>
+</tr>
+<tr>
+<td>CD400</td>
+<td>DSC-CD400</td>
+<td>NP-FM50</td>
+<td>BC-VM10, BC-VM50, AC-VQ850M</td>
+</tr>
+<tr>
+<td>CD350</td>
+<td>DSC-CD350</td>
+<td>NP-FM50</td>
+<td>BC-VM10, BC-VM50, AC-VQ850M</td>
+</tr>
+<tr>
+<td>CD500</td>
+<td>DSC-CD500</td>
+<td>NP-FM50</td>
+<td>BC-VM10, BC-VM50, AC-VQ850M</td>
+</tr>
+</tbody>
+</table>
+</td>
+<!-- Right Sidebar --> <td class="sidebar">
+<div class="sidebar-title">Transitional Cameras</div>
+&nbsp; <span class="camera-brand"></span><br>
+</td>
+</tr>
+</tbody>
+</table>
+<footer>2025 Captured On Floppy — All rights reserved.</footer>
+</body>
+</html>
+
 </body>
 </html>
