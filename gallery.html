@@ -79,6 +79,11 @@ border: 1px solid #ccc;
 background: #fafaff;
 margin-bottom: 0.7em;
 box-shadow: 0 1px 5px #e0e8f0;
+cursor: pointer;
+transition: box-shadow 0.2s;
+}
+.gallery-img:hover {
+box-shadow: 0 4px 18px #b2c3e6;
 }
 .desc {
 font-size: 1em;
@@ -128,6 +133,39 @@ padding: 1em 0 1.5em 0;
 margin-top: 2em;
 border-top: 2px solid #6699cc;
 }
+/* Lightbox styles */
+.lightbox-overlay {
+display: none;
+position: fixed;
+z-index: 9999;
+left: 0; top: 0; right: 0; bottom: 0;
+background: rgba(20,30,50,0.85);
+justify-content: center;
+align-items: center;
+}
+.lightbox-overlay.active {
+display: flex;
+}
+.lightbox-content img {
+max-width: 96vw;
+max-height: 90vh;
+border-radius: 10px;
+box-shadow: 0 3px 24px #222;
+}
+.lightbox-close {
+position: absolute;
+top: 3vw;
+right: 5vw;
+font-size: 2.5em;
+color: #fff;
+cursor: pointer;
+font-family: Arial, Helvetica, sans-serif;
+background: rgba(60,80,140,0.7);
+border-radius: 50%;
+padding: 0 0.2em;
+border: 2px solid #fff;
+z-index: 10000;
+}
 </style>
 </head>
 <body>
@@ -147,25 +185,25 @@ target="_blank">YouTube</a> </div>
 <table class="gallery-table">
 <tbody>
 <tr>
-<td class="gallery-cell"> <img src="your-image1.jpg"
+<td class="gallery-cell"> <img src="images/fd5gallery.jpg"
 alt="Description 1" class="gallery-img">
-<div class="desc">Description for Photo 1</div>
+<div class="desc">Mavica FD5</div>
 </td>
-<td class="gallery-cell"> <img src="your-image2.jpg"
+<td class="gallery-cell"> <img src="images/fd7gallery.jpg"
 alt="Description 2" class="gallery-img">
-<div class="desc">Description for Photo 2</div>
+<div class="desc">Mavica FD7</div>
 </td>
-<td class="gallery-cell"> <img src="your-image3.jpg"
+<td class="gallery-cell"> <img src="images/fd71gallery.jpg"
 alt="Description 3" class="gallery-img">
-<div class="desc">Description for Photo 3</div>
+<div class="desc">Mavica FD71</div>
 </td>
-<td class="gallery-cell"> <img src="your-image4.jpg"
+<td class="gallery-cell"> <img src="images/fd731gallery.jpg"
 alt="Description 4" class="gallery-img">
-<div class="desc">Description for Photo 4</div>
+<div class="desc">Mavica FD73</div>
 </td>
-<td class="gallery-cell"> <img src="your-image5.jpg"
+<td class="gallery-cell"> <img src="images/fd75gallery.jpg"
 alt="Description 5" class="gallery-img">
-<div class="desc">Description for Photo 5</div>
+<div class="desc">Mavica FD75</div>
 </td>
 </tr>
 <tr>
@@ -192,6 +230,36 @@ alt="Description 10" class="gallery-img">
 </tr>
 </tbody>
 </table>
+<!-- Lightbox overlay element -->
+<div id="lightboxOverlay" class="lightbox-overlay"> <span
+id="lightboxClose" class="lightbox-close">×</span>
+<div class="lightbox-content"> <img id="lightboxImg" src="" alt=""> </div>
+</div>
 <footer> 2025 Captured On Floppy — All rights reserved. </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+var galleryImages = document.querySelectorAll('.gallery-img');
+var lightbox = document.getElementById('lightboxOverlay');
+var lightboxImg = document.getElementById('lightboxImg');
+var closeBtn = document.getElementById('lightboxClose');
+galleryImages.forEach(function(img) {
+img.addEventListener('click', function() {
+lightboxImg.src = img.src;
+lightboxImg.alt = img.alt;
+lightbox.classList.add('active');
+});
+});
+closeBtn.addEventListener('click', function() {
+lightbox.classList.remove('active');
+lightboxImg.src = '';
+});
+lightbox.addEventListener('click', function(e) {
+if (e.target === lightbox) {
+lightbox.classList.remove('active');
+lightboxImg.src = '';
+}
+});
+});
+</script>
 </body>
 </html>
