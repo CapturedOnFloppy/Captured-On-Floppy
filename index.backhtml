@@ -1,205 +1,335 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Captured On Floppy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background: #f8f8ff;
-      color: #000;
-      font-family: Verdana, Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      margin: 0;
-      padding: 0;
-    }
-    .banner {
-      background: #003366;
-      color: #fff;
-      padding: 0.7em 0;
-      text-align: center;
-      font-size: 2em;
-      font-family: Arial, Helvetica, sans-serif;
-      letter-spacing: 0.07em;
-      border-bottom: 4px solid #6699cc;
-    }
-    /* Top nav bar (buttons, no dropdowns) */
-    .navbar {
-      background: #e0e8f0;
-      border-bottom: 2px solid #6699cc;
-      font-size: 1.1em;
-      font-family: Verdana, Arial, Helvetica, sans-serif;
-      text-align: center;
-      padding: 0.3em 0;
-    }
-    .navbar a {
-      display: inline-block;
-      color: #003366;
-      background: #d6e2f5;
-      text-decoration: none;
-      padding: 0.7em 2em;
-      margin: 0 0.2em;
-      font-weight: bold;
-      border: 1px solid #6699cc;
-      border-radius: 7px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .navbar a:hover, .navbar a:focus {
-      background: #c7daf5;
-      color: #000;
-      text-decoration: underline;
-    }
-    /* Layout table */
-    .layout-table {
-      width: 1100px;
-      margin: 2em auto;
-      border-collapse: separate;
-      border-spacing: 15px 0;
-    }
-    .sidebar {
-      background: #e8eef8;
-      border: 1px solid #b2c3e6;
-      padding: 1em 1.4em;
-      width: 220px;
-      min-width: 160px;
-      vertical-align: top;
-      font-size: 0.97em;
-    }
-    .main-content {
-      background: #fff;
-      border: 1px solid #b2c3e6;
-      padding: 1.7em 2em;
-      min-height: 400px;
-      font-size: 1.08em;
-      vertical-align: top;
-    }
-    .sidebar-title {
-      font-weight: bold;
-      color: #003366;
-      margin-bottom: 0.5em;
-      font-size: 1.07em;
-      text-align: center;
-    }
-    .camera-link {
-      color: #003399;
-      text-decoration: underline;
-      display: inline-block;
-      margin-bottom: 0.24em;
-    }
-    .camera-link:hover {
-      color: #000066;
-      background: #dbeafe;
-      text-decoration: underline;
-    }
-    .camera-year {
-      color: #666;
-      font-size: 0.96em;
-      margin-left: 0.7em;
-    }
-    footer {
-      background: #e0e8f0;
-      color: #003366;
-      text-align: center;
-      font-size: 0.95em;
-      padding: 1em 0 1.5em 0;
-      margin-top: 2em;
-      border-top: 2px solid #6699cc;
-    }
-    @media (max-width: 1200px) {
-      .layout-table { width: 99vw; }
-      .sidebar, .main-content { font-size: 0.97em; padding: 1em; }
-    }
-    @media (max-width: 850px) {
-      .layout-table, .navbar { width: 99vw; }
-      .sidebar, .main-content { width: 100% !important; }
-      .layout-table { display: block; }
-      .sidebar, .main-content { display: block; }
-    }
-  </style>
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
+<meta charset="utf-8">
+<title>Captured On Floppy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+background: #f8f8ff;
+color: #000;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 16px;
+margin: 0;
+padding: 0;
+}
+.banner {
+background: #003366;
+color: #fff;
+padding: 0.7em 0;
+text-align: center;
+font-size: 2em;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 0.07em;
+border-bottom: 4px solid #6699cc;
+}
+/* Top nav bar (buttons, no dropdowns) */
+.navbar {
+background: #e0e8f0;
+border-bottom: 2px solid #6699cc;
+font-size: 1.1em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-align: center;
+padding: 0.3em 0;
+}
+.navbar a {
+display: inline-block;
+color: #003366;
+background: #d6e2f5;
+text-decoration: none;
+padding: 0.7em 2em;
+margin: 0 0.2em;
+font-weight: bold;
+border: 1px solid #6699cc;
+border-radius: 7px;
+transition: background 0.2s, color 0.2s;
+}
+.navbar a:hover, .navbar a:focus {
+background: #c7daf5;
+color: #000;
+text-decoration: underline;
+}
+/* Layout table */
+.layout-table {
+width: 1100px;
+margin: 2em auto;
+border-collapse: separate;
+border-spacing: 15px 0;
+}
+.sidebar {
+background: #e8eef8;
+border: 1px solid #b2c3e6;
+padding: 1em 1.4em;
+width: 220px;
+min-width: 160px;
+vertical-align: top;
+font-size: 0.97em;
+}
+.main-content {
+background: #fff;
+border: 1px solid #b2c3e6;
+padding: 1.7em 2em;
+min-height: 400px;
+font-size: 1.08em;
+vertical-align: top;
+}
+.sidebar-title {
+font-weight: bold;
+color: #003366;
+margin-bottom: 0.5em;
+font-size: 1.07em;
+text-align: center;
+}
+.camera-link {
+color: #003399;
+text-decoration: underline;
+display: inline-block;
+margin-bottom: 0.24em;
+}
+.camera-link:hover {
+color: #000066;
+background: #dbeafe;
+text-decoration: underline;
+}
+.camera-year {
+color: #666;
+font-size: 0.96em;
+margin-left: 0.7em;
+}
+.camera-brand {
+color: #444;
+font-weight: bold;
+margin-right: 0.35em;
+}
+.camera-model {
+color: #003399;
+font-weight: normal;
+}
+footer {
+background: #e0e8f0;
+color: #003366;
+text-align: center;
+font-size: 0.95em;
+padding: 1em 0 1.5em 0;
+margin-top: 2em;
+border-top: 2px solid #6699cc;
+}
+@media (max-width: 1200px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content { font-size: 0.97em; padding: 1em; }
+}
+@media (max-width: 850px) {
+.layout-table, .navbar { width: 99vw; }
+.sidebar, .main-content { width: 100% !important; }
+.layout-table { display: block; }
+.sidebar, .main-content { display: block; }
+}
+</style>
 </head>
 <body>
-  <div class="banner">
-     Captured On Floppy Coming Soon
-     <div style="font-size:0.5em; color:#cce;">1997-2003 Floppy - Digital</div>
-  </div>
-
-  <!-- Top Navbar (no dropdowns) -->
-  <nav class="navbar">
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/gallery.html">Gallery</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
-
-  <!-- Table-based layout: sidebar left, main content, sidebar right -->
-  <table class="layout-table">
-    <tr>
-      <!-- Left Sidebar: All Mavica Models -->
-      <td class="sidebar">
-        <div class="sidebar-title">Sony Mavica Cameras</div>
-        <a class="camera-link" href="/cameras/mvc-fd5.html">MVC-FD5</a><span class="camera-year">1997</span><br>
-        <a class="camera-link" href="/mvc-fd7.html">MVC-FD7</a><span class="camera-year">1997</span><br>
-        <a class="camera-link" href="/mvc-fd51.html">MVC-FD51</a><span class="camera-year">1997</span><br>
-        <a class="camera-link" href="/mvc-fd71.html">MVC-FD71</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/mvc-fd73.html">MVC-FD73</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/mvc-fd75.html">MVC-FD75</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/mvc-fd81.html">MVC-FD81</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/mvc-fd83.html">MVC-FD83</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/mvc-fd85.html">MVC-FD85</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/mvc-fd87.html">MVC-FD87</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/mvc-fd88.html">MVC-FD88</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/mvc-fd90.html">MVC-FD90</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/mvc-fd91.html">MVC-FD91</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/mvc-fd92.html">MVC-FD92</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/mvc-fd95.html">MVC-FD95</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/mvc-fd97.html">MVC-FD97</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/mvc-fd100.html">MVC-FD100</a><span class="camera-year">2001</span><br>
-        <a class="camera-link" href="/mvc-fd200.html">MVC-FD200</a><span class="camera-year">2001</span><br>
-        <a class="camera-link" href="/mvc-prototypes.html">MVC-Prototypes</a><span class="camera-year">1987-1990</span><br>
-        <a class="camera-link" href="/mvc-slr.html">MVC-SLR</a><span class="camera-year">1990-1992</span><br>
-        <a class="camera-link" href="/mvc-cd1000.html">MVC-CD1000</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/mvc-cd200.html">MVC-CD200</a><span class="camera-year">2001</span><br>
-        <a class="camera-link" href="/mvc-300.html">MVC-300</a><span class="camera-year">2001</span><br>
-        <a class="camera-link" href="/mvc-cd250.html">MVC-CD250</a><span class="camera-year">2002</span><br>
-        <a class="camera-link" href="/mvc-cd400.html">MVC-CD400</a><span class="camera-year">2002</span><br>
-        <a class="camera-link" href="/mvc-cd350.html">MVC-CD350</a><span class="camera-year">2003</span><br>
-        <a class="camera-link" href="/mvc-cd500.html">MVC-CD500</a><span class="camera-year">2003-end</span><br>
-      </td>
-      <!-- Main Content -->
-      <td class="main-content">
-        <h2>Welcome to Captured On Floppy</h2>
-        <p>This is the coming soon page for the classic digital camera archive. More content will be available soon!</p>
-      </td>
-      <!-- Right Sidebar: Non-Sony Digital Cameras -->
-      <td class="sidebar">
-        <div class="sidebar-title">Other Digital Cameras</div>
-        <a class="camera-link" href="/nikon-coolpix900.html">Nikon Coolpix 900</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/nikon-coolpix950.html">Nikon Coolpix 950</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/nikon-coolpix990.html">Nikon Coolpix 990</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/canon-powershotA5.html">Canon PowerShot A5</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/canon-powershotS10.html">Canon PowerShot S10</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/canon-d30.html">Canon D30</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/minolta-dimagev.html">Minolta DiMAGE V</a><span class="camera-year">1997</span><br>
-        <a class="camera-link" href="/minolta-dimage7.html">Minolta DiMAGE 7</a><span class="camera-year">2001</span><br>
-        <a class="camera-link" href="/olympus-d340l.html">Olympus D-340L</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/olympus-c2000z.html">Olympus C-2000Z</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/olympus-c3030z.html">Olympus C-3030Z</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/kodak-dc260.html">Kodak DC260</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/kodak-dc4800.html">Kodak DC4800</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/kodak-dc5000.html">Kodak DC5000</a><span class="camera-year">2001</span><br>
-        <a class="camera-link" href="/fujifilm-finepix1400.html">Fujifilm FinePix 1400</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/fujifilm-finepix4900.html">Fujifilm FinePix 4900</a><span class="camera-year">2000</span><br>
-        <a class="camera-link" href="/fujifilm-finepix6800.html">Fujifilm FinePix 6800</a><span class="camera-year">2001</span><br>
-        <a class="camera-link" href="/agfa-ephoto307.html">Agfa ePhoto 307</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/agfa-ephoto1680.html">Agfa ePhoto 1680</a><span class="camera-year">1999</span><br>
-        <a class="camera-link" href="/hp-photosmartc20.html">HP PhotoSmart C20</a><span class="camera-year">1998</span><br>
-        <a class="camera-link" href="/hp-photosmart912.html">HP PhotoSmart 912</a><span class="camera-year">2001</span><br>
-      </td>
-    </tr>
-  </table>
-
-  <footer>
-    &copy; 2025 Captured On Floppy &mdash; All rights reserved.
-  </footer>
+<div class="banner"> Captured On Floppy
+<div style="font-size: 0.5em; color: rgb(204, 204, 238);">1997-2003
+Floppy - Digital</div>
+</div>
+<div style="text-align: center;">&nbsp;<nav class="navbar"><a
+href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
+href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a>
+<br>
+<br>
+</nav><a href="https://www.flickr.com/groups/capturedonfloppy/"
+target="_blank"
+style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); font-weight: bold;">Flickr</a><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span>&nbsp;</span></span><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); font-weight: bold;">&nbsp;
+&nbsp;</span><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span>&nbsp;</span></span><a
+href="https://www.instagram.com/capturedonfloppy/"
+style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); font-weight: bold;">Instragram</a><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">&nbsp;&nbsp;<span>&nbsp;</span></span><a
+href="https://x.com/FloppyCameras"
+style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); font-weight: bold;">Twitter</a><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">&nbsp;&nbsp;<span>&nbsp;</span></span><a
+href="https://www.reddit.com/r/CapturedonFloppy/"
+style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><span
+style="text-decoration: underline; font-weight: bold;">Floppy Reddit</span></a><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">&nbsp;&nbsp;<span>&nbsp;</span></span><a
+href="https://www.youtube.com/@CapturedOnFloppy"
+style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); font-weight: bold;">Floppy
+Youtube</a><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"><span>&nbsp;</span></span><a
+href="https://www.floppycameras.com/"
+style="font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><span
+style="font-weight: bold; text-decoration: underline;">FloppyCameras.com</span></a><br>
+</div>
+<table class="layout-table">
+<tbody>
+<tr>
+<!-- Left Sidebar: All Mavica Models --> <td class="sidebar">
+<div class="sidebar-title">Sony Mavica Cameras</div>
+<a class="camera-link" href="/mavica/mvc-fd5.html">MVC-FD5</a><span
+class="camera-year">1997</span><br>
+<a class="camera-link" href="/mavica/mvc-fd7.html">MVC-FD7</a><span
+class="camera-year">1997</span><br>
+<a class="camera-link" href="/mavica/mvc-fd51.html">MVC-FD51</a><span
+class="camera-year">1997</span><br>
+<a class="camera-link" href="/mavica/mvc-fd71.html">MVC-FD71</a><span
+class="camera-year">1998</span><br>
+<a class="camera-link" href="/mavica/mvc-fd73.html">MVC-FD73</a><span
+class="camera-year">1998</span><br>
+<a class="camera-link" href="/mavica/mvc-fd75.html">MVC-FD75</a><span
+class="camera-year">1999</span><br>
+<a class="camera-link" href="/mavica/mvc-fd81.html">MVC-FD81</a><span
+class="camera-year">1998</span><br>
+<a class="camera-link" href="/mavica/mvc-fd83.html">MVC-FD83</a><span
+class="camera-year">1999</span><br>
+<a class="camera-link" href="/mavica/mvc-fd85.html">MVC-FD85</a><span
+class="camera-year">1999</span><br>
+<a class="camera-link" href="/mavica/mvc-fd87.html">MVC-FD87</a><span
+class="camera-year">2000</span><br>
+<a class="camera-link" href="/mavica/mvc-fd88.html">MVC-FD88</a><span
+class="camera-year">2000</span><br>
+<a class="camera-link" href="/mavica/mvc-fd90.html">MVC-FD90</a><span
+class="camera-year">2000</span><br>
+<a class="camera-link" href="/mavica/mvc-fd91.html">MVC-FD91</a><span
+class="camera-year">1998</span><br>
+<a class="camera-link" href="/mavica/mvc-fd92.html">MVC-FD92</a><span
+class="camera-year">1999</span><br>
+<a class="camera-link" href="/mavica/mvc-fd95.html">MVC-FD95</a><span
+class="camera-year">1999</span><br>
+<a class="camera-link" href="/mavica/mvc-fd97.html">MVC-FD97</a><span
+class="camera-year">1999</span><br>
+<a class="camera-link" href="/mavica/mvc-fd100.html">MVC-FD100</a><span
+class="camera-year">2001</span><br>
+<a class="camera-link" href="/mavica/mvc-fd200.html">MVC-FD200</a><span
+class="camera-year">2001</span><br>
+<a class="camera-link" href="/mavica/mvc-prototypes.html">MVC-Prototye</a><span
+class="camera-year">87/90</span><br>
+<a class="camera-link" href="/mavica/mvc-slr.html">MVC-Analog</a><span
+class="camera-year">90/92</span><br>
+<a class="camera-link" href="/mavica/mvc-cd1000.html">MVC-CD1000</a><span
+class="camera-year">2000</span><br>
+<a class="camera-link" href="/mavica/mvc-cd200.html">MVC-CD200</a><span
+class="camera-year">2001</span><br>
+<a class="camera-link" href="/mavica/mvc-cd300.html">MVC-CD300</a><span
+class="camera-year">2001</span><br>
+<a class="camera-link" href="/mavica/mvc-cd250.html">MVC-CD250</a><span
+class="camera-year">2002</span><br>
+<a class="camera-link" href="/mavica/mvc-cd400.html">MVC-CD400</a><span
+class="camera-year">2002</span><br>
+<a class="camera-link" href="/mavica/mvc-cd350.html">MVC-CD350</a><span
+class="camera-year">2003</span><br>
+<a class="camera-link" href="/mavica/mvc-cd500.html">MVC-CD500</a><span
+class="camera-year">2003-end</span><br>
+<br>
+<a class="camera-link camera-model"
+href="/mavica/sony-mavica-analog.html">Mavica Analog Series</a> <span
+class="camera-year">1982–1986</span><br>
+</td>
+<!-- Main Content --> <td class="main-content">
+<div style="text-align: center;"> </div>
+<h2 style="text-align: center;">Welcome To <br>
+Captured On Floppy</h2>
+<div style="text-align: center;"><img src="images/logo.png"
+alt="Site Logo" height="auto" width="150"><br>
+</div>
+<br>
+<table style="text-align: left; width: 100%;" border="0"
+cellpadding="0" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<p
+style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">For
+over 35 years, I’ve lived and worked as both a professional and amateur
+photographer, my journey beginning in the late 1970s with studies in
+photography, television production, and computer programming. The first
+time I held a Sony Mavica, the satisfying click of the shutter and the
+unmistakable whirr of the floppy drive instantly transported me back to
+the excitement of discovering new technology as a kid. These cameras as
+well as other I own have become companions on many adventures,
+capturing moments both big and small with a charm that modern devices
+can't replicate.</p>
+<p
+style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">I
+created Captured On Floppy as a personal tribute and resource for
+anyone curious about the world of Sony Mavica cameras. Building this
+site in old-school HTML feels like a return to the web’s early
+days—just as the Mavica brings me back to a simpler time in
+photography. As I grow older, my hope is that others will find
+inspiration, nostalgia, and maybe even their own treasured moments
+here. Whether you’re a fellow enthusiast or just discovering these
+quirky cameras, I invite you to explore, share, and enjoy the legacy of
+the Mavica. <br>
+Just and old school programmer, and photographer wanting to leave
+small legacy for Mavica owners Enjoy.<br>
+Site is HTML to match most coding at the time Mavicas were produced. <br>
+</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">This site will only grow
+as I add more resources. Check out my other links as they too grow. <br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">The site took hundreds of
+hours of research and coding. I go by This Old Mavica, and
+CapturedOnFloppy in discussion forums.<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">Thank You and enjoy.<br>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; text-align: center;"><img
+alt="" src="images/paul.png" height="100" width="100"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+</p>
+</td>
+<!-- Right Sidebar: Transitional Cameras --> <td class="sidebar">
+<div class="sidebar-title">Transitional Cameras</div>
+<span class="camera-brand">Canon</span> <a
+class="camera-link camera-model" href="/canon/canon-rc701.html">RC-701</a>
+<span class="camera-year">1986</span><br>
+<span class="camera-brand">Canon</span> <a
+class="camera-link camera-model" href="/canon/canon-rc250.html">RC-250</a>
+<span class="camera-year">1988</span><br>
+<span class="camera-brand">Canon</span> <a
+class="camera-link camera-model" href="/canon/canon-rc760.html">RC-760</a>
+<span class="camera-year">1990</span><br>
+<span class="camera-brand"></span><br>
+<br>
+<span class="camera-brand"></span>
+<div style="text-align: center;">More Cameras To Be Added As
+Reviewed.<br>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align: center;"><footer> 2025 Captured On Floppy —
+All rights reserved.<br>
+<br>
+<br>
+</footer>Presented by <a href="https://paulcordell.com/">Paul Cordell
+Photography</a>, and This Old Mavica<br>
+contact: capturedonfloppy (at) Gmail&nbsp; .com<br>
+Do not send attachments, they will not be accepted. <br>
+<br>
+<small>Would Be HTML Thieves, it easy to copy the site and code<br>
+There is no need to steal its 100% free and will remain so<br>
+But if you feel the need to steal the work for your own<br>
+The code is however intertwined and, hidden coded for copyright.<br>
+Meaning pages or site copied can be identified.<br>
+The Site is old school HTML where its hosted is not.<br>
+Please Don't Steal Took 100's of hours to research and build.<br>
+Thank You Paul</small><br>
+<br>
+</div>
 </body>
 </html>
