@@ -109,15 +109,58 @@ background: #c7daf5;
 color: #000;
 text-decoration: underline;
 }
+.comparison-table {
+width: 96%;
+margin: 2em auto 2em auto;
+border-collapse: collapse;
+background: #fff;
+font-size: 0.98em;
+}
+.comparison-table th, .comparison-table td {
+border: 1px solid #bbb;
+padding: 7px 7px;
+text-align: left;
+}
+.comparison-table th {
+background: #e5e9f7;
+color: #222;
+}
+.comparison-table caption {
+font-weight: bold;
+margin-bottom: 0.5em;
+color: #2a3d7f;
+font-size: 1em;
+text-align: left;
+padding-left: 5px;
+}
+.comparison-section {
+margin: 3em auto 2em auto;
+max-width: 1100px;
+}
+.notes {
+font-size: 0.97em;
+margin-top: 2em;
+margin-bottom: 2em;
+background: #eef;
+padding: 1em;
+border-radius: 6px;
+max-width: 1100px;
+margin-left: auto;
+margin-right: auto;
+}
 @media (max-width: 1100px) {
 .gallery-table { width: 99vw; }
 .gallery-cell { width: 31vw; height: 33vw; }
 .gallery-img { max-width: 90%; }
+.comparison-table { width: 99vw; font-size: 0.95em;}
+.comparison-section, .notes { max-width: 99vw;}
 }
 @media (max-width: 750px) {
 .gallery-table { width: 99vw; }
 .gallery-cell { width: 95vw; height: auto; }
 .gallery-img { max-width: 93vw; }
+.comparison-table { width: 99vw; font-size: 0.92em;}
+.comparison-section, .notes { max-width: 99vw;}
 }
 footer {
 background: #e0e8f0;
@@ -134,58 +177,310 @@ border-top: 2px solid #6699cc;
 <div class="banner"> Captured On Floppy Gallery
 <div class="subtitle">1997-2003 Floppy - Digital</div>
 </div>
-<nav class="navbar"> </nav>
-<div style="text-align: center;"><nav class="navbar"><a
+<nav class="navbar"></nav>
+<div style="text-align: center;"> <nav class="navbar"> <a
 href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
-href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a></nav></div>
-<nav class="navbar"> </nav>
-<h2 style="text-align: center; margin-top: 2em;"><span
-style="color: red;">Tech and Repair </span><br>
-</h2>
-<div class="gallery-links"> <a href="https://www.flickr.com/groups/capturedonfloppy/"
-target="_blank">Flickr</a> <a href="https://www.reddit.com/r/CapturedonFloppy/"
-target="_blank">Reddit</a> <a href="https://www.youtube.com/@CapturedOnFloppy/"
-target="_blank">YouTube</a> </div>
-<div style="text-align: center;"><footer><br>
+href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a>
+</nav>
+</div>
+<nav class="navbar"></nav>
+<h2 style="text-align: center; margin-top: 2em;"> </h2>
+<h2
+style="font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(248, 248, 255); color: rgb(42, 61, 127);">Sony
+Mavica Model Comparison</h2>
+<h2 style="text-align: center; margin-top: 2em;"></h2>
+<!-- BEGIN Mavica Comparison Tables -->
+<div class="comparison-section">
+<div style="text-align: center;"> </div>
+<h2 style="color: rgb(42, 61, 127); text-align: center;">Sony Mavica
+Model Comparison</h2>
+<p style="text-align: center;">A complete listing of Sony Mavica camera
+models, organized by technology series.</p>
+<p style="text-align: center;"><br>
+</p>
+<table class="comparison-table">
+<caption>Analog Mavica Series (1982–1992)</caption> <thead> <tr>
+<th>Model</th>
+<th>Year(s)</th>
+<th>Type</th>
+<th>Storage</th>
+<th>Notes</th>
+</tr>
+</thead> <tbody>
+<tr>
+<td>MVC-Analog</td>
+<td>1982–1986</td>
+<td>Analog</td>
+<td>Video Floppy</td>
+<td>First prototypes</td>
+</tr>
+<tr>
+<td>MVC-Prototype</td>
+<td>1987/1990</td>
+<td>Analog</td>
+<td>Video Floppy</td>
+<td>Unreleased concept</td>
+</tr>
+<tr>
+<td>MVC-Analog90</td>
+<td>1990</td>
+<td>Analog</td>
+<td>Video Floppy</td>
+<td>Consumer release</td>
+</tr>
+<tr>
+<td>MVC-Analog92</td>
+<td>1992</td>
+<td>Analog</td>
+<td>Video Floppy</td>
+<td>Improved analog</td>
+</tr>
+</tbody>
+</table>
+<table class="comparison-table">
+<caption>Digital Floppy Disk Series (MVC-FD, 1997–2001)</caption> <thead>
+<tr>
+<th>Model</th>
+<th>Year</th>
+<th>Sensor</th>
+<th>Storage</th>
+<th>Resolution</th>
+<th>Notable Features</th>
+</tr>
+</thead> <tbody>
+<tr>
+<td>MVC-FD5</td>
+<td>1997</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>First digital Mavica</td>
+</tr>
+<tr>
+<td>MVC-FD7</td>
+<td>1997</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>LCD screen</td>
+</tr>
+<tr>
+<td>MVC-FD51</td>
+<td>1997</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>Compact design</td>
+</tr>
+<tr>
+<td>MVC-FD71</td>
+<td>1998</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>Enhanced autofocus</td>
+</tr>
+<tr>
+<td>MVC-FD73</td>
+<td>1998</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>Entry-level</td>
+</tr>
+<tr>
+<td>MVC-FD75</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>Budget model</td>
+</tr>
+<tr>
+<td>MVC-FD81</td>
+<td>1998</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.7MP</td>
+<td>Higher resolution</td>
+</tr>
+<tr>
+<td>MVC-FD83</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.7MP</td>
+<td>Improved lens</td>
+</tr>
+<tr>
+<td>MVC-FD85</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>1.3MP</td>
+<td>Better image quality</td>
+</tr>
+<tr>
+<td>MVC-FD87</td>
+<td>2000</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>1.3MP</td>
+<td>USB connectivity</td>
+</tr>
+<tr>
+<td>MVC-FD88</td>
+<td>2000</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>1.3MP</td>
+<td>6X zoom</td>
+</tr>
+<tr>
+<td>MVC-FD90</td>
+<td>2000</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>1.3MP</td>
+<td>Video recording</td>
+</tr>
+<tr>
+<td>MVC-FD91</td>
+<td>1998</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.8MP</td>
+<td>High zoom</td>
+</tr>
+<tr>
+<td>MVC-FD92</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.8MP</td>
+<td>Macro mode</td>
+</tr>
+<tr>
+<td>MVC-FD95</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>2.1MP</td>
+<td>Largest lens, 8X zoom</td>
+</tr>
+<tr>
+<td>MVC-FD97</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>2.1MP</td>
+<td>MPEG movie</td>
+</tr>
+<tr>
+<td>MVC-FD100</td>
+<td>2001</td>
+<td>CCD</td>
+<td>Floppy/MS</td>
+<td>1.6MP</td>
+<td>Memory Stick support</td>
+</tr>
+<tr>
+<td>MVC-FD200</td>
+<td>2001</td>
+<td>CCD</td>
+<td>Floppy/MS</td>
+<td>2.0MP</td>
+<td>Dual storage options</td>
+</tr>
+</tbody>
+</table>
+<table class="comparison-table">
+<caption>Digital CD Series (MVC-CD, 2000–2003)</caption> <thead> <tr>
+<th>Model</th>
+<th>Year</th>
+<th>Sensor</th>
+<th>Storage</th>
+<th>Resolution</th>
+<th>Notable Features</th>
+</tr>
+</thead> <tbody>
+<tr>
+<td>MVC-CD1000</td>
+<td>2000</td>
+<td>CCD</td>
+<td>CD-R</td>
+<td>2.1MP</td>
+<td>First CD Mavica</td>
+</tr>
+<tr>
+<td>MVC-CD200</td>
+<td>2001</td>
+<td>CCD</td>
+<td>CD-R</td>
+<td>2.1MP</td>
+<td>Improved autofocus</td>
+</tr>
+<tr>
+<td>MVC-CD250</td>
+<td>2002</td>
+<td>CCD</td>
+<td>CD-R</td>
+<td>2.0MP</td>
+<td>Compact body</td>
+</tr>
+<tr>
+<td>MVC-CD300</td>
+<td>2001</td>
+<td>CCD</td>
+<td>CD-R</td>
+<td>3.3MP</td>
+<td>Higher resolution</td>
+</tr>
+<tr>
+<td>MVC-CD350</td>
+<td>2003</td>
+<td>CCD</td>
+<td>CD-R</td>
+<td>3.2MP</td>
+<td>MPEG movie</td>
+</tr>
+<tr>
+<td>MVC-CD400</td>
+<td>2002</td>
+<td>CCD</td>
+<td>CD-R</td>
+<td>4.0MP</td>
+<td>Professional features</td>
+</tr>
+<tr>
+<td>MVC-CD500</td>
+<td>2003</td>
+<td>CCD</td>
+<td>CD-R</td>
+<td>5.0MP</td>
+<td>Highest resolution</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="notes"> <strong>Notes:</strong>
+<ul>
+<li style="color: red;">Resolution is approximate and may vary by
+model and region.</li>
+<li>"MS" indicates Memory Stick compatibility (in addition to floppy
+disks).</li>
+<li>Some analog models are rare prototypes or limited releases.</li>
+<li>The CD series used mini CD-R discs (~156MB).</li>
+<li>Most models feature video recording and LCD screens by 2000.</li>
+</ul>
+<p> <strong>See also:</strong>&nbsp; <a
+href="https://capturedonfloppy.com/resources.html">Mavica Resources</a>
+</p>
+</div>
+<!-- END Mavica Comparison Tables -->
+<div style="text-align: center;"> <footer> <br>
 <br>
-<a href="https://www.youtube.com/watch?v=l9847b4KmuQ&amp;t=626s"><br
-style="font-weight: bold;">
-</a></footer><a style="font-weight: bold; color: rgb(51, 51, 255);"
-href="https://www.youtube.com/watch?v=l9847b4KmuQ&amp;t=626s"><span
-style="font-family: Roboto,Arial,sans-serif; font-size: 14px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; display: inline ! important; float: none;">Fix
-the "For "InfoLITHIUM" BATTERY ONLY</span></a><br
-style="color: rgb(51, 51, 255);">
-<br>
-<a style="font-weight: bold;"
-href="https://www.youtube.com/watch?v=MdbvYJ8y8vA">FD-83 Teardown</a><br>
-<br style="font-weight: bold;">
-<a href="https://www.youtube.com/watch?v=1jPcYCcaHv0"><span
-style="font-weight: bold;">FD-7 Tear Down</span></a><br>
-<br>
-<a href="https://www.youtube.com/watch?v=SEwmujOfLsI"><span
-style="font-weight: bold;">Rebuild Batteries</span></a><br>
-<br>
-<a style="font-weight: bold;"
-href="https://www.youtube.com/watch?v=Vtwg8qTQzqk">Fix Writer
-Protection Error</a><br>
-<br>
-<a style="font-weight: bold;"
-href="https://www.youtube.com/watch?v=eIo4engUI-I">FD88 - FD Tear Down</a><br>
-<br>
-<br style="font-weight: bold;">
-<footer><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-2025 Captured On Floppy — All rights reserved. </footer></div>
+2025 Captured On Floppy — All rights reserved. </footer>
+</div>
 </body>
 </html>
