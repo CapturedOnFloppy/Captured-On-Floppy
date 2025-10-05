@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -54,72 +53,36 @@ text-decoration: underline;
 }
 .main-content {
 background: #fff;
-max-width: 900px;
+max-width: 600px;
 margin: 2em auto 2em auto;
 border: 1px solid #b2c3e6;
 border-radius: 8px;
-padding: 2em 2em 2em 2em;
+padding: 2em 1em 2em 1em;
 box-shadow: 0 2px 8px rgba(102,153,204,0.06);
 }
-h1, h2, h3 {
-color: #003366;
-margin-top: 1.2em;
+.photo-section {
+margin-bottom: 3em;
+padding-bottom: 2em;
+border-bottom: 1px solid #e0e8f0;
 }
-.instructions, .onecol-bottom {
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.2em 1em;
-font-size: 1em;
-margin-bottom: 2em;
-}
-.mavica-table-section {
-margin: 2em 0;
-}
-.mavica-table {
-width: 100%;
-border-collapse: collapse;
-background: #fff;
-font-size: 0.97em;
-}
-.mavica-table th, .mavica-table td {
-border: 1px solid #bbb;
-padding: 7px 7px;
-text-align: left;
-}
-.mavica-table th {
-background: #e5e9f7;
+.photo-text {
+font-size: 1.07em;
 color: #222;
+margin-bottom: 0.7em;
 }
-.mavica-table caption {
-font-weight: bold;
-margin-bottom: 0.5em;
-color: #2a3d7f;
-font-size: 1em;
-text-align: left;
-padding-left: 5px;
-}
-.resources-section {
-margin: 2em 0;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1em;
-}
-.resources-section a {
-font-weight: bold;
-color: #003366;
-text-decoration: underline;
-margin: 0 0.7em;
-}
-.logo-img {
-width: 177px;
-height: 177px;
+.photo-img {
+width: 100%;
+max-width: 400px;
 border-radius: 10px;
 border: 1px solid #b2c3e6;
-margin: 2em auto 1em auto;
-display: block;
 background: #fff;
+box-shadow: 0 2px 8px #e8eef8;
+display: block;
+margin-bottom: 0.4em;
+}
+@media (max-width: 700px) {
+.main-content { padding: 1em 0.3em; max-width: 99vw;}
+.photo-img { max-width: 99vw; }
 }
 footer {
 background: #e0e8f0;
@@ -130,118 +93,221 @@ padding: 1em 0 1.5em 0;
 margin-top: 2em;
 border-top: 2px solid #6699cc;
 }
-@media (max-width: 650px) {
-.main-content { padding: 1em 0.5em;}
-.mavica-table { font-size: 0.95em;}
-}
 </style>
 </head>
 <body>
 <div class="banner">Captured On Floppy<small>™️</small>
-  <div class="subtitle">Photos Captured On Floppy Drive Cameras Guild &amp; Resources</div>
+<div class="subtitle">Photos Captured On Floppy Drive Cameras Guild
+&amp; Resources</div>
 </div>
-<nav class="navbar">
-  <a href="/index.html">Home</a>
-  <a href="/tech.html">Tech</a>
-  <a href="/gallery.html">Gallery</a>
-  <a href="/resources.html">Resources</a>
-</nav>
-<div class="main-content">
-
-  <img src="mavica/images/logopage1.jpg" alt="Captured On Floppy Logo" class="logo-img">
-
-  <h1>Yes, Your Mavica Should Know the Time! (Replacing the clock battery on late-model FD Mavicas)</h1>
-  <div class="instructions">
-    <small>Contribution by <a href="https://www.reddit.com/user/ExceedinglyGayDerg/">ExceedinglyGayDerg</a> (Reddit)</small>
-    <p>
-      All Mavicas allow you to set the time and date, which populate the "date created" metadata and timestamp your photos. Recent FD models (like the FD-92) may lose time when the main battery is removed—due to a backup coin cell battery. Some models use a disposable CR2025 coin cell, others (FD-92, FD87, FD97, FD100, FD200) use a rechargeable MS621FE soldered to the board.
-    </p>
-    <p>
-      <b>What you'll need:</b>
-      <ul>
-        <li>The replacement battery: <a href="https://www.digikey.com/en/products/detail/seiko-instruments/MS621FE-FL11E/1889208" target="_blank">MS621FE lithium cell</a></li>
-        <li>Soldering iron, flux, solder</li>
-        <li>Desoldering tool (wick or sucker)</li>
-        <li>#0 or #00 Philips screwdriver</li>
-      </ul>
-    </p>
-    <b>Quick Steps:</b>
-    <ol>
-      <li>Open the camera (remove main battery first, unscrew all outside screws)</li>
-      <li>Disconnect ribbon cables and display/control PCB; locate old battery</li>
-      <li>Desolder and remove the old battery</li>
-      <li>Prep and fit the new MS621FE battery into place</li>
-      <li>Solder new battery, clean up, reassemble camera</li>
-      <li>Take your time reassembling, mind the ribbon cable locks</li>
-    </ol>
-    <img src="images/step1.webp" alt="Remove all eight of the marked screws to open the camera" width="400">
-    <img src="images/step2.webp" alt="Disconnect the ribbon cable connecting the two halves." width="400">
-    <img src="images/step3.webp" alt="Remove all screws (blue) and remaining connections (yellow). Old battery will be at green arrow." width="400">
-    <img src="images/step4.webp" alt="New battery ready to be soldered." width="400">
-    <img src="images/step5.webp" alt="New solder joints =)" width="400">
-    <img src="images/step6.webp" alt="Cable connected to port" width="400">
-    <p>
-      <b>Model notes:</b> The tutorial is for FD-92; similar applies to FD87, FD97, FD100, FD200 (rechargeable battery). FD83, FD88, FD85, FD90, FD95 use the same battery, but it's surface-mount rather than through-hole.
-    </p>
-  </div>
-
-  <div class="mavica-table-section">
-    <h2>Sony Mavica Camera Models (Chronological)</h2>
-    <table class="mavica-table">
-      <thead>
-        <tr>
-          <th>Model</th>
-          <th>Year</th>
-          <th>Type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>MVC-Analog</td><td>1982–1986</td><td>Analog</td></tr>
-        <tr><td>MVC-Prototype</td><td>1987/1990</td><td>Analog</td></tr>
-        <tr><td>MVC-Analog90</td><td>1990</td><td>Analog</td></tr>
-        <tr><td>MVC-Analog92</td><td>1992</td><td>Analog</td></tr>
-        <tr><td>MVC-FD5</td><td>1997</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD7</td><td>1997</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD51</td><td>1997</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD71</td><td>1998</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD73</td><td>1998</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD81</td><td>1998</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD91</td><td>1998</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD75</td><td>1999</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD83</td><td>1999</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD85</td><td>1999</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD92</td><td>1999</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD95</td><td>1999</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD97</td><td>1999</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD87</td><td>2000</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD88</td><td>2000</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD90</td><td>2000</td><td>Digital (Floppy)</td></tr>
-        <tr><td>MVC-FD100</td><td>2001</td><td>Digital (Floppy/MS)</td></tr>
-        <tr><td>MVC-FD200</td><td>2001</td><td>Digital (Floppy/MS)</td></tr>
-        <tr><td>MVC-CD1000</td><td>2000</td><td>Digital (CD)</td></tr>
-        <tr><td>MVC-CD200</td><td>2001</td><td>Digital (CD)</td></tr>
-        <tr><td>MVC-CD300</td><td>2001</td><td>Digital (CD)</td></tr>
-        <tr><td>MVC-CD250</td><td>2002</td><td>Digital (CD)</td></tr>
-        <tr><td>MVC-CD400</td><td>2002</td><td>Digital (CD)</td></tr>
-        <tr><td>MVC-CD350</td><td>2003</td><td>Digital (CD)</td></tr>
-        <tr><td>MVC-CD500</td><td>2003</td><td>Digital (CD)</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="resources-section">
-    <h3>Connect with the Floppy Camera Community</h3>
-    <a href="https://www.flickr.com/groups/capturedonfloppy/" target="_blank">Flickr</a>
-    <a href="https://www.instagram.com/capturedonfloppy/" target="_blank">Instagram</a>
-    <a href="https://x.com/FloppyCameras" target="_blank">Twitter</a>
-    <a href="https://www.reddit.com/r/CapturedonFloppy/" target="_blank">Floppy Reddit</a>
-    <a href="https://www.youtube.com/@CapturedOnFloppy" target="_blank">Floppy YouTube</a>
-    <a href="https://www.floppycameras.com" target="_blank">FloppyCameras.com</a>
-    <p>This site is 100% designed in 1990's HTML technology. Hand Built HTML Website by <a href="https://paulcordell.com/" target="_blank">Paul Cordell Photography</a> keeping it Classic.</p>
-  </div>
+<nav class="navbar"> </nav>
+<div style="text-align: center;"><nav class="navbar"><a
+href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
+href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a></nav></div>
+<nav class="navbar"></nav>
+<div class="main-content"> <small
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal;">Contribution
+by<span>&nbsp;</span><a
+href="https://www.reddit.com/user/ExceedinglyGayDerg/">ExceedinglyGayDerg</a><span>&nbsp;</span>(Reddit)
+Thank You </small><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(248, 248, 255); display: inline ! important; float: none;"></span>
+<p
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal;">All
+Mavicas allow you to set the time and date, which populate the "date
+created" metadata and timestamp your photos. Recent FD models (like the
+FD-92) may lose time when the main battery is removed—due to a backup
+coin cell battery. Some models use a disposable CR2025 coin cell,
+others (FD-92, FD87, FD97, FD100, FD200) use a rechargeable MS621FE
+soldered to the board.</p>
+<p
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal;"><b>What
+you'll need:</b></p>
+<ul
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal;">
+<li>The replacement battery:<span>&nbsp;</span><a
+href="https://www.digikey.com/en/products/detail/seiko-instruments/MS621FE-FL11E/1889208"
+target="_blank">MS621FE lithium cell</a></li>
+<li>Soldering iron, flux, solder</li>
+<li>Desoldering tool (wick or sucker)</li>
+<li>#0 or #00 Philips screwdriver<br>
+<br>
+<b
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 16px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal;">Quick
+Steps:</b><span
+style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(248, 248, 255); display: inline ! important; float: none;"></span></li>
+<li>Open the camera (remove main battery first, unscrew all outside
+screws)</li>
+<li>Disconnect ribbon cables and display/control PCB; locate old
+battery</li>
+<li>Desolder and remove the old battery</li>
+<li>Prep and fit the new MS621FE battery into place</li>
+<li>Solder new battery, clean up, reassemble camera</li>
+<li>Take your time reassembling, mind the ribbon cable locks<br>
+<br>
+</li>
+</ul>
+<div class="photo-section">
+<p
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">Here's
+how to replace it!</p>
+<p
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">Step
+1: Open up the Camera.<br style="margin-top: 0px;">
+REMOVE THE MAIN BATTERY FIRST!!!<br style="margin-bottom: 0px;">
+On the FD-92 and similar models, opening the camera simple. Remove all
+eight screws around the exterior and pull the two halves apart!
+Carefully disconnect the ribbon cable holding the two primary boards
+together.<br>
+<br>
+<span
+style="color: red; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none; font-weight: bold; text-decoration: underline;">Remove
+all eight of the marked screws to open the camera</span><br>
+</p>
+<img class="photo-img" src="images/setup1.webp" alt="Photo 1"> </div>
+<div style="text-align: center;"><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none; text-decoration: underline;">Disconnect
+the ribbon cable connecting the two halves.</span></div>
+<div class="photo-section">
+<div class="photo-text"><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;"><br>
+<br>
+Step 2: Remove the display/control PCB.</span><br
+style="margin-top: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Remove
+all the screws marked in the image below (blue). Then, lift the metal
+shield plate away from the board. Finally, disconnect the two remaining
+ribbon cables (one is hidden below the shield plate) and the speaker
+connector.</span><br
+style="margin-bottom: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">The
+old battery will be in the location marked by the green arrow, a small
+coin cell battery.</span> <span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none; text-decoration: underline;"></span><span
+style="font-weight: bold; text-decoration: underline;"></span> </div>
+<img class="photo-img" src="images/setup2.webp" alt="Photo 2"> </div>
+<div style="text-align: center;"><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Remove
+all screws (blue) and remaining connections (yellow). Old battery will
+be at green arrow.</span><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;"></span></div>
+<div class="photo-section">
+<div class="photo-text"><!-- Add your text for Photo 3 here --> <span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;"><br>
+<br>
+Step 3: Remove the old battery.</span><br
+style="margin-bottom: 0px; margin-top: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">This
+can be a bit tricky, especially if you haven't done much solder work.
+On the back side of the PCB you'll find both connection points for the
+old battery, labeled + and -. Using your desoldering tools, remove the
+solder from the battery connections and remove the battery from the
+board.</span><br>
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;"><br>
+</span><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;"><br>
+</span> </div>
+<img class="photo-img" src="images/setup3.webp" alt="Photo 3"> </div>
+<div style="text-align: center;"><!-- Photo Section 4 --></div>
+<div class="photo-section">
+<div class="photo-text"><!-- Add your text for Photo 4 here --> <span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Step
+4: Prep the new battery.</span><br
+style="margin-top: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">While
+the Digikey part number above is a pretty good fit, it's not the exact
+same item original to the cameras. To make it fit, we'll need to first
+bend the legs down at a 90 degree angle. Be careful not to connect both
+legs if you use a metal tool, these batteries don't hold much energy,
+but a short is still not good for them.</span><br
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Make
+sure that you bend both legs AWAY from the positive side of the battery
+(see 'after' pic below).</span><br
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Once
+done, test fit the battery into the holes on the board. You'll probably
+find that it's a bit tight. Bend the legs away from each other slightly
+to make sure everything fits and the battery can lay flat against the
+board.</span><br
+style="margin-bottom: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Remember
+that the "+" side of the battery should be facing away from the board,
+and the battery should be on the side of the board WITHOUT the +/-
+marks. If this is confusing, use the last picture in this post as a
+reference for the battery's orientation.</span> </div>
+<img class="photo-img" src="images/setup4.webp" alt="Photo 4"> </div>
+<div style="text-align: center;"><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none; text-decoration: underline;">New
+battery ready to be soldered.</span></div>
+<div class="photo-section">
+<div class="photo-text"><!-- Add your text for Photo 5 here --><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;"><br>
+<br>
+Step 5: Solder the new battery.</span><br
+style="margin-bottom: 0px; margin-top: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">With
+the new battery on the board (and double checking the orientation
+reminder from the previous step) solder both legs of the battery. I
+recommend using flux and trying not to apply heat for too long, as too
+much heat might damage the new battery. Clean up any flux and you
+should be good to go!</span> </div>
+<img class="photo-img" src="images/setup5.webp" alt="Photo 5"> </div>
+<div style="text-align: center;"><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">New
+solder joints :)</span></div>
+<div class="photo-section">
+<div class="photo-text"><!-- Add your text for Photo 6 here --> <br>
+<br>
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Step
+6: Re-assembly.</span><br
+style="margin-top: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">With
+the new battery installed, reverse the disassembly steps to put the
+camera back together. For the connectors on the display/control board,
+make sure that the brown lock goes ABOVE the ribbon cable (blue) and
+the black lock goes BELOW the ribbon cable (green).</span><br
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Don't
+forget the speaker connection and the metal shield on the PCB!</span><br
+style="margin-bottom: 0px; color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251);">
+<span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Take
+your time when bringing the two halves of the camera back together,
+there's a handful of things that need to line up.</span> </div>
+<img class="photo-img" src="images/setup6.webp" alt="Photo 6"> </div>
+<div style="text-align: center;"><span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 11.2px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">Make
+sure the blue connector's lock goes above the ribbon cable, and the
+green connector's lock goes below the cable.<br>
+<br>
+<br>
+<br>
+New battery installed in top-right!</span><br>
 </div>
-<footer>
-&copy; 1998-2025 Mavica Camera Club / Captured On Floppy™️ &bull; All rights reserved.
-</footer>
+<div class="photo-section">
+<div class="photo-text"><!-- Add your text for Photo 7 here --> <span
+style="color: rgb(50, 54, 58); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;,&quot;Segoe UI Symbol&quot;,sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(250, 250, 251); display: inline ! important; float: none;">With
+everything back together you should be good to go! I haven't tested how
+long the rechargeable battery keeps time yet, but I know it is at least
+a few hours. Odds are it should be good for weeks or even months. Sony
+likely used a similar system to a digital watch.</span> </div>
+<img class="photo-img" src="images/setup7.webp" alt="Photo 7"> </div>
+</div>
+<div style="text-align: center;"><footer>
+© 1998-2025 Mavica Camera Club / Captured On Floppy™️ • All rights
+reserved.
+</footer></div>
 </body>
 </html>
