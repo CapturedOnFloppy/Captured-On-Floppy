@@ -1,391 +1,173 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>[Captured On Floppy.com]</title>
+<title>Sony Mavica MVC-FD7</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #fff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
+body { background: #000; color: #ffff00; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; margin: 0; padding: 0; }
+.banner { background: #222; color: #ffff00; padding: 1em 0 0.4em 0; text-align: center; font-size: 2em; font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.07em; border-bottom: 4px solid #FF00FF; text-shadow: 2px 2px 0 #FF00FF; }
+.banner-sub { font-size: 0.7em; color: #FFD700; margin-bottom: 0.3em; }
+.navbar-wrapper { width: 100%; text-align: center; margin: 0 auto; }
+.navbar { background: #111; border-bottom: 2px solid #FF00FF; font-size: 1.1em; font-family: Verdana, Arial, Helvetica, sans-serif; padding: 0.3em 0; display: inline-block; text-align: center; }
+.navbar a { color: #000; background: #ffff00; text-decoration: none; padding: 0.7em 2em; margin: 0 0.2em; font-weight: bold; border: 2px solid #FF00FF; border-radius: 7px; transition: none; display: inline-block; }
+.navbar a:hover, .navbar a:focus { background: #ffff00; color: #000; text-decoration: underline; border-color: #FF00FF; }
+.layout-table { width: 1100px; margin: 2em auto; border-spacing: 0; border-collapse: separate; }
+.sidebar { background: #111; border-right: 4px solid #FF00FF; padding: 2.2em 1em 2em 1em; width: 220px; min-width: 160px; vertical-align: top; text-align: left; }
+.sidebar-title { font-weight: bold; color: #FFFF00; margin-bottom: 1.2em; font-size: 1.25em; text-align: center; text-shadow: 2px 2px 0 #FF00FF; letter-spacing: 2px; }
+.camera-btn { display: block; width: 90%; margin: 0.4em auto 0.4em auto; padding: 0.9em 0.7em; background: #FFFF00; color: #000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 1em; font-weight: bold; border: 2px outset #FF00FF; border-radius: 10px; cursor: pointer; box-shadow: 2px 2px 6px #222; transition: none; text-align: left; text-decoration: none; }
+.camera-btn:hover { background: #FFFF00; color: #000; border-color: #FF00FF; }
+.camera-year { color: #FF00FF; font-size: 0.96em; margin-left: 0.7em; font-weight: bold; }
+.main-content { background: #222; border-radius: 16px; box-shadow: 0 0 15px #FFFF00; min-height: 400px; font-size: 1.08em; vertical-align: top; color: #FFFF00; padding: 2.7em 2.5em; width: 100%; max-width: 740px; margin: auto; }
+h2 { color: #FFFF00; text-align: center; text-shadow: 2px 2px 0 #FF00FF;}
+a, a:visited { color: #FF00FF; }
+a:hover { color: #FFFF00; }
+.spec-list { color: #FFFF00; font-size: 1.08em; margin: 1.5em 0 1.5em 2em;}
+.footer { background: #111; color: #FF00FF; text-align: center; font-size: 0.95em; padding: 1em 0 1.5em 0; margin-top: 2em; border-top: 2px solid #FFFF00; }
+img { border-radius: 8px; border: 2px solid #FF00FF; margin: 12px 0; box-shadow: 0 0 10px #FFFF00; }
+@media (max-width: 1200px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content { font-size: 0.97em; padding: 1em; }
+.main-content { max-width: 98vw; }
 }
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size:0.5em;
-color:#cce;
-}
+@media (max-width: 850px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content { width: 100% !important; }
+.layout-table { display: block; }
+.sidebar, .main-content { display: block; }
+.navbar-wrapper { width: 100%; }
 .navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
+width: 99vw;
+display: block;
 text-align: center;
-padding: 0.3em 0;
+padding: 0.7em 0;
 }
 .navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.main-content {
-background: #fff;
-max-width: 900px;
-margin: 2em auto 2em auto;
-border: 1px solid #b2c3e6;
-border-radius: 8px;
-padding: 2em 2em 2em 2em;
-box-shadow: 0 2px 8px rgba(102,153,204,0.06);
-}
-.photo-section {
-display: flex;
-gap: 32px;
-margin-bottom: 2em;
-flex-wrap: wrap;
-justify-content: flex-start;
-align-items: flex-start;
-}
-.photo-box {
-flex: 1 1 380px;
-max-width: 48%;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1em;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.photo-box img {
-max-width: 100%;
-border: 1px solid #b2c3e6;
-background: #fff;
-margin-bottom: 0.7em;
-width: 100%;
-height: auto;
-}
-.photo-caption {
-font-size: 1em;
-color: #444;
-margin-bottom: 0;
+margin: 0.3em 0;
+width: 90vw;
 text-align: center;
 }
-.twocols-4rows {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2em 2em;
-margin-bottom: 2em;
-}
-.twocols-4rows > div {
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.2em 1em;
-min-height: 120px;
-font-size: 1em;
-}
-.onecol-bottom {
-margin-top: 2em;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.5em 1.2em;
-font-size: 1.05em;
-}
-.main-content h1, .main-content h2, .main-content h3 {
-color: #003366;
-margin-top: 1.5em;
-}
-@media (max-width: 650px) {
-.twocols-4rows {
-grid-template-columns: 1fr;
-}
-.photo-section {
-flex-direction: column;
-gap: 12px;
-}
-.photo-box {
-max-width: 100%;
-}
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
 }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy<small><small><small>™</small></small></small>️
-<div class="subtitle">Photos Captured On Floppy Drive Cameras Guild
-&amp; Resources</div>
+<div class="banner"> Captured On Floppy
+<div class="banner-sub">Sony Mavica MVC-FD7 (1997)</div>
 </div>
-<div style="text-align: center;"><!-- Top Navbar (no dropdowns) --> <nav
-class="navbar"> <a href="/index.html">Home</a> <a href="/tech.html">Tech</a>
-<a href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a>
-</nav>
-</div>
-<div class="main-content">
-<h1>Mavica FD7 1997<br>
-</h1>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
+<div class="navbar-wrapper"> <nav class="navbar"> <a
+href="/index.html">Home</a> <a href="/gallery.html">Gallery</a> <a
+href="/resources.html">Resources</a> <a href="/forums.html">Stash</a>
+<a href="../FieldNotes/FieldNotes.html">Field Notes</a> </nav> </div>
+<table class="layout-table">
 <tbody>
 <tr>
-<td style="vertical-align: top;"><span style="font-weight: bold;">Resolution
-Technical 0.38 MP</span><br>
+<td class="sidebar">
+<div class="sidebar-title">Sony Mavica Cameras</div>
+<a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd7.html">MVC-FD7 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd51.html">MVC-FD51 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd71.html">MVC-FD71 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd73.html">MVC-FD73 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd75.html">MVC-FD75 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd81.html">MVC-FD81 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd83.html">MVC-FD83 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd87.html">MVC-FD87 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd88.html">MVC-FD88 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd90.html">MVC-FD90 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd91.html">MVC-FD91 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd92.html">MVC-FD92 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd95.html">MVC-FD95 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd97.html">MVC-FD97 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd100.html">MVC-FD100 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd200.html">MVC-FD200 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-prototypes.html">MVC-Prototye
+<span class="camera-year">87/90</span></a>
+<a class="camera-btn" href="/mavica/mvc-slr.html">MVC-Analog <span
+class="camera-year">90/92</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd200.html">MVC-CD200 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd300.html">MVC-CD300 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd250.html">MVC-CD250 <span
+class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd400.html">MVC-CD400 <span
+class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd350.html">MVC-CD350 <span
+class="camera-year">2003</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
+class="camera-year">2003-end</span></a>
+<a class="camera-btn" href="/mavica/sony-mavica-analog.html">Mavica
+Analog Series <span class="camera-year">1982–1986</span></a>
 </td>
-</tr>
-</tbody>
-</table>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top; text-align: center;"> <a
-style="font-weight: bold;"
-href="https://www.flickr.com/groups/capturedonfloppy/" target="_blank">Flickr</a>
-<span style="font-weight: bold;">&nbsp; &nbsp;</span> <a
-style="font-weight: bold;"
-href="https://www.instagram.com/capturedonfloppy/">Instagram</a>&nbsp;&nbsp;
-<a style="font-weight: bold;" href="https://x.com/FloppyCameras">Twitter</a>&nbsp;&nbsp;
-<a href="https://www.reddit.com/r/CapturedonFloppy/"><span
-style="text-decoration: underline; font-weight: bold;">Floppy Reddit</span></a>&nbsp;&nbsp;
-<a style="font-weight: bold;"
-href="https://www.youtube.com/@CapturedOnFloppy">Floppy Youtube</a> <a
-href="https://www.floppycameras.com"><span
-style="font-weight: bold; text-decoration: underline;">FloppyCameras.com</span></a><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="photo-section">
-<div class="photo-box"> <img src="images/FD7f.jpg" alt="Photo 1"
-height="240" width="320">
-<p class="photo-caption">[Captured On Floppy]</p>
+<td class="main-content">
+<h2>Sony Mavica MVC-FD7</h2>
+<p> <strong>About the FD5 and FD7:</strong><br>
+The Sony MVC-FD5 and MVC-FD7 are nearly identical cameras, sharing
+almost all of their specifications and features. The main difference,
+as noted in the official <a
+href="https://www.sony.com/electronics/support/res/manuals/W000/W0007209M.pdf"
+target="_blank">Sony manual</a>, is the viewfinder: the FD5 uses a
+traditional optical viewfinder, while the FD7 features a color LCD
+electronic viewfinder for composing images. </p>
+<img src="images/FD7.jpg" alt="Sony Mavica FD7 camera"
+width="220">
+<div class="spec-list"> <b>Recording medium:</b> 3.5" floppy
+disk (2HD, 1.44 MB)<br>
+<b>Picture element:</b> 640 × 480 pixels<br>
+<b>Image file type:</b> JPEG<br>
+<b>Lens:</b> Sony lens, f=4.2 – 42 mm, F2.8 – 2.9<br>
+<b>LCD monitor:</b> 2.5-inch, TFT color<br>
+<b>Viewfinder:</b> Real-image type<br>
+<b>Battery:</b> Sony InfoLithium battery pack NP-F330<br>
+<b>Dimensions:</b> Approx. 154 × 103 × 157 mm (W × H × D)<br>
+<b>Mass:</b> Approx. 650 g (camera only)<br>
+<b>Other features:</b>
+<ul>
+<li>Self-timer function</li>
+<li>Date/time recording</li>
+<li>Automatic white balance</li>
+<li>Built-in flash</li>
+<li>Video output (NTSC/PAL selectable)</li>
+<li>Serial interface (RS-232C for PC connection)</li>
+</ul>
 </div>
-<div class="photo-box"> <img src="images/FD7.jpg" alt="Photo 2"
-height="240" width="320">
-<p class="photo-caption">[Captured On Floppy]</p>
-</div>
-</div>
-<div class="twocols-4rows">
-<div>
-<h2>About the FD7</h2>
-<p><strong>Sony Mavica™️ MVC-FD7: Historical &amp; Technical Overview</strong></p>
-<p><strong>Introduction &amp; Historical Context</strong><br>
-Release: Late 1997, launched alongside the MVC-FD5 as part of Sony’s
-first digital Mavica line.<br>
-Significance: The FD7 stood out as the first consumer digital camera
-with a true 10x optical zoom lens—a major leap for everyday
-photographers, and a feature rarely seen at the time.<br>
-Storage Innovation: Like the FD5, the FD7 used the common 3.5-inch
-floppy disk for image storage, allowing simple, cable-free transfers to
-nearly any PC. </p>
-<h3
-style="font-weight: 600; color: rgb(31, 35, 40); font-size: 1.25em; margin-top: 24px;">Technical
-Specifications</h3>
-<table
-style="overflow: auto; border-collapse: collapse; border-spacing: 0pt; margin-top: 0pt; margin-bottom: 16px; max-width: 100%; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; background-color: rgb(255, 255, 255); width: 100%;">
-<thead> <tr style="background-color: rgb(246, 248, 250);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; font-weight: 600; text-align: left;">Feature</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; font-weight: 600; text-align: left;">Details</th>
-</tr>
-</thead> <tbody>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Sensor</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">1/4"
-CCD, 640×480 pixels (VGA)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Lens</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">4.2–42mm
-f/1.8–2.9 (10x optical zoom, 40–400mm equiv. 35mm)</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Storage</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">3.5"
-1.44MB floppy disk</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Image
-Format</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">JPEG
-(two compression levels), BMP</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Battery</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">NP-F530
-Lithium Ion (shared with Sony camcorders)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Display</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">2.5"
-LCD monitor</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Release
-Price</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">~$800
-USD (late 1997)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Inflation
-Adj.</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">≈
-$1,750 in today’s money (2025)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div>
-<p><strong>Design &amp; User Experience</strong><br>
-Body Shape: A chunky, robust design with a pronounced handgrip, needed
-to house the floppy drive and support the large zoom lens.<br>
-Lens: 10x optical zoom, offering a 40–400mm equivalent range—far more
-flexible than the fixed-lens FD5. Manual zoom lever, plus macro
-capability for close-ups.<br>
-Image Storage: JPEG and BMP formats, storing about 15–30 images per
-floppy depending on compression.<br>
-Ease of Use: Standard floppy disks meant no special media or cables
-were needed; just shoot, then insert the disk in any computer.<br>
-Extra Features: Pop-up flash, self-timer, basic exposure controls, and
-a tripod socket for steady telephoto shots. </p>
-<p><strong>Impact &amp; Legacy</strong><br>
-Zoom Pioneer: The FD7 made high-ratio optical zoom available to
-consumers, a first in digital cameras and a standout feature for its
-era.<br>
-Access &amp; Appeal: While more expensive than the FD5, the FD7’s zoom
-and versatility attracted enthusiasts and early adopters.<br>
-Iconic Status: The FD7 became a cult favorite among collectors and
-vintage digital camera fans, remembered for its innovation and unique
-blend of features. </p>
-</div>
-<div>
-<h2><br>
-</h2>
-</div>
-<div>
-<h2><br>
-</h2>
-<table style="width: 100%;">
-<tbody>
-<tr>
-<th><br>
-</th>
-<th><br>
-</th>
-</tr>
-<tr>
-<td><br>
-</td>
-<td><br>
-</td>
-</tr>
-<!-- Additional rows as needed -->
-</tbody>
-</table>
-</div>
-</div>
-<div class="onecol-bottom">
-<h2>Manual &amp; My Opinion</h2>
 <p> <a
 href="https://www.sony.com/electronics/support/res/manuals/W000/W0007209M.pdf"
-target="_blank"> <strong>Download the official manual (PDF)</strong> </a>
-</p>
-<p> <strong>My Opinion:</strong><br>
-The FD7, is number#2 on the list of releases for the Mavica Floppy
-drive camera products by Sony.<br>
-However it is sought after more then the FD5, Sony's first release.<br>
-<br>
-The FD7 is popular because it does process faster then the FD5 and why
-it was released in the same time frame as the FD5, it had many
-advances. <br>
-However most users of the FD7, are looking at the results, more than
-bells and whistles.<br>
-As the FD7 makes photos aged, and real. They appear to resemble the
-photos of the 1970, 80s <br>
-in fact a novice may have a hard time placing when the photos on a FD7
-were taken.<br>
-<br>
-I find personally the FD7, to be a remarkable camera, simple to operate
-and the floppy drive accessing as you snap a photo is a real experience.<br>
-There are many different variations on the Mavica Floppy Cameras.<br>
-But the FD7 is the flag ship even though it lacks many features, like
-the FD95 and others have.<br>
-It holds its own among them all.<br>
-</p>
-</div>
-</div>
-<div style="text-align: center;"><!-- Example of a self-hosted image --> <img
-style="width: 177px; height: 177px;" src="images/logopage1.jpg"
-alt="Captured On Floppy Logo">
-<table
-style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;"
-border="1" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top; text-align: center;"> This site
-is 100% designed in 1990's HTML technology. Hand Built HTML Website by <a
-style="font-weight: bold;" href="https://paulcordell.com/">Paul
-Cordell Photography</a> keeping it Classic.<br>
+target="_blank">Sony Official Manual (PDF)</a> </p>
 </td>
 </tr>
 </tbody>
 </table>
-<footer> <br>
-<br>
-© 1998-2025 Mavica Camera Club / Captured On Floppy™️ • All rights
-reserved.<br>
-<br>
-<br>
-</footer></div>
+<div class="footer"> 2025 Captured On Floppy — All rights reserved.<br>
+Presented by <a href="https://paulcordell.com/">Paul Cordell
+Photography</a>, and This Old Mavica<br>
+contact: capturedonfloppy (at) Gmail&nbsp;.com<br>
+Do not send attachments, they will not be accepted.<br>
+<small>Would Be HTML Thieves, it easy to copy the site and code<br>
+There is no need to steal its 100% free and will remain so<br>
+The code is however intertwined and, hidden coded for copyright.<br>
+Thank You Paul</small> <br>
+</div>
 </body>
 </html>
