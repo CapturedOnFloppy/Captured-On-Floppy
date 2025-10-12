@@ -114,6 +114,15 @@ font-size: 0.96em;
 margin-left: 0.7em;
 font-weight: bold;
 }
+.rightbar {
+background: #111;
+border-left: 4px solid #FF00FF;
+padding: 2.2em 1em 2em 1em;
+width: 220px;
+min-width: 160px;
+vertical-align: top;
+text-align: left;
+}
 .main-content {
 background: #222;
 border-radius: 16px;
@@ -142,14 +151,14 @@ border-top: 2px solid #FFFF00;
 img { border-radius: 8px; border: 2px solid #FF00FF; margin: 12px 0; box-shadow: 0 0 10px #FFFF00; }
 @media (max-width: 1200px) {
 .layout-table { width: 99vw; }
-.sidebar, .main-content { font-size: 0.97em; padding: 1em; }
+.sidebar, .main-content, .rightbar { font-size: 0.97em; padding: 1em; }
 .main-content { max-width: 98vw; }
 }
 @media (max-width: 850px) {
 .layout-table { width: 99vw; }
-.sidebar, .main-content { width: 100% !important; }
+.sidebar, .main-content, .rightbar { width: 100% !important; }
 .layout-table { display: block; }
-.sidebar, .main-content { display: block; }
+.sidebar, .main-content, .rightbar { display: block; }
 .navbar-wrapper { width: 100%; }
 .navbar {
 width: 99vw;
@@ -166,8 +175,9 @@ text-align: center;
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy
-<div class="banner-sub">1997-2003 Floppy - Digital</div>
+<div class="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Captured On Floppy
+<div style="text-align: center;" class="banner-sub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1997-2003 Floppy - Digital</div>
 </div>
 <div class="navbar-wrapper"> <nav class="navbar"> <a
 href="/index.html">Home</a>&nbsp; <a href="/gallery.html">Gallery</a>
@@ -183,53 +193,66 @@ class="sidebar">
 src="../images/anybrowser6.gif"><br>
 </div>
 <a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
-class="camera-year">1997</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd7.html">MVC-FD7 <span class="camera-year">1997</span></a>
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd7.html">MVC-FD7 <span
+class="camera-year">1997</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd51.html">MVC-FD51 <span
-class="camera-year">1997</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd71.html">MVC-FD71 <span class="camera-year">1998</span></a>
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd71.html">MVC-FD71 <span
+class="camera-year">1998</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd73.html">MVC-FD73 <span
-class="camera-year">1998</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd75.html">MVC-FD75 <span class="camera-year">1999</span></a>
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd75.html">MVC-FD75 <span
+class="camera-year">1999</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd81.html">MVC-FD81 <span
-class="camera-year">1998</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd83.html">MVC-FD83 <span class="camera-year">1999</span></a>
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd83.html">MVC-FD83 <span
+class="camera-year">1999</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
-class="camera-year">1999</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd87.html">MVC-FD87 <span class="camera-year">2000</span></a>
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd87.html">MVC-FD87 <span
+class="camera-year">2000</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd88.html">MVC-FD88 <span
-class="camera-year">2000</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd90.html">MVC-FD90 <span class="camera-year">2000</span></a>
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd90.html">MVC-FD90 <span
+class="camera-year">2000</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd91.html">MVC-FD91 <span
-class="camera-year">1998</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd92.html">MVC-FD92 <span class="camera-year">1999</span></a>
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd92.html">MVC-FD92 <span
+class="camera-year">1999</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd95.html">MVC-FD95 <span
-class="camera-year">1999</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd97.html">MVC-FD97 <span class="camera-year">1999</span></a>
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd97.html">MVC-FD97 <span
+class="camera-year">1999</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd100.html">MVC-FD100 <span
-class="camera-year">2001</span></a> <a class="camera-btn"
-href="/mavica/mvc-fd200.html">MVC-FD200 <span class="camera-year">2001</span></a>
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd200.html">MVC-FD200 <span
+class="camera-year">2001</span></a>
 <a class="camera-btn" href="/mavica/mvc-prototypes.html">MVC-Prototye
-<span class="camera-year">87/90</span></a> <a class="camera-btn"
-href="/mavica/mvc-slr.html">MVC-Analog <span class="camera-year">90/92</span></a>
+<span class="camera-year">87/90</span></a>
+<a class="camera-btn" href="/mavica/mvc-slr.html">MVC-Analog <span
+class="camera-year">90/92</span></a>
 <a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
-class="camera-year">2000</span></a> <a class="camera-btn"
-href="/mavica/mvc-cd200.html">MVC-CD200 <span class="camera-year">2001</span></a>
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd200.html">MVC-CD200 <span
+class="camera-year">2001</span></a>
 <a class="camera-btn" href="/mavica/mvc-cd300.html">MVC-CD300 <span
-class="camera-year">2001</span></a> <a class="camera-btn"
-href="/mavica/mvc-cd250.html">MVC-CD250 <span class="camera-year">2002</span></a>
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd250.html">MVC-CD250 <span
+class="camera-year">2002</span></a>
 <a class="camera-btn" href="/mavica/mvc-cd400.html">MVC-CD400 <span
-class="camera-year">2002</span></a> <a class="camera-btn"
-href="/mavica/mvc-cd350.html">MVC-CD350 <span class="camera-year">2003</span></a>
+class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd350.html">MVC-CD350 <span
+class="camera-year">2003</span></a>
 <a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
-class="camera-year">2003-end</span></a> <a class="camera-btn"
-href="/mavica/sony-mavica-analog.html">Mavica Analog Series <span
-class="camera-year">1982–1986<br>
+class="camera-year">2003-end</span></a>
+<a class="camera-btn" href="/mavica/sony-mavica-analog.html">Mavica
+Analog Series <span class="camera-year">1982–1986<br>
 <br>
-<a href="/mavica/sony-mavica-analog.html"><img
+</span></a><a href="/mavica/sony-mavica-analog.html"><img
 style="border: 0px solid ; width: 100px; height: 36px;" alt=""
 src="../images/gh-pages-bo.gif"></a><br>
-</span></a> </td>
+</td>
 <!-- Main Content: Centered --> <td class="main-content">
 <h2>Welcome To<br>
 Captured On Floppy<br>
@@ -249,25 +272,24 @@ cellpadding="0" cellspacing="2">
 <tr>
 <td style="vertical-align: top;">
 <p style="color: rgb(255, 255, 0);">For over 35 years, I’ve
-lived and worked as both a professional and
-amateur photographer, my journey beginning in the late 1970s with
-studies in photography, television production, and computer
-programming. The first time I held a Sony Mavica, the satisfying click
-of the shutter and the unmistakable whirr of the floppy drive instantly
-transported me back to the excitement of discovering new technology as
-a kid. These cameras as well as other I own have become companions on
-many adventures, capturing moments both big and small with a charm that
-modern devices can't replicate. </p>
+lived and worked as both a professional and amateur photographer, my
+journey beginning in the late 1970s with studies in photography,
+television production, and computer programming. The first time I held
+a Sony Mavica, the satisfying click of the shutter and the unmistakable
+whirr of the floppy drive instantly transported me back to the
+excitement of discovering new technology as a kid. These cameras as
+well as other I own have become companions on many adventures,
+capturing moments both big and small with a charm that modern devices
+can't replicate. </p>
 <p style="color: rgb(255, 255, 0);">I created Captured On
-Floppy as a personal tribute and resource for
-anyone curious about the world of Sony Mavica cameras. Building this
-site in old-school HTML feels like a return to the web’s early
-days—just as the Mavica brings me back to a simpler time in
-photography. As I grow older, my hope is that others will find
-inspiration, nostalgia, and maybe even their own treasured moments
-here. Whether you’re a fellow enthusiast or just discovering these
-quirky cameras, I invite you to explore, share, and enjoy the legacy of
-the Mavica. <br>
+Floppy as a personal tribute and resource for anyone curious about the
+world of Sony Mavica cameras. Building this site in old-school HTML
+feels like a return to the web’s early days—just as the Mavica brings
+me back to a simpler time in photography. As I grow older, my hope is
+that others will find inspiration, nostalgia, and maybe even their own
+treasured moments here. Whether you’re a fellow enthusiast or just
+discovering these quirky cameras, I invite you to explore, share, and
+enjoy the legacy of the Mavica. <br>
 Just and old schoool programmer, and photographer wanting to leave
 small legacy for Mavica owners.<br>
 Site is HTML to match most coding at the time Mavicas were produced. <br>
@@ -286,9 +308,8 @@ used Google and there AI to do research on the material I could not
 find.&nbsp; However AI did not create the site. Remnence of the old
 sitejet is is in some parts of the code and would take a month to go
 back and remove. <br>
-So in all fairness the site is 95% true HTML
-with a small remenence from when I had MavicaCameras.com as the main
-site.</span><br>
+So in all fairness the site is 95% true HTML with a small remenence
+from when I had MavicaCameras.com as the main site.</span><br>
 </p>
 </td>
 </tr>
@@ -323,6 +344,13 @@ style="color: red; font-weight: bold;">( Site Scheduled Completion
 </tbody>
 </table>
 </td>
+<!-- Right Sidebar: Yellow Boxes Only (no words, no links) -->
+<td class="rightbar"><!-- 26 empty yellow boxes to match camera-btn count in sidebar --> <br>
+<br>
+<br>
+<br>
+test<br>
+</td>
 </tr>
 </tbody>
 </table>
@@ -335,8 +363,9 @@ Photography</a>, and This Old Mavica<br>
 contact: capturedonfloppy (at) Gmail&nbsp;.com<br>
 Do not send attachments, they will not be accepted.<br>
 <br>
-<small></small><img style="width: 88px; height: 31px;" alt=""
+<img style="width: 88px; height: 31px;" alt=""
 src="../images/copyscape.gif"><br>
 </div>
 </body>
 </html>
+
