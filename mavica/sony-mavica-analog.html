@@ -1,434 +1,202 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Captured On Floppy.com</title>
+<title>Mavica — Bridging the Gap</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #fff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
-}
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size:0.5em;
-color:#cce;
-}
-.navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-text-align: center;
-padding: 0.3em 0;
-}
-.navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.main-content {
-background: #fff;
-max-width: 900px;
-margin: 2em auto 2em auto;
-border: 1px solid #b2c3e6;
-border-radius: 8px;
-padding: 2em 2em 2em 2em;
-box-shadow: 0 2px 8px rgba(102,153,204,0.06);
-}
-.photo-section {
-display: flex;
-gap: 32px;
-margin-bottom: 2em;
-flex-wrap: wrap;
-justify-content: flex-start;
-align-items: flex-start;
-}
-.photo-box {
-flex: 1 1 380px;
-max-width: 48%;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1em;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.photo-box img {
-max-width: 100%;
-border: 1px solid #b2c3e6;
-background: #fff;
-margin-bottom: 0.7em;
-width: 100%;
-height: auto;
-}
-.photo-caption {
-font-size: 1em;
-color: #444;
-margin-bottom: 0;
-text-align: center;
-}
-.twocols-4rows {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2em 2em;
-margin-bottom: 2em;
-}
-.twocols-4rows > div {
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.2em 1em;
-min-height: 120px;
-font-size: 1em;
-}
-.onecol-bottom {
-margin-top: 2em;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.5em 1.2em;
-font-size: 1.05em;
-}
-.main-content h1, .main-content h2, .main-content h3 {
-color: #003366;
-margin-top: 1.5em;
-}
-@media (max-width: 650px) {
-.twocols-4rows {
-grid-template-columns: 1fr;
-}
-.photo-section {
-flex-direction: column;
-gap: 12px;
-}
-.photo-box {
-max-width: 100%;
-}
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
+/* Retro V2 (Geocities-like) — black & yellow theme */
+html,body{height:100%;margin:0;padding:0;background:#000;color:#ffff00;font-family:Verdana,Arial,Helvetica,sans-serif;}
+.banner {background:#222;color:#ffff00;padding:1em 0;text-align:center;font-size:2em;border-bottom:4px solid #FF00FF;text-shadow:2px 2px 0 #FF00FF;}
+.banner-sub {font-size:0.85em;color:#FFD700;margin-top:0.25em;}
+.navbar-wrapper {text-align:center;padding:0.6em;background:#111;border-bottom:2px solid #FF00FF;}
+.navbar {display:inline-block;background:#ffff00;color:#000;padding:0.5em 1em;margin:0 0.2em;text-decoration:none;font-weight:bold;border:2px solid #FF00FF;border-radius:8px;}
+.layout-table { width: 1100px; margin: 1.6em auto; border-spacing: 0; border-collapse: separate; display: table; }
+.row { display: table-row; }
+.cell { display: table-cell; vertical-align: top; }
+.sidebar { width: 240px; background:#111; border-right:4px solid #FF00FF; padding:22px 12px; color:#FFFF00; }
+.sidebar-title { text-align:center; font-weight:bold; margin-bottom:12px; font-size:1.1em; text-shadow:2px 2px 0 #FF00FF;}
+.camera-btn { display:block; width:100%; margin:0.35em 0; padding:0.8em 0.6em; background:#FFFF00; color:#000; text-decoration:none; font-weight:bold; border:2px solid #FF00FF; border-radius:8px; box-sizing:border-box; }
+.camera-year { float:right; color:#FF00FF; font-weight:bold; margin-left:8px; }
+.main { background:#222; border-radius:12px; padding:22px; color:#FFFF00; box-shadow:0 0 14px #FFFF00; width:640px; }
+h1,h2,h3 { color:#FFFF00; margin-top:0; text-shadow:1px 1px 0 #FF00FF; }
+.photo-section { display:flex; gap:18px; flex-wrap:wrap; justify-content:flex-start; margin:14px 0; }
+.photo-box { background:#111; padding:10px; border-radius:8px; border:2px solid #FF00FF; max-width:420px; width:100%; text-align:center; }
+.photo-box img { width:100%; height:auto; border-radius:6px; box-shadow:0 0 8px #FFFF00; display:block; }
+.twocols { display:flex; gap:18px; flex-wrap:wrap; margin-top:12px; }
+.col { flex:1 1 300px; background:#111; border:1px solid #FF00FF; padding:12px; border-radius:10px; box-sizing:border-box; }
+.specs { width:100%; border-collapse:collapse; margin-top:8px; color:#FFFF00; }
+.specs th, .specs td { border:1px solid #FF00FF; padding:8px; text-align:left; vertical-align:top; }
+.onecol-bottom { margin-top:16px; background:#111; padding:12px; border-radius:10px; border:1px solid #FF00FF; }
+.rightbar { width:220px; background:#111; border-left:4px solid #FF00FF; padding:22px 12px; color:#FFFF00; }
+a, a:visited { color:#FF00FF; }
+.footer { text-align:center; padding:14px 10px; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:18px; }
+@media (max-width: 1100px) { .layout-table { width: 96%; } .main { width:100%; } }
+@media (max-width: 900px){
+.layout-table { display:block; width:96%; margin:12px auto; }
+.cell { display:block; width:100%; }
+.sidebar, .rightbar { width:100%; margin-bottom:12px; }
+.main { width:100%; }
 }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy<small><small><small>™</small></small></small>️
-<div class="subtitle">Photos Captured On Floppy Drive Cameras Guild
-&amp; Resources</div>
+<div class="banner"> Captured On Floppy
+<div class="banner-sub">Mavica — Bridging the Gap (Analog SLR chapter)</div>
 </div>
-<div style="text-align: center;"><!-- Top Navbar (no dropdowns) -->
-<nav class="navbar"> <a href="/index.html">Home</a> <a
-href="/tech.html">Tech</a> <a href="/gallery.html">Gallery</a>
-<a href="/resources.html">Resources</a></nav></div>
-<nav class="navbar"></nav>
-<div class="main-content">
-<h1 tabindex="-1" class="heading-element"
-style="font-size: 2em; margin-top: 0px ! important; margin-right: 0px; margin-bottom: 16px; margin-left: 0px; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-style: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Mavica
-Bridging the Gap</h1>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top;"><span
-style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">A
-history in how it came to be.<br>
-</span></td>
-</tr>
-</tbody>
-</table>
-<br>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top; text-align: center;"> <a
-style="font-weight: bold;"
+<div class="navbar-wrapper" role="navigation"
+aria-label="Top navigation"> <a class="navbar" href="/index.html">Home</a>
+<a class="navbar" href="/gallery.html">Gallery</a> <a class="navbar"
+href="/resources.html">Resources</a> <a class="navbar"
+href="/tech.html">Tech</a> </div>
+<div class="layout-table" role="main" aria-label="Page layout">
+<div class="row"><!-- Left sidebar: consistent left menu (present, same style as other V2 pages) -->
+<div class="cell sidebar" role="navigation"
+aria-label="Left menu — Sony Mavica models">
+<div class="sidebar-title">Sony Mavica Cameras</div>
+<img
+style="margin: 8px auto 10px; width: 55px; height: 55px; display: block;"
+alt="" src="../mavica/images/mancirlce.gif"> <a class="camera-btn"
+href="/mavica/mvc-fd5.html">MVC-FD5 <span class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd7.html">MVC-FD7 <span
+class="camera-year">1997</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd51.html">MVC-FD51 <span class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd71.html">MVC-FD71 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd73.html">MVC-FD73 <span class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd75.html">MVC-FD75 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd81.html">MVC-FD81 <span class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd83.html">MVC-FD83 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd85.html">MVC-FD85 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd87.html">MVC-FD87 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd88.html">MVC-FD88 <span class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd90.html">MVC-FD90 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd91.html">MVC-FD91 <span class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd92.html">MVC-FD92 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd95.html">MVC-FD95 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd97.html">MVC-FD97 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd100.html">MVC-FD100 <span class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd200.html">MVC-FD200 <span
+class="camera-year">2001</span></a> <a class="camera-btn"
+href="/mavica/mvc-prototypes.html">MVC-Prototypes <span
+class="camera-year">87/90</span></a> <a class="camera-btn"
+href="/mavica/mvc-slr.html">MVC-Analog <span class="camera-year">90/92</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd200.html">MVC-CD200 <span class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd250.html">MVC-CD250 <span
+class="camera-year">2002</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd300.html">MVC-CD300 <span class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd350.html">MVC-CD350 <span
+class="camera-year">2003</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd400.html">MVC-CD400 <span class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
+class="camera-year">2003-end</span></a>
+<div style="text-align: center; margin-top: 12px;"><img
+style="width: 160px; height: 90px;" alt=""
+src="../mavica/images/windows5.gif"></div>
+</div>
+<!-- Main content -->
+<div class="cell main" role="main" aria-label="Main content">
+<h1>Mavica — Bridging the Gap</h1>
+<p style="color: rgb(255, 255, 0); font-weight: bold;">A history in how
+it came to be.</p>
+<div style="margin: 12px 0pt;"> <a class="navbar"
 href="https://www.flickr.com/groups/capturedonfloppy/" target="_blank">Flickr</a>
-<span style="font-weight: bold;">&nbsp; &nbsp;</span> <a
-style="font-weight: bold;"
-href="https://www.instagram.com/capturedonfloppy/">Instagram</a>&nbsp;&nbsp;
-<a style="font-weight: bold;" href="https://x.com/FloppyCameras">Twitter</a>&nbsp;&nbsp;
-<a href="https://www.reddit.com/r/CapturedonFloppy/"><span
-style="text-decoration: underline; font-weight: bold;">Floppy Reddit</span></a>&nbsp;&nbsp;
-<a style="font-weight: bold;"
-href="https://www.youtube.com/@CapturedOnFloppy">Floppy Youtube</a> <a
-href="https://www.floppycameras.com"><span
-style="font-weight: bold; text-decoration: underline;">FloppyCameras.com</span></a><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="photo-section">
-<div class="photo-box"> <img src="images/Mavicaproto.jpg" alt="Photo 1"
-height="240" width="320">
-<p class="photo-caption">[Captured On Floppy]</p>
+<a class="navbar" href="https://www.instagram.com/capturedonfloppy/"
+target="_blank">Instagram</a> <a class="navbar"
+href="https://x.com/FloppyCameras" target="_blank">X</a> </div>
+<div class="photo-section" aria-label="Photos">
+<div class="photo-box"> <img src="images/Mavicaproto.jpg"
+alt="Mavica prototype">
+<div style="color: rgb(255, 215, 0); margin-top: 8px;">[Captured On
+Floppy]</div>
 </div>
-<div class="photo-box"> <img src="images/C1.png" alt="Photo 2"
-height="240" width="320">
-<p class="photo-caption">[Captured On Floppy]</p>
+<div class="photo-box"> <img src="images/C1.png"
+alt="Mavica SLR illustration">
+<div style="color: rgb(255, 215, 0); margin-top: 8px;">[Captured On
+Floppy]</div>
 </div>
 </div>
-<div class="twocols-4rows">
-<div><br>
-<div class="markdown-heading"
-style="position: relative; margin-top: 0px ! important; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h1 tabindex="-1" class="heading-element"
-style="font-size: 2em; margin-top: 0px ! important; margin-right: 0px; margin-bottom: 16px; margin-left: 0px; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em;">Bridging
-the Gap: How the SLR Was a Key Chapter in the Mavica Analog Series</h1>
-<a
-id="user-content-bridging-the-gap-how-the-slr-was-a-key-chapter-in-the-mavica-analog-series"
-class="anchor"
-aria-label="Permalink: Bridging the Gap: How the SLR Was a Key Chapter in the Mavica Analog Series"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#bridging-the-gap-how-the-slr-was-a-key-chapter-in-the-mavica-analog-series"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 45.2969px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em;">Introduction</h2>
-<a id="user-content-introduction" class="anchor"
-aria-label="Permalink: Introduction"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#introduction"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">The
-Sony Mavica line is celebrated for reshaping the landscape of consumer
-and professional photography, taking cameras from film to floppy disk,
-and eventually to CD-based digital capture. While the Mavica name is
-most closely associated with floppy disk (FD) and CD-based digital
-cameras, the story truly begins in the analog era—with a visionary
-series of electronic still video cameras. One of the most fascinating
-and underappreciated chapters in this journey was the Mavica SLR: a
-bridge between traditional photography and the coming digital
-revolution.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em;">The
-Mavica Analog Series: A Foundation of Innovation</h2>
-<a id="user-content-the-mavica-analog-series-a-foundation-of-innovation"
-class="anchor"
-aria-label="Permalink: The Mavica Analog Series: A Foundation of Innovation"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#the-mavica-analog-series-a-foundation-of-innovation"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Launched
-in the late 1980s, the original Mavica (Magnetic Video Camera) models
-were not digital as we think of them today. Instead, they recorded
-analog still images onto tiny 2-inch video floppy disks, producing
-images that could be played back on a television or special video
-printer. These cameras were a revelation—offering instant playback and
-electronic storage at a time when film development was still the norm.</p>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">The
-early Mavica analog models, such as the MVC-A7AF, were built for
-accessibility and ease of use, featuring fixed or zoom lenses and
-point-and-shoot simplicity. They were quickly adopted by news agencies,
-businesses, and technology enthusiasts who needed fast turnaround and
-electronic transfer of images.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em;">Enter
-the SLR: The Professional’s Mavica</h2>
-<a id="user-content-enter-the-slr-the-professionals-mavica"
-class="anchor"
-aria-label="Permalink: Enter the SLR: The Professional’s Mavica"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#enter-the-slr-the-professionals-mavica"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Recognizing
-the needs of more advanced users, Sony developed the MVC-SLR series in
-the early 1990s. These models were true single-lens reflex (SLR)
-cameras, featuring interchangeable lenses, optical viewfinders with
-moving mirrors, and full manual controls—just like professional 35mm
-film cameras of the era. Yet, they still recorded analog still video
-images to the familiar video floppy disk.</p>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">The
-SLR Mavicas offered photographers the creative flexibility, optical
-quality, and handling of a professional camera, while introducing them
-to a workflow built around electronic imaging. For photojournalists and
-serious enthusiasts, this was a game-changer: you could shoot with your
-favorite glass, control every aspect of exposure, and still have your
-images instantly available for broadcast or print.</p>
-<br>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0% 50%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;"><br>
-<p><br>
-</p>
-</div>
-<div>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em;">A
-Bridge to the Future: From Analog to Digital</h2>
-<a id="user-content-a-bridge-to-the-future-from-analog-to-digital"
-class="anchor"
-aria-label="Permalink: A Bridge to the Future: From Analog to Digital"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#a-bridge-to-the-future-from-analog-to-digital"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">The
-Mavica SLR was more than just a technical curiosity—it was a crucial
-link between the old and new worlds of photography. By combining
-trusted SLR ergonomics and lens systems with Sony’s pioneering
-electronic storage, the SLR models eased the transition for
-professionals wary of abandoning film. They demonstrated that
-electronic imaging could meet the demands of serious photography,
-paving the way for the digital SLRs that would dominate the market in
-the decades to come.</p>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">As
-digital sensor technology matured, Sony shifted the Mavica line toward
-fully digital capture. The iconic FD (floppy disk) Mavicas of the
-mid-to-late 1990s brought digital imaging to the masses, using the
-ubiquitous 3.5" floppy for storage. These were followed by the CD
-Mavicas, which further increased capacity and convenience with mini
-CD-R and CD-RW discs.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em;">Legacy:
-The SLR’s Lasting Impact</h2>
-<a id="user-content-legacy-the-slrs-lasting-impact" class="anchor"
-aria-label="Permalink: Legacy: The SLR’s Lasting Impact"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#legacy-the-slrs-lasting-impact"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">The
-Mavica SLR models are now rare collector’s items, remembered for their
-bold attempt to fuse the best of both analog and digital technologies.
-Their influence, however, is undeniable. They proved that professionals
-could embrace new workflows without sacrificing control or
-quality—lessons that shaped not only the later Mavica FD and CD series,
-but the entire digital camera industry.</p>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">In
-retrospect, the SLR chapter of the Mavica Analog Series was a crucial
-stepping stone. It bridged the gap between film and digital, serving as
-both a technological testbed and a transition tool for photographers
-around the world. The innovations embodied by the SLR Mavicas live on
-in every digital SLR and mirrorless camera today.</p>
-<br class="Apple-interchange-newline">
-</div>
-</div>
-<div class="onecol-bottom">
-<h2>My Opinion On My Article Making It Clear.<br>
+<div class="twocols" role="region" aria-label="Article content">
+<div class="col">
+<h2>Introduction<br>
+I do not own these. Nor do I have access to one. Thi sis information I
+have found and may or may not be complete.<br>
 </h2>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: italic; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><big>The
-article "Bridging the Gap: How the SLR Was a Key Chapter in the Mavica
-Analog Series" is a overview of a lesser-known, but critically
-important, moment in camera history. The Sony Mavica SLR models—not as
-isolated oddities, but as pivotal bridges between the world of
-film-based SLRs and the digital cameras that would soon dominate
-photography. By highlighting how these models combined classic SLR
-ergonomics and lens compatibility with groundbreaking electronic
-storage, I hope the article conveys the innovative spirit that has
-always characterized Sony and the Mavica brand.</big></p>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: italic; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><big>Mavica
-technology responded to changing user needs—from point-and-shoot
-simplicity for general consumers to the advanced creative control
-required by professionals. The SLR’s influence on later Mavica FD and
-CD models, and on digital camera design as a whole, is particularly
-important. I hope It’s refreshing to see the SLR Mavicas given credit
-for their transitional role, rather than being dismissed as
-technological curiosities.</big></p>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: italic; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><big>The
-SLR Mavicas. By connecting these cameras to the eventual rise of
-digital SLRs and mirrorless systems, it places them within a longer,
-meaningful lineage of photographic innovation. And also serves as an
-excellent primer for collectors and camera historians, underlining the
-importance of experimentation and hybrid thinking in technological
-progress.</big></p>
-<p
-style="margin-top: 0px; margin-bottom: 0px ! important; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: italic; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><big>In
-conclusion, I hope this article not only fills a gap in the historical
-record for you, but also celebrates the bold engineering that defined
-Sony’s approach to camera development. It reminds us that photography’s
-evolution was not a straight line, but a series of creative leaps—and
-that the SLR chapter of the Mavica story was one of its most important
-bridges.</big></p>
-<br>
+<p style="color: rgb(255, 255, 0);"> The Sony Mavica line reshaped
+consumer and professional photography, moving from film to electronic
+still video and later to digital capture. The Mavica SLR series was a
+key transitional chapter that connected traditional SLR ergonomics and
+optics with electronic storage workflows. </p>
+<h3>The Mavica Analog Series</h3>
+<p style="color: rgb(255, 255, 0);"> Launched in the late 1980s, early
+Mavica models recorded analog still images onto small video floppy
+disks. Models such as the MVC‑A7AF offered instant playback and
+electronic storage, quickly adopted by newsrooms and businesses needing
+rapid turnaround and electronic transfer. </p>
+<h3>Enter the SLR</h3>
+<p style="color: rgb(255, 255, 0);"> In the early 1990s Sony produced
+the MVC‑SLR series: single-lens reflex bodies with interchangeable
+lenses, optical viewfinders and full manual control, while still
+recording to video floppy media. These SLR Mavicas provided
+professionals familiar handling and creative flexibility alongside an
+electronic workflow. </p>
+</div>
+<div class="col">
+<h2>A Bridge to the Future</h2>
+<p style="color: rgb(255, 255, 0);"> The SLR Mavicas demonstrated that
+electronic imaging could meet professional demands. As sensor
+technology advanced, Sony shifted the Mavica line toward fully digital
+capture: FD (floppy) Mavicas brought digital imaging to many users,
+followed by CD-based models that increased storage capacity. </p>
+<h3>Legacy: The SLR’s Impact</h3>
+<p style="color: rgb(255, 255, 0);"> The SLR Mavicas are now rare and
+collectible. They proved professionals could adopt electronic workflows
+without sacrificing control or quality. Lessons from the analog SLR
+chapter influenced later Mavica FD and CD models and helped shape the
+broader digital camera industry. </p>
+<h3>References &amp; Resources</h3>
+<ul style="color: rgb(255, 255, 0);">
+<li><a href="https://www.sony.com/">Sony archives</a></li>
+<li><a href="https://www.floppycameras.com">FloppyCameras.com</a></li>
+<li><a href="https://www.flickr.com/groups/capturedonfloppy/">Captured
+On Floppy Flickr group</a></li>
+</ul>
 </div>
 </div>
-<div style="text-align: center;"><!-- Example of a self-hosted image -->
-<img style="width: 177px; height: 177px;" src="images/logopage1.jpg"
-alt="Captured On Floppy Logo">
-<table
-style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;"
-border="1" cellpadding="2" cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top; text-align: center;"> This site
-is 100% designed in
-1990's HTML technology. Hand Built HTML Website by <a
-style="font-weight: bold;" href="https://paulcordell.com/">Paul
-Cordell Photography</a> keeping it Classic.<br>
-</td>
-</tr>
-</tbody>
-</table>
-<footer><br>
-<br>
-© 1998-2025 Mavica Camera Club / Captured On Floppy™️ • All
-rights reserved.<br>
-<br>
-<br>
-</footer></div>
+<div class="onecol-bottom" role="region" aria-label="Manual">
+<h3>Manual</h3>
+<p><a
+href="https://www.sony.com/electronics/support/res/manuals/W000/W0007197M.pdf"
+target="_blank" rel="noopener">Download official Sony manual (PDF)</a></p>
+</div>
+</div>
+<!-- Optional rightbar kept minimal for layout parity (can be removed if not needed) -->
+<div class="cell rightbar" role="complementary"
+aria-label="Right column">
+<div style="text-align: center; margin-bottom: 14px;"><img
+src="../mavica/images/acroPIM.gif" alt=""
+style="width: 120px; height: 60px;"></div>
+<div style="margin-top: 8px;"><a class="camera-btn"
+href="/mavica/mvc-prototypes.html"
+style="padding: 0.6em; display: block;">Prototypes</a></div>
+<div style="margin-top: 8px;"><a class="camera-btn"
+href="/mavica/mvc-slr.html" style="padding: 0.6em; display: block;">Analog
+SLR Index</a></div>
+</div>
+</div>
+</div>
+<div class="footer" role="contentinfo"> © 1998-2025 Mavica Camera Club
+/ Captured On Floppy™ • All rights reserved.
+<div style="margin-top: 6px; color: rgb(255, 215, 0);">Hand-built retro
+layout</div>
+</div>
 </body>
 </html>
