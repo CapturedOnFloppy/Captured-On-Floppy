@@ -1,757 +1,375 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Captured On Floppy.com</title>
+<title>Sony Mavica MVC-FD95</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #fff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
+body { background: #000; color: #ffff00; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; margin: 0; padding: 0; }
+.banner { background: #222; color: #ffff00; padding: 1em 0 0.4em 0; text-align: center; font-size: 2em; font-family: Arial, Helvetica, sans-serif; letter-spacing: 0.07em; border-bottom: 4px solid #FF00FF; text-shadow: 2px 2px 0 #FF00FF; }
+.banner-sub { font-size: 0.7em; color: #FFD700; margin-bottom: 0.3em; }
+.navbar-wrapper { width: 100%; text-align: center; margin: 0 auto; }
+.navbar { background: #111; border-bottom: 2px solid #FF00FF; font-size: 1.1em; font-family: Verdana, Arial, Helvetica, sans-serif; padding: 0.3em 0; display: inline-block; text-align: center; }
+.navbar a { color: #000; background: #ffff00; text-decoration: none; padding: 0.7em 2em; margin: 0 0.2em; font-weight: bold; border: 2px solid #FF00FF; border-radius: 7px; transition: none; display: inline-block; }
+.navbar a:hover, .navbar a:focus { background: #ffff00; color: #000; text-decoration: underline; border-color: #FF00FF; }
+.layout-table { width: 1100px; margin: 2em auto; border-spacing: 0; border-collapse: separate; }
+.sidebar { background: #111; border-right: 4px solid #FF00FF; padding: 2.2em 1em 2em 1em; width: 220px; min-width: 160px; vertical-align: top; text-align: left; }
+.sidebar-title { font-weight: bold; color: #FFFF00; margin-bottom: 1.2em; font-size: 1.25em; text-align: center; text-shadow: 2px 2px 0 #FF00FF; letter-spacing: 2px; }
+.camera-btn { display: block; width: 90%; margin: 0.4em auto 0.4em auto; padding: 0.9em 0.7em; background: #FFFF00; color: #000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 1em; font-weight: bold; border: 2px outset #FF00FF; border-radius: 10px; cursor: pointer; box-shadow: 2px 2px 6px #222; transition: none; text-align: left; text-decoration: none; height: 48px; }
+.camera-btn:hover { background: #FFFF00; color: #000; border-color: #FF00FF; }
+.camera-year { color: #FF00FF; font-size: 0.96em; margin-left: 0.7em; font-weight: bold; }
+.rightbar { background: #111; border-left: 4px solid #FF00FF; padding: 2.2em 1em 2em 1em; width: 220px; min-width: 160px; vertical-align: top; text-align: left; }
+.main-content { background: #222; border-radius: 16px; box-shadow: 0 0 15px #FFFF00; min-height: 400px; font-size: 1.08em; vertical-align: top; color: #FFFF00; padding: 2.7em 2.5em; width: 100%; max-width: 740px; margin: auto; }
+h2 { color: #FFFF00; text-align: center; text-shadow: 2px 2px 0 #FF00FF;}
+a, a:visited { color: #FF00FF; }
+a:hover { color: #FFFF00; }
+.spec-list { color: #FFFF00; font-size: 1.08em; margin: 1.5em 0 1.5em 2em;}
+.footer { background: #111; color: #FF00FF; text-align: center; font-size: 0.95em; padding: 1em 0 1.5em 0; margin-top: 2em; border-top: 2px solid #FFFF00; }
+img { border-radius: 8px; border: 2px solid #FF00FF; margin: 12px 0; box-shadow: 0 0 10px #FFFF00; }
+@media (max-width: 1200px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content, .rightbar { font-size: 0.97em; padding: 1em; }
+.main-content { max-width: 98vw; }
 }
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size:0.5em;
-color:#cce;
-}
+@media (max-width: 850px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content, .rightbar { width: 100% !important; }
+.layout-table { display: block; }
+.sidebar, .main-content, .rightbar { display: block; }
+.navbar-wrapper { width: 100%; }
 .navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
+width: 99vw;
+display: block;
 text-align: center;
-padding: 0.3em 0;
+padding: 0.7em 0;
 }
 .navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.main-content {
-background: #fff;
-max-width: 900px;
-margin: 2em auto 2em auto;
-border: 1px solid #b2c3e6;
-border-radius: 8px;
-padding: 2em 2em 2em 2em;
-box-shadow: 0 2px 8px rgba(102,153,204,0.06);
-}
-.photo-section {
-display: flex;
-gap: 32px;
-margin-bottom: 2em;
-flex-wrap: wrap;
-justify-content: flex-start;
-align-items: flex-start;
-}
-.photo-box {
-flex: 1 1 380px;
-max-width: 48%;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1em;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.photo-box img {
-max-width: 100%;
-border: 1px solid #b2c3e6;
-background: #fff;
-margin-bottom: 0.7em;
-width: 100%;
-height: auto;
-}
-.photo-caption {
-font-size: 1em;
-color: #444;
-margin-bottom: 0;
+margin: 0.3em 0;
+width: 90vw;
 text-align: center;
 }
-.twocols-4rows {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2em 2em;
-margin-bottom: 2em;
-}
-.twocols-4rows > div {
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.2em 1em;
-min-height: 120px;
-font-size: 1em;
-}
-.onecol-bottom {
-margin-top: 2em;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.5em 1.2em;
-font-size: 1.05em;
-}
-.main-content h1, .main-content h2, .main-content h3 {
-color: #003366;
-margin-top: 1.5em;
-}
-@media (max-width: 650px) {
-.twocols-4rows {
-grid-template-columns: 1fr;
-}
-.photo-section {
-flex-direction: column;
-gap: 12px;
-}
-.photo-box {
-max-width: 100%;
-}
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
 }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy<small><small><small>™</small></small></small>️
-<div class="subtitle">Photos Captured On Floppy Drive Cameras Guild
-&amp; Resources</div>
-</div>
-<div style="text-align: center;"><!-- Top Navbar (no dropdowns) -->
-<nav class="navbar"> <a href="/index.html">Home</a> <a
-href="/tech.html">Tech</a> <a href="/gallery.html">Gallery</a>
-<a href="/resources.html">Resources</a></nav></div>
-<nav class="navbar"></nav>
-<div class="main-content">
-<h1>Mavica FD95<br>
-</h1>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top;"><span
-style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">Resolution
-Technical 1.2 MP</span></td>
-</tr>
-</tbody>
-</table>
 <br>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
+<div class="banner">Captured On Floppy
+<div class="banner-sub">Sony Mavica MVC-FD95 (1999)</div>
+</div>
+<div class="navbar-wrapper"> <nav class="navbar"> <a
+href="/index.html">Home</a> <a href="/gallery.html">Gallery</a> <a
+href="/resources.html">Resources</a> <a href="/forums.html">Stash</a>
+<a href="../FieldNotes/FieldNotes.html">Field Notes</a> </nav> </div>
+<table class="layout-table">
 <tbody>
 <tr>
-<td style="vertical-align: top; text-align: center;"> <a
-style="font-weight: bold;"
-href="https://www.flickr.com/groups/capturedonfloppy/" target="_blank">Flickr</a>
-<span style="font-weight: bold;">&nbsp; &nbsp;</span> <a
-style="font-weight: bold;"
-href="https://www.instagram.com/capturedonfloppy/">Instagram</a>&nbsp;&nbsp;
-<a style="font-weight: bold;" href="https://x.com/FloppyCameras">Twitter</a>&nbsp;&nbsp;
-<a href="https://www.reddit.com/r/CapturedonFloppy/"><span
-style="text-decoration: underline; font-weight: bold;">Floppy Reddit</span></a>&nbsp;&nbsp;
-<a style="font-weight: bold;"
-href="https://www.youtube.com/@CapturedOnFloppy">Floppy Youtube</a> <a
-href="https://www.floppycameras.com"><span
-style="font-weight: bold; text-decoration: underline;">FloppyCameras.com</span></a><br>
+<td class="sidebar">
+<div class="sidebar-title">Sony Mavica Cameras<br>
+<img style="width: 55px; height: 55px;" alt=""
+src="../mavica/images/mancirlce.gif"><br>
+</div>
+<a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd7.html">MVC-FD7 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd51.html">MVC-FD51 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd71.html">MVC-FD71 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd73.html">MVC-FD73 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd75.html">MVC-FD75 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd81.html">MVC-FD81 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd83.html">MVC-FD83 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd87.html">MVC-FD87 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd88.html">MVC-FD88 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd90.html">MVC-FD90 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd91.html">MVC-FD91 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd92.html">MVC-FD92 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd95.html">MVC-FD95 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd97.html">MVC-FD97 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd100.html">MVC-FD100 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd200.html">MVC-FD200 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-prototypes.html">MVC-Prototye
+<span class="camera-year">87/90</span></a>
+<a class="camera-btn" href="/mavica/mvc-slr.html">MVC-Analog <span
+class="camera-year">90/92</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd200.html">MVC-CD200 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd300.html">MVC-CD300 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd250.html">MVC-CD250 <span
+class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd400.html">MVC-CD400 <span
+class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd350.html">MVC-CD350 <span
+class="camera-year">2003</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
+class="camera-year">2003-end</span></a>
+<a class="camera-btn" href="/mavica/sony-mavica-analog.html">Mavica
+Analog Series <span class="camera-year">1982–1986</span></a>
+<div style="text-align: center;"><img
+style="width: 217px; height: 125px;" alt=""
+src="../mavica/images/windows5.gif"><br>
+</div>
 </td>
-<td style="vertical-align: top;"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="photo-section">
-<div class="photo-box"> <img src="images/fd95f.jpg" alt="Photo 1"
-height="240" width="320">
-<p class="photo-caption">[Captured On Floppy]</p>
-</div>
-<div class="photo-box"> <img src="images/fd95r.jpg" alt="Photo 2"
-height="240" width="320">
-<p class="photo-caption">[Captured On Floppy]</p>
-</div>
-</div>
-<div class="twocols-4rows">
-<div>
-<div class="markdown-heading"
-style="position: relative; margin-top: 0px ! important; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="margin-top: 0px ! important; margin-bottom: 16px; font-size: 1.5em; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em;">Sony
-Mavica MVC-FD95: Full Details</h2>
-<a id="user-content-sony-mavica-mvc-fd95-full-details" class="anchor"
-aria-label="Permalink: Sony Mavica MVC-FD95: Full Details"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#sony-mavica-mvc-fd95-full-details"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h3 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; font-weight: 600; line-height: 1.25;">Historical
-Context</h3>
-<a id="user-content-historical-context" class="anchor"
-aria-label="Permalink: Historical Context"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#historical-context"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 12.5px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><strong
-style="font-weight: 600;">Release Date:</strong><span>&nbsp;</span>2000<br
-style="">
-<strong style="font-weight: 600;">Lineage:</strong><span>&nbsp;</span>The
-FD95 was the most advanced Mavica model to use 3.5" floppy disks,
-released alongside the FD85, FD87, and FD92. It marked the peak of the
-classic floppy Mavica era and was among the first to offer true hybrid
-storage with Memory Stick support, as well as professional-focused
-features like a hot shoe for external flash.<br style="">
-<strong style="font-weight: 600;">Market Position:</strong><span>&nbsp;</span>Targeted
-at advanced users, educators, and business professionals who wanted the
-highest resolution, greatest zoom, and flexibility to use both floppy
-disks and solid-state memory.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h3 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; font-weight: 600; line-height: 1.25;">Key
-Features &amp; Specifications</h3>
-<a id="user-content-key-features--specifications" class="anchor"
-aria-label="Permalink: Key Features &amp; Specifications"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#key-features--specifications"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 12.5px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<markdown-accessiblity-table data-catalyst=""
-style="display: block; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"></markdown-accessiblity-table>
-<table
-style="overflow: auto; border-spacing: 0px; border-collapse: collapse; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; font-weight: 600;">Feature</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; font-weight: 600;">Details</th>
-</tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Image
-Sensor</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">1/2.7-inch
-CCD, 2.1 megapixels (1600 x 1200 pixels)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Lens</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">10x
-optical zoom, 8–80mm f/2.8–3.5 (39–390mm 35mm equiv.)</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Digital
-Zoom</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">2x
-(up to 20x total with optical)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Macro</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Dedicated
-macro switch for close-ups (approx. 5cm)</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Storage</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">3.5"
-1.44MB floppy disk (standard PC format)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Memory
-Stick</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Supported
-via internal slot (no adapter required)</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Image
-Format</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">JPEG
-(Fine/Standard), BMP (uncompressed, rarely used)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Shots
-per Disk</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">3–10
-(JPEG, depending on compression/quality)</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Shots
-per Memory Stick</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">128MB
-stick: ~80–400 shots (depending on quality)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Movie
-Mode</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">MPEG-EX
-(Memory Stick only; not available on floppy)</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">LCD
-Display</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">2.5"
-TFT color LCD</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Viewfinder</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Electronic
-(color), not optical</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Battery</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Sony
-NP-F330/530/550 InfoLithium (Li-Ion)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">AC
-Adapter</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Optional,
-AC-L10</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Flash</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Built-in,
-automatic pop-up; hot shoe for external flash</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Self
-Timer</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(10 seconds)</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">White
-Balance</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Auto,
-Indoor, Outdoor, One Push</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Exposure
-Control</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">+/-
-1.5 EV, 0.5 step increments</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Connectivity</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Video
-out (NTSC/PAL), DC in, multi-terminal</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Dimensions</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Approx.
-141 x 103 x 70 mm</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Weight</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Approx.
-650g (without battery/floppy)</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Software</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Sony
-PictureGear for Windows</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Release
-Price</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">~$900–$1,000
-USD</td>
-</tr>
-</tbody>
-</table>
-<p><br>
+<td class="main-content">
+<h2>Sony Mavica MVC-FD95<br>
+<img style="width: 100px; height: 100px;" alt=""
+src="../mavica/images/march.gif"><br>
+</h2>
+<p> <strong>About the FD95:</strong><br>
+The Sony MVC-FD95 is a professional-grade member of the Mavica line,
+using 3.5" floppy disks for digital photo storage. The FD95 is notable
+for its high-resolution imaging, powerful zoom lens, and advanced
+manual controls for creative photography. All specifications and
+features are taken from the <a
+href="https://www.sony.com/electronics/support/res/manuals/W000/W0007232M.pdf"
+target="_blank">official Sony MVC-FD95 manual</a>.
 </p>
-</div>
-<div>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h3 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; font-weight: 600; line-height: 1.25;">Detailed
-Features</h3>
-<a id="user-content-detailed-features" class="anchor"
-aria-label="Permalink: Detailed Features"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#detailed-features"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 12.5px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h4 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1em; font-weight: 600; line-height: 1.25;">1.
-Sensor &amp; Image Quality</h4>
-<a id="user-content-1-sensor--image-quality" class="anchor"
-aria-label="Permalink: 1. Sensor &amp; Image Quality"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#1-sensor--image-quality"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 10px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">2.1
-Megapixels: 1600 x 1200 resolution, a substantial upgrade over previous
-models, suitable for prints up to 8x10" and flexible cropping.<br
-style="">
-JPEG Compression: “Fine” and “Standard” settings; only a handful of
-images per floppy at highest quality.<br style="">
-BMP Option: For uncompressed images.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h4 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1em; font-weight: 600; line-height: 1.25;">2.
-Lens &amp; Zoom</h4>
-<a id="user-content-2-lens--zoom" class="anchor"
-aria-label="Permalink: 2. Lens &amp; Zoom"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#2-lens--zoom"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 10px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">10x
-Optical Zoom: 39–390mm (35mm equivalent), outstanding for both wide and
-telephoto needs.<br style="">
-Aperture: f/2.8 (wide) to f/3.5 (tele), good for varied lighting.<br
-style="">
-Macro Mode: For crisp close-ups (approx. 5cm).</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h4 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1em; font-weight: 600; line-height: 1.25;">3.
-Storage &amp; Transfer</h4>
-<a id="user-content-3-storage--transfer" class="anchor"
-aria-label="Permalink: 3. Storage &amp; Transfer"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#3-storage--transfer"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 10px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Hybrid
-Storage: Uses both 3.5" floppies and Sony Memory Stick (internal slot,
-no adapter required).<br style="">
-Memory Stick: Enables much higher capacity, faster shooting, and video
-capture (MPEG-EX, Memory Stick only).<br style="">
-Floppy: Instant compatibility with most PCs, but limited capacity and
-slower write speed.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h4 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1em; font-weight: 600; line-height: 1.25;">4.
-Display &amp; Controls</h4>
-<a id="user-content-4-display--controls" class="anchor"
-aria-label="Permalink: 4. Display &amp; Controls"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#4-display--controls"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 10px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">LCD:
-2.5" color screen for composing and reviewing images.<br style="">
-Electronic Viewfinder: Color display, useful in bright environments and
-for saving battery.<br style="">
-Menu System: Icon-based with options for white balance, exposure, and
-media management.<br style="">
-Playback: Review, delete, and protect images.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h4 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1em; font-weight: 600; line-height: 1.25;">5.
-Battery &amp; Power</h4>
-<a id="user-content-5-battery--power" class="anchor"
-aria-label="Permalink: 5. Battery &amp; Power"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#5-battery--power"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 10px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">InfoLithium
-Batteries: Long-lasting, shared across Sony devices.<br style="">
-AC Adapter: For continuous or studio use.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h4 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1em; font-weight: 600; line-height: 1.25;">6.
-Flash &amp; Output</h4>
-<a id="user-content-6-flash--output" class="anchor"
-aria-label="Permalink: 6. Flash &amp; Output"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#6-flash--output"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 10px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Pop-up
-Flash: Automatic, with red-eye reduction.<br style="">
-Hot Shoe: Supports external flash units for professional lighting
-control.<br style="">
-Video Out: NTSC/PAL for TV or projector viewing.<br style="">
-Multi-Terminal: For accessories and data.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h4 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1em; font-weight: 600; line-height: 1.25;">7.
-Other Features</h4>
-<a id="user-content-7-other-features" class="anchor"
-aria-label="Permalink: 7. Other Features"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#7-other-features"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 10px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Self
-Timer: 10 seconds.<br style="">
-White Balance: Auto, Indoor, Outdoor, and One Push for custom color
-tuning.<br style="">
-Exposure Compensation: +/- 1.5 EV, 0.5 steps.<br style="">
-Movie Mode: MPEG-EX (with Memory Stick only, not available when using
-floppies).</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h3 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; font-weight: 600; line-height: 1.25;">User
-Experience</h3>
-<a id="user-content-user-experience" class="anchor"
-aria-label="Permalink: User Experience"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#user-experience"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 12.5px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Image
-Quality: A major leap for the Mavica line, making the FD95 suitable for
-serious photography, documentation, and printing.<br style="">
-Storage Flexibility: Hybrid design allowed users to shoot on floppy for
-convenience or Memory Stick for capacity, speed, and video.<br style="">
-Zoom Power: 10x zoom lens was versatile for events, travel, wildlife,
-or close-ups.<br style="">
-Speed: Floppy write times were slow, but Memory Stick allowed much
-faster shooting and video capture.<br style="">
-Portability: Bulkier and heavier due to lens and media bay, but
-manageable for serious use and provides stability for telephoto work.<br
-style="">
-Reliability: Solid build; floppy disks and memory sticks needed careful
-handling.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h3 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; font-weight: 600; line-height: 1.25;">Legacy
-&amp; Impact</h3>
-<a id="user-content-legacy--impact" class="anchor"
-aria-label="Permalink: Legacy &amp; Impact"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#legacy--impact"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 12.5px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">High
-Point of Floppy Mavicas: The FD95 marked the ultimate evolution of
-floppy-based Mavicas and the transition to solid-state memory in
-consumer digital cameras.<br style="">
-Hybrid Pioneer: One of the first mainstream cameras to support both
-floppy and Memory Stick, setting a pattern for future Sony products.<br
-style="">
-Collector Value: Highly regarded by collectors as the most advanced and
-versatile of the floppy-based Mavicas.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h3 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; font-weight: 600; line-height: 1.25;">Comparison
-to Other Mavica Models</h3>
-<a id="user-content-comparison-to-other-mavica-models" class="anchor"
-aria-label="Permalink: Comparison to Other Mavica Models"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#comparison-to-other-mavica-models"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 12.5px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<p
-style="margin-top: 0px; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">FD85/FD87:
-1.3MP, 3x/6x zoom, Memory Stick via adapter (not internal slot), no
-MPEG-EX video.<br style="">
-FD88/FD91: 1.2MP/0.8MP, 14x zoom, floppy-only, lower resolution.<br
-style="">
-FD92: 2.1MP, 8x zoom, hybrid storage, smaller body, fewer pro controls.<br
-style="">
-FD200: 2.1MP+, CD-R and Memory Stick storage, successor to FD95.<br
-style="">
-FD73/FD75: VGA models, much lower resolution, more shots per floppy, no
-Memory Stick support.</p>
-<div class="markdown-heading"
-style="position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<h3 tabindex="-1" class="heading-element"
-style="margin-top: 24px; margin-bottom: 16px; font-size: 1.25em; font-weight: 600; line-height: 1.25;">Trivia
-&amp; Notes</h3>
-<a id="user-content-trivia--notes" class="anchor"
-aria-label="Permalink: Trivia &amp; Notes"
-href="https://github.com/copilot/c/34a42323-388d-46f5-923b-d290d5231ca5#trivia--notes"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 12.5px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" version="1.1"
-width="16" height="16" aria-hidden="true"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<ul
-style="padding-left: 2em; margin-top: 0px; margin-bottom: 0px ! important; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);">
-<li style="">The FD95’s hot shoe for external flash was unique among
-consumer Mavicas, making it a favorite for serious photographers.</li>
-<li style="margin-top: 0.25em;">Hybrid storage made it extremely
-flexible—users could instantly transfer a few images via floppy or
-shoot hundreds of high-res photos and videos on Memory Stick.</li>
-<li style="margin-top: 0.25em;">MPEG-EX movie mode was only available
-with Memory Stick, not floppy.</li>
-<li style="margin-top: 0.25em;">The FD95 is a favorite among
-collectors for its blend of “old” and “new” digital camera technology.</li>
+<img src="images/mvc-fd95.jpg" alt="Sony Mavica FD95 camera"
+width="220">
+<div class="spec-list"><b>Recording medium:</b> 3.5" floppy disk
+(2HD, 1.44 MB)<br>
+<b>Picture element:</b> 1600 × 1200 pixels (High), 1024 × 768
+pixels (Standard), 640 × 480 pixels (Economy)<br>
+<b>Image file type:</b> JPEG<br>
+<b>Lens:</b> Sony lens, f=8.0 – 64 mm, F2.8 – 3.0 (8x optical
+zoom)<br>
+<b>LCD monitor:</b> 2.5-inch, TFT color<br>
+<b>Viewfinder:</b> Real-image type<br>
+<b>Battery:</b> Sony InfoLithium battery pack NP-F550/NP-F330<br>
+<b>Dimensions:</b> Approx. 162 × 112 × 160 mm (W × H × D)<br>
+<b>Mass:</b> Approx. 880 g (camera only)<br>
+<b>Other features:</b>
+<ul>
+<li>Self-timer function</li>
+<li>Date/time recording</li>
+<li>Automatic white balance</li>
+<li>Built-in flash</li>
+<li>Video output (NTSC/PAL selectable)</li>
+<li>Serial interface (RS-232C for PC connection)</li>
+<li>Program AE (auto exposure)</li>
+<li>Red-eye reduction</li>
+<li>Spot metering</li>
+<li>Macro mode</li>
+<li>8x optical zoom</li>
+<li>Continuous shooting mode</li>
+<li>Quick review</li>
+<li>Auto power off</li>
+<li>High-resolution mode (1600 × 1200 pixels)</li>
+<li>Standard-resolution mode (1024 × 768 pixels)</li>
+<li>Economy-resolution mode (640 × 480 pixels)</li>
+<li>Manual focus</li>
+<li>Manual exposure</li>
+<li>AE lock</li>
+<li>Custom white balance</li>
 </ul>
 </div>
-</div>
-<div class="onecol-bottom">
-<h2>Manual &amp; My Opinion</h2>
 <p> <a
 href="https://www.sony.com/electronics/support/res/manuals/W000/W0007232M.pdf"
-target="_blank"><strong>Download the
-official manual (PDF)</strong></a> </p>
-<p> <strong>My Opinion:</strong><br>
+target="_blank">Sony Official Manual (PDF)</a>
 </p>
-<p
-style="margin-top: 0px ! important; margin-bottom: 16px; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><big>The
-Sony Mavica FD95 marks a significant turning point in the Mavica
-series, combining the familiar floppy disk workflow with advanced
-photographic capabilities that could rival many early dedicated digital
-cameras. With its 2.1-megapixel sensor, the FD95 delivers images with a
-level of clarity and color accuracy that makes true 8x10-inch prints
-possible, moving beyond the novelty of digital capture into serious
-creative territory. The 8x optical zoom lens is impressively sharp and
-versatile, allowing for everything from wide-angle shots to distant
-subjects without noticeable loss of quality. Its manual controls are a
-major highlight, offering not only thoughtful white balance and
-exposure settings but also a genuine hot shoe for external flash—a rare
-feature among consumer digital cameras of the era.<br>
-NOTE: The Sony DSC P50 which used a memory stick was a very close
-relative to the FD95's technology.<br>
-Why the P50 Was compact and 2.1mp it adapted allot from the FD95 and
-why it is not withing the FD club, It needs a nod. <br>
-</big></p>
-<p
-style="margin-top: 0px; margin-bottom: 0px ! important; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><big>What
-truly sets the FD95 apart is how it bridges old and new technology.
-While it retains floppy disk compatibility for universal access, the
-FD95 also introduces support for Sony Memory Stick, greatly expanding
-storage options and making the camera much more practical for extended
-shooting sessions. The bright, large LCD display and comfortable grip
-make it a pleasure to use, while the solid build quality inspires
-confidence for field use. For enthusiasts, educators, and even small
-business users, the FD95 is more than just a nostalgic throwback—it’s a
-camera that delivers real photographic control, reliability, and
-flexibility, and stands as one of the most complete and satisfying
-entries in the Mavica legacy.</big></p>
+<p> <strong>Note:</strong><br>
+Compared to previous models, the FD95 offers even higher resolution, 8x
+optical zoom lens, and extensive manual controls. The camera supports
+multiple image sizes for flexible shooting. All other major
+specifications, including the floppy disk recording system, remain the
+same.<br>
+</p>
+<div style="text-align: center;"> <img
+style="width: 118px; height: 104px;" alt=""
+src="../mavica/images/aol6.gif"><br>
+<img style="width: 120px; height: 60px;" alt=""
+src="../mavica/images/matrix.gif"><br>
 </div>
-</div>
-<div style="text-align: center;"><!-- Example of a self-hosted image -->
-<img style="width: 177px; height: 177px;" src="images/logopage1.jpg"
-alt="Captured On Floppy Logo">
-<table
-style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;"
-border="1" cellpadding="2" cellspacing="2">
+</td>
+<!-- RIGHT SIDEBAR: Table with 27 empty yellow boxes matching left -->
+<td class="rightbar">
+<table style="width: 100%;">
 <tbody>
 <tr>
-<td style="vertical-align: top; text-align: center;"> This site
-is 100% designed in
-1990's HTML technology. Hand Built HTML Website by <a
-style="font-weight: bold;" href="https://paulcordell.com/">Paul
-Cordell Photography</a> keeping it Classic.<br>
+<td><img style="width: 120px; height: 60px;" alt=""
+src="../mavica/images/acroPIM.gif"><br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
 </td>
 </tr>
 </tbody>
 </table>
-<footer><br>
-<br>
-© 1998-2025 Mavica Camera Club / Captured On Floppy™️ • All
-rights reserved.<br>
-<br>
-<br>
-</footer></div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="footer"> 2025 Captured On Floppy — All rights reserved.<br>
+Presented by <a href="https://paulcordell.com/">Paul Cordell
+Photography</a>, and This Old Mavica<br>
+contact: capturedonfloppy (at) Gmail&nbsp;.com<br>
+</div>
 </body>
 </html>
+
