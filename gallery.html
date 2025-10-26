@@ -1,16 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Captured On Floppy - Gallery (GeoCities Style)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
+
 <style>
-/* Make sizing predictable so layout centers correctly */
+/* Make sizing predictable so layout centers correctly these are my notes */
 * { box-sizing: border-box; }
 
-/* GeoCities-inspired retro styling */
+/* GeoCities-inspired retro styling. asshats reading the code yes it was made by me. */
 body {
-background: #000 url('images/geotile.gif') repeat; /* replace with your tile */
+background: #000 url('images/geotile.gif') repeat;
 color: #00ff00;
 font-family: "Comic Sans MS", "Arial", Verdana, sans-serif;
 font-size: 16px;
@@ -26,7 +28,6 @@ border: 4px double #ff00ff;
 padding: 8px;
 box-shadow: 0 0 20px #ff00ff;
 }
-/* Header marquee + badges */
 .header-top {
 text-align: center;
 background: linear-gradient(#300030,#000022);
@@ -36,8 +37,6 @@ margin-bottom: 8px;
 }
 .header-top h1 { margin:0; color:#ffff00; text-shadow:1px 1px 0 #ff00ff; font-size:2.1em; }
 .header-sub { color:#ffdd55; font-size:0.9em; margin-top:6px; }
-
-/* Retro nav buttons (table-ish look) */
 .navbar { text-align:center; margin:10px 0; }
 .navbar a {
 background: #ffff00;
@@ -51,46 +50,65 @@ border-radius: 6px;
 box-shadow: 2px 2px 0 #222;
 }
 
-/* Gallery grid using table layout like the 90s
-Use width:100% with max-width so table always centers in container */
+/* Gallery fixes: force stable grid and aligned thumbnails */
 .gallery-table {
 width: 100%;
 max-width: 940px;
 margin: 12px auto;
 border-collapse: collapse;
-table-layout: fixed;
+table-layout: fixed; /* important: fixed column widths so layout doesn't shift notes yep */
 }
+.gallery-table colgroup col { width: 20%; } /* 5 equal columns */
+
 .gallery-cell {
-padding: 8px;
+padding: 10px;
 vertical-align: top;
 text-align: center;
 background: #fff;
 color: #000;
 border: 3px ridge #ff99ff;
-height: 300px;
-/* Each cell width is handled by table-layout: fixed and number of columns */
+/* make cells behave consistently and align children */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+min-height: 320px; /* consistent cell height for alignment */
 }
-.gallery-img {
-max-width: 210px;
-max-height: 210px;
-width: auto;
-height: auto;
-border: 4px solid #ff00ff;
+
+/* Image box ensures every thumbnail area is the same size */
+.img-box {
+width: 210px;
+height: 160px;
+display: flex;
+align-items: center;
+justify-content: center;
 background: #fafaff;
 border-radius: 6px;
-margin-bottom: 6px;
-cursor: pointer;
+overflow: hidden;
+margin-bottom: 8px;
+border: 4px solid #ff00ff;
 box-shadow: 0 2px 8px #222;
-display:block;
-margin-left:auto;
-margin-right:auto;
 }
-/* Retro caption style */
+
+/* Make images fill the box without distortion and centered */
+.gallery-img {
+width: 100%;
+height: 100%;
+object-fit: contain; /* keep full image visible, centered */
+display:block;
+background: transparent;
+}
+
+/* Retro caption style with consistent height so captions align */
 .desc {
 font-size: 0.95em;
 color: #003366;
 margin-top: 6px;
-min-height: 36px;
+min-height: 48px; /* increased to align rows with multi-line captions */
+line-height: 1.2;
+width: 100%;
+text-align: center;
+padding: 0 6px;
 }
 
 /* Placeholder look if image not yet uploaded */
@@ -101,9 +119,11 @@ padding: 10px;
 border: 2px dashed #ff00ff;
 border-radius: 6px;
 height: 210px;
+width:210px;
+box-sizing:border-box;
 }
 
-/* Lightbox (modern behavior retained) */
+/* Lightbox */
 .lightbox-overlay {
 display: none;
 position: fixed;
@@ -134,7 +154,7 @@ padding: 0 0.25em;
 border: 2px solid #fff;
 }
 
-/* Footer styled like a GeoCities badge area */
+/* Footer */
 .footer {
 text-align:center;
 color:#ff99ff;
@@ -144,232 +164,167 @@ border-top:2px solid #ff00ff;
 font-size:0.9em;
 }
 
-/* Responsive adjustments while keeping table layout */
-@media (max-width: 980px) {
+/* Responsive: change number of columns and image box width */
+@media (max-width: 1100px) {
 .container { width: 98%; padding:6px; }
-.gallery-table { width: 96%; }
-.gallery-cell { /* width auto: 3-4 columns will wrap visually */ }
+.gallery-table colgroup col { width: 25%; } /* 4 columns visually */
+.img-box { width: 180px; height: 140px; }
+}
+@media (max-width: 800px) {
+.gallery-table colgroup col { width: 50%; } /* 2 columns */
+.img-box { width: 90%; height: auto; aspect-ratio: 4 / 3; }
+.gallery-cell { min-height: 260px; }
+}
+@media (max-width: 450px) {
+.gallery-table colgroup col { width: 100%; } /* 1 column */
+.img-box { width: 96%; height: auto; aspect-ratio: 4 / 3; }
+.gallery-cell { min-height: 220px; }
 }
 </style>
 </head>
 <body>
 <div class="container">
 <div class="header-top">
-<h1>
-<marquee behavior="scroll" direction="left" scrollamount="6">Welcome to
-Captured On Floppy — Classic Mavica Photos!</marquee>
-</h1>
-<div class="header-sub"><img src="images/under-construction.gif"
-alt="[under construction]"
-style="vertical-align: middle; height: 24px;"> Classic layout —
-GeoCities vibes preserved</div>
+<h1><marquee behavior="scroll" direction="left" scrollamount="6">Welcome to Captured On Floppy — Classic Mavica Photos!</marquee></h1>
+<div class="header-sub"><img src="images/under-construction.gif" alt="[under construction]" style="vertical-align: middle; height: 24px;"> Classic layout — GeoCities vibes preserved</div>
 </div>
-<div class="navbar"> <a href="/index.html">Home</a> <a
-href="/tech.html">Tech</a> <a href="/gallery.html">Gallery</a> <a
-href="/resources.html">Resources</a> </div>
-<h2
-style="text-align: center; color: rgb(255, 255, 0); text-shadow: rgb(255, 0, 255) 1px 1px 0pt;">Gallery
-Highlights — Click an image to enlarge</h2>
-<!-- Gallery: 40 slots (keeps your original images & captions; adds 30 more slots) -->
-<table class="gallery-table" role="table"
-aria-label="GeoCities style gallery">
+
+<div class="navbar">
+<a href="/index.html">Home</a>
+<a href="/tech.html">Tech</a>
+<a href="/gallery.html">Gallery</a>
+<a href="/resources.html">Resources</a>
+</div>
+
+<h2 style="text-align: center; color: rgb(255, 255, 0); text-shadow: rgb(255, 0, 255) 1px 1px 0pt;">Gallery Highlights — Click an image to enlarge</h2>
+
+<!-- Gallery: colgroup ensures stable column widths -->
+<table class="gallery-table" role="table" aria-label="GeoCities style gallery">
+<colgroup>
+<col/>
+<col/>
+<col/>
+<col/>
+<col/>
+</colgroup>
 <tbody>
-<!-- Row 1 --> <tr>
-<td class="gallery-cell"> <img src="images/fd5gallery.jpg"
-alt="Mavica FD5" class="gallery-img">
-<div class="desc"><b>Mavica FD5</b><br>
-<small>1997</small></div>
+<!-- Row 1 -->
+<tr>
+<td class="gallery-cell">
+<div class="img-box"><img src="images/fd5gallery.jpg" alt="Mavica FD5" class="gallery-img"></div>
+<div class="desc"><b>Mavica FD5</b><br><small>1997</small></div>
 </td>
-<td class="gallery-cell"> <img src="images/fd7gallery.jpg"
-alt="Mavica FD7" class="gallery-img">
-<div class="desc"><b>Mavica FD7</b><br>
-<small>1997</small></div>
+<td class="gallery-cell">
+<div class="img-box"><img src="images/fd7gallery.jpg" alt="Mavica FD7" class="gallery-img"></div>
+<div class="desc"><b>Mavica FD7</b><br><small>1997</small></div>
 </td>
-<td class="gallery-cell"> <img src="images/fd71gallery.jpg"
-alt="Mavica FD71" class="gallery-img">
-<div class="desc"><b>Mavica FD71</b><br>
-<small>1998</small></div>
+<td class="gallery-cell">
+<div class="img-box"><img src="images/fd71gallery.jpg" alt="Mavica FD71" class="gallery-img"></div>
+<div class="desc"><b>Mavica FD71</b><br><small>1998</small></div>
 </td>
-<td class="gallery-cell"> <img src="images/fd73gallery.jpg"
-alt="Mavica FD73" class="gallery-img">
-<div class="desc"><b>Mavica FD73</b><br>
-<small>1998</small></div>
+<td class="gallery-cell">
+<div class="img-box"><img src="images/fd73gallery.jpg" alt="Mavica FD73" class="gallery-img"></div>
+<div class="desc"><b>Mavica FD73</b><br><small>1998</small></div>
 </td>
-<td class="gallery-cell"> <img src="images/fd75gallery.jpg"
-alt="Mavica FD75" class="gallery-img">
-<div class="desc"><b>Mavica FD75</b><br>
-<small>1999</small></div>
+<td class="gallery-cell">
+<div class="img-box"><img src="images/fd75gallery.jpg" alt="Mavica FD75" class="gallery-img"></div>
+<div class="desc"><b>Mavica FD75</b><br><small>1999</small></div>
 </td>
 </tr>
-<!-- Row 2 --> <tr>
-<td class="gallery-cell"> <img src="your-image6.jpg"
-alt="Description 6" class="gallery-img">
+
+<!-- Row 2 -->
+<tr>
+<td class="gallery-cell">
+<div class="img-box"><img src="your-image6.jpg" alt="Description 6" class="gallery-img"></div>
 <div class="desc">Description for Photo 6</div>
 </td>
-<td class="gallery-cell"> <img src="your-image7.jpg"
-alt="Description 7" class="gallery-img">
+<td class="gallery-cell">
+<div class="img-box"><img src="your-image7.jpg" alt="Description 7" class="gallery-img"></div>
 <div class="desc">Description for Photo 7</div>
 </td>
-<td class="gallery-cell"> <img src="your-image8.jpg"
-alt="Description 8" class="gallery-img">
+<td class="gallery-cell">
+<div class="img-box"><img src="your-image8.jpg" alt="Description 8" class="gallery-img"></div>
 <div class="desc">Description for Photo 8</div>
 </td>
-<td class="gallery-cell"> <img src="your-image9.jpg"
-alt="Description 9" class="gallery-img">
+<td class="gallery-cell">
+<div class="img-box"><img src="your-image9.jpg" alt="Description 9" class="gallery-img"></div>
 <div class="desc">Description for Photo 9</div>
 </td>
-<td class="gallery-cell"> <img src="your-image10.jpg"
-alt="Description 10" class="gallery-img">
+<td class="gallery-cell">
+<div class="img-box"><img src="your-image10.jpg" alt="Description 10" class="gallery-img"></div>
 <div class="desc">Description for Photo 10</div>
 </td>
 </tr>
-<!-- Rows 3-8: placeholders for photos 11-40 (30 new slots) --> <tr>
-<td class="gallery-cell"><img src="photo11.jpg" alt="Photo 11"
-class="gallery-img">
-<div class="desc">Photo 11</div>
-</td>
-<td class="gallery-cell"><img src="photo12.jpg" alt="Photo 12"
-class="gallery-img">
-<div class="desc">Photo 12</div>
-</td>
-<td class="gallery-cell"><img src="photo13.jpg" alt="Photo 13"
-class="gallery-img">
-<div class="desc">Photo 13</div>
-</td>
-<td class="gallery-cell"><img src="photo14.jpg" alt="Photo 14"
-class="gallery-img">
-<div class="desc">Photo 14</div>
-</td>
-<td class="gallery-cell"><img src="photo15.jpg" alt="Photo 15"
-class="gallery-img">
-<div class="desc">Photo 15</div>
-</td>
-</tr>
+
+<!-- Placeholder rows adding later (11-40) -->
 <tr>
-<td class="gallery-cell"><img src="photo16.jpg" alt="Photo 16"
-class="gallery-img">
-<div class="desc">Photo 16</div>
-</td>
-<td class="gallery-cell"><img src="photo17.jpg" alt="Photo 17"
-class="gallery-img">
-<div class="desc">Photo 17</div>
-</td>
-<td class="gallery-cell"><img src="photo18.jpg" alt="Photo 18"
-class="gallery-img">
-<div class="desc">Photo 18</div>
-</td>
-<td class="gallery-cell"><img src="photo19.jpg" alt="Photo 19"
-class="gallery-img">
-<div class="desc">Photo 19</div>
-</td>
-<td class="gallery-cell"><img src="photo20.jpg" alt="Photo 20"
-class="gallery-img">
-<div class="desc">Photo 20</div>
-</td>
+<td class="gallery-cell"><div class="img-box"><img src="photo11.jpg" alt="Photo 11" class="gallery-img"></div><div class="desc">Photo 11</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo12.jpg" alt="Photo 12" class="gallery-img"></div><div class="desc">Photo 12</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo13.jpg" alt="Photo 13" class="gallery-img"></div><div class="desc">Photo 13</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo14.jpg" alt="Photo 14" class="gallery-img"></div><div class="desc">Photo 14</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo15.jpg" alt="Photo 15" class="gallery-img"></div><div class="desc">Photo 15</div></td>
 </tr>
+
 <tr>
-<td class="gallery-cell"><img src="photo21.jpg" alt="Photo 21"
-class="gallery-img">
-<div class="desc">Photo 21</div>
-</td>
-<td class="gallery-cell"><img src="photo22.jpg" alt="Photo 22"
-class="gallery-img">
-<div class="desc">Photo 22</div>
-</td>
-<td class="gallery-cell"><img src="photo23.jpg" alt="Photo 23"
-class="gallery-img">
-<div class="desc">Photo 23</div>
-</td>
-<td class="gallery-cell"><img src="photo24.jpg" alt="Photo 24"
-class="gallery-img">
-<div class="desc">Photo 24</div>
-</td>
-<td class="gallery-cell"><img src="photo25.jpg" alt="Photo 25"
-class="gallery-img">
-<div class="desc">Photo 25</div>
-</td>
+<td class="gallery-cell"><div class="img-box"><img src="photo16.jpg" alt="Photo 16" class="gallery-img"></div><div class="desc">Photo 16</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo17.jpg" alt="Photo 17" class="gallery-img"></div><div class="desc">Photo 17</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo18.jpg" alt="Photo 18" class="gallery-img"></div><div class="desc">Photo 18</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo19.jpg" alt="Photo 19" class="gallery-img"></div><div class="desc">Photo 19</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo20.jpg" alt="Photo 20" class="gallery-img"></div><div class="desc">Photo 20</div></td>
 </tr>
+
 <tr>
-<td class="gallery-cell"><img src="photo26.jpg" alt="Photo 26"
-class="gallery-img">
-<div class="desc">Photo 26</div>
-</td>
-<td class="gallery-cell"><img src="photo27.jpg" alt="Photo 27"
-class="gallery-img">
-<div class="desc">Photo 27</div>
-</td>
-<td class="gallery-cell"><img src="photo28.jpg" alt="Photo 28"
-class="gallery-img">
-<div class="desc">Photo 28</div>
-</td>
-<td class="gallery-cell"><img src="photo29.jpg" alt="Photo 29"
-class="gallery-img">
-<div class="desc">Photo 29</div>
-</td>
-<td class="gallery-cell"><img src="photo30.jpg" alt="Photo 30"
-class="gallery-img">
-<div class="desc">Photo 30</div>
-</td>
+<td class="gallery-cell"><div class="img-box"><img src="photo21.jpg" alt="Photo 21" class="gallery-img"></div><div class="desc">Photo 21</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo22.jpg" alt="Photo 22" class="gallery-img"></div><div class="desc">Photo 22</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo23.jpg" alt="Photo 23" class="gallery-img"></div><div class="desc">Photo 23</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo24.jpg" alt="Photo 24" class="gallery-img"></div><div class="desc">Photo 24</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo25.jpg" alt="Photo 25" class="gallery-img"></div><div class="desc">Photo 25</div></td>
 </tr>
+
 <tr>
-<td class="gallery-cell"><img src="photo31.jpg" alt="Photo 31"
-class="gallery-img">
-<div class="desc">Photo 31</div>
-</td>
-<td class="gallery-cell"><img src="photo32.jpg" alt="Photo 32"
-class="gallery-img">
-<div class="desc">Photo 32</div>
-</td>
-<td class="gallery-cell"><img src="photo33.jpg" alt="Photo 33"
-class="gallery-img">
-<div class="desc">Photo 33</div>
-</td>
-<td class="gallery-cell"><img src="photo34.jpg" alt="Photo 34"
-class="gallery-img">
-<div class="desc">Photo 34</div>
-</td>
-<td class="gallery-cell"><img src="photo35.jpg" alt="Photo 35"
-class="gallery-img">
-<div class="desc">Photo 35</div>
-</td>
+<td class="gallery-cell"><div class="img-box"><img src="photo26.jpg" alt="Photo 26" class="gallery-img"></div><div class="desc">Photo 26</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo27.jpg" alt="Photo 27" class="gallery-img"></div><div class="desc">Photo 27</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo28.jpg" alt="Photo 28" class="gallery-img"></div><div class="desc">Photo 28</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo29.jpg" alt="Photo 29" class="gallery-img"></div><div class="desc">Photo 29</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo30.jpg" alt="Photo 30" class="gallery-img"></div><div class="desc">Photo 30</div></td>
 </tr>
+
 <tr>
-<td class="gallery-cell"><img src="photo36.jpg" alt="Photo 36"
-class="gallery-img">
-<div class="desc">Photo 36</div>
-</td>
-<td class="gallery-cell"><img src="photo37.jpg" alt="Photo 37"
-class="gallery-img">
-<div class="desc">Photo 37</div>
-</td>
-<td class="gallery-cell"><img src="photo38.jpg" alt="Photo 38"
-class="gallery-img">
-<div class="desc">Photo 38</div>
-</td>
-<td class="gallery-cell"><img src="photo39.jpg" alt="Photo 39"
-class="gallery-img">
-<div class="desc">Photo 39</div>
-</td>
-<td class="gallery-cell"><img src="photo40.jpg" alt="Photo 40"
-class="gallery-img">
-<div class="desc">Photo 40</div>
-</td>
+<td class="gallery-cell"><div class="img-box"><img src="photo31.jpg" alt="Photo 31" class="gallery-img"></div><div class="desc">Photo 31</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo32.jpg" alt="Photo 32" class="gallery-img"></div><div class="desc">Photo 32</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo33.jpg" alt="Photo 33" class="gallery-img"></div><div class="desc">Photo 33</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo34.jpg" alt="Photo 34" class="gallery-img"></div><div class="desc">Photo 34</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo35.jpg" alt="Photo 35" class="gallery-img"></div><div class="desc">Photo 35</div></td>
+</tr>
+
+<tr>
+<td class="gallery-cell"><div class="img-box"><img src="photo36.jpg" alt="Photo 36" class="gallery-img"></div><div class="desc">Photo 36</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo37.jpg" alt="Photo 37" class="gallery-img"></div><div class="desc">Photo 37</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo38.jpg" alt="Photo 38" class="gallery-img"></div><div class="desc">Photo 38</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo39.jpg" alt="Photo 39" class="gallery-img"></div><div class="desc">Photo 39</div></td>
+<td class="gallery-cell"><div class="img-box"><img src="photo40.jpg" alt="Photo 40" class="gallery-img"></div><div class="desc">Photo 40</div></td>
 </tr>
 </tbody>
 </table>
+
 <!-- Lightbox overlay -->
-<div id="lightboxOverlay" class="lightbox-overlay"> <span
-id="lightboxClose" class="lightbox-close">×</span>
-<div class="lightbox-content"> <img id="lightboxImg" src="" alt=""> </div>
+<div id="lightboxOverlay" class="lightbox-overlay">
+<span id="lightboxClose" class="lightbox-close">×</span>
+<div class="lightbox-content">
+<img id="lightboxImg" src="" alt="">
 </div>
-<div style="text-align: center; margin-top: 10px;"> <img
-src="images/guestbook.gif" alt="Sign the guestbook"
-style="height: 34px; margin-right: 8px;"> <img src="images/hits.gif"
-alt="Hit counter" style="height: 34px;"> </div>
+</div>
+
+<div style="text-align: center; margin-top: 10px;">
+<img src="images/guestbook.gif" alt="Sign the guestbook" style="height: 34px; margin-right: 8px;">
+<img src="images/hits.gif" alt="Hit counter" style="height: 34px;">
+</div>
+
 <div class="footer"> 2025 Captured On Floppy — All rights reserved. </div>
 </div>
+
 <script>
-/* Lightbox behavior (keeps it friendly and keyboard accessible) */
+/* Lightbox behavior and keyboard support */
 document.addEventListener('DOMContentLoaded', function() {
 var imgs = document.querySelectorAll('.gallery-img');
 var overlay = document.getElementById('lightboxOverlay');
@@ -378,7 +333,8 @@ var closeBtn = document.getElementById('lightboxClose');
 
 imgs.forEach(function(img){
 img.addEventListener('click', function(){
-lightboxImg.src = img.src;
+// use high-res version if you have a convention (e.g., images/large/...), otherwise use same src
+lightboxImg.src = img.getAttribute('data-large') || img.src;
 lightboxImg.alt = img.alt || '';
 overlay.classList.add('active');
 closeBtn.focus();
