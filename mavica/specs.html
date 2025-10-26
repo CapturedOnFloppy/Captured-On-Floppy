@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,21 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
+/* Match indexv2 styling so this page is consistent with the site */
 body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
 .banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
 .banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
 .navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
 .navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
-.layout { max-width:1100px; margin:1.6em auto; display:flex; gap:20px; }
-.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; }
+.layout-table { width:1100px; margin:1.6em auto; border-collapse:separate; border-spacing:0; }
+.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; box-sizing:border-box; }
 .sidebar-title { color:#FFFF00; font-weight:bold; text-align:center; margin-bottom:1.2em; font-size:1.2em; text-shadow:2px 2px 0 #FF00FF; letter-spacing:2px; }
-.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; flex:1; min-width:300px; }
-.twocols-4rows { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-.onecol-bottom { background:#111; padding:12px; border:1px solid #FF00FF; border-radius:10px; margin-top:18px; }
-.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; }
+.camera-btn { display:block; width:100%; margin:0.35em 0; padding:0.6em 0.8em; background:#FFFF00; color:#000; font-weight:bold; border:2px outset #FF00FF; border-radius:10px; text-decoration:none; box-sizing:border-box; text-align:left; }
+.camera-year { color:#FF00FF; font-weight:bold; margin-left:0.6em; font-size:0.95em; }
+.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; width:740px; max-width:98%; margin:auto; box-sizing:border-box; }
+h1 { color:#FFD700; margin-top:0; text-align:center; }
+.twocols-4rows { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:1em; }
+.spec-block { background:#111; padding:14px; border:1px solid #FF00FF; border-radius:10px; color:#FFFF00; line-height:1.45; }
+.onecol-bottom { background:#111; padding:12px; border:1px solid #FF00FF; border-radius:10px; margin-top:18px; color:#FFFF00; }
+.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; box-sizing:border-box; }
 .footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
 a { color:#FF00FF; }
-@media (max-width:900px) { .layout { flex-direction:column; padding:0 12px; } .sidebar, .main-content, .rightbar { width:100% !important; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
+img { border-radius:8px; border:2px solid #FF00FF; margin:12px 0; box-shadow:0 0 10px #FFFF00; }
+@media (max-width:900px) {
+.layout-table { width:96vw; }
+.sidebar, .main-content, .rightbar { width:100% !important; display:block; padding:1em; }
+.twocols-4rows { grid-template-columns:1fr; }
+.navbar { display:block; width:90vw; margin:0.3em auto; }
+}
 </style>
 </head>
 <body>
@@ -37,8 +47,12 @@ style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
 class="navbar"><a href="/resources.html"
 style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
 </div>
-<div class="layout"> <aside class="sidebar" role="navigation"
-aria-label="Left menu"> </aside>
+<table class="layout-table" role="presentation" cellpadding="0"
+cellspacing="0">
+<tbody>
+<tr>
+<!-- left sidebar --> <td class="sidebar" role="navigation"
+aria-label="Left menu">
 <div class="sidebar-title">Sony Mavica Cameras<br>
 <img style="width: 55px; height: 55px;" alt=""
 src="../mavica/images/mancirlce.gif"></div>
@@ -57,81 +71,226 @@ href="/mavica/mvc-fd83.html">MVC-FD83 <span class="camera-year">1999</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
 class="camera-year">1999</span></a> <a class="camera-btn"
 href="/mavica/mvc-fd87.html">MVC-FD87 <span class="camera-year">2000</span></a>
-<a class="camera-btn" href="/mavica/sony-mavica-analog.html">Mavica
-Analog Series <span class="camera-year">1982–1986</span></a> <main
-class="main-content" role="main" aria-label="Mavica Specs"> </main>
+<a class="camera-btn" href="/mavica/mvc-fd88.html">MVC-FD88 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd90.html">MVC-FD90 <span class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd91.html">MVC-FD91 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd92.html">MVC-FD92 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd95.html">MVC-FD95 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd97.html">MVC-FD97 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd100.html">MVC-FD100 <span
+class="camera-year">2001</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd200.html">MVC-FD200 <span class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-prototypes.html">MVC-Prototypes
+<span class="camera-year">87/90</span></a> <a class="camera-btn"
+href="/mavica/mvc-slr.html">MVC-Analog <span class="camera-year">90/92</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd200.html">MVC-CD200 <span class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd300.html">MVC-CD300 <span
+class="camera-year">2001</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd250.html">MVC-CD250 <span class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd400.html">MVC-CD400 <span
+class="camera-year">2002</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd350.html">MVC-CD350 <span class="camera-year">2003</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
+class="camera-year">2003-end</span></a>
+<div style="text-align: center; margin-top: 12px;"> <a
+href="/mavica/sony-mavica-analog.html"><img
+style="border: 0pt none ; width: 100px; height: 36px;" alt=""
+src="../images/gh-pages-bo.gif"></a> </div>
+</td>
+<!-- main content --> <td class="main-content" role="main"
+aria-label="Mavica Specs">
 <h1>Mavica Specs</h1>
-<div class="twocols-4rows">
-<div>
-<p style="color: rgb(255, 255, 0);">FD5 (0.31 MP) | 1997 | 640x480 | 1x
-zoom<br>
+<div style="text-align: center; margin-bottom: 12px;"> <a
+href="https://www.flickr.com/groups/capturedonfloppy/" target="_blank"
+style="color: rgb(57, 255, 20); font-weight: bold;">Flickr</a>
+&nbsp;&nbsp; <a href="https://www.instagram.com/capturedonfloppy/"
+target="_blank" style="color: rgb(57, 255, 20); font-weight: bold;">Instagram</a>
+&nbsp;&nbsp; <a href="https://x.com/FloppyCameras" target="_blank"
+style="color: rgb(57, 255, 20); font-weight: bold;">X</a> &nbsp;&nbsp;
+<a href="https://www.reddit.com/r/CapturedonFloppy/"
+target="_blank" style="color: rgb(57, 255, 20); font-weight: bold;">Floppy
+Reddit</a> &nbsp;&nbsp; <a
+href="https://www.youtube.com/@CapturedOnFloppy" target="_blank"
+style="color: rgb(57, 255, 20); font-weight: bold;">YouTube</a> </div>
+<!-- Two-column specs area. All models from your original specs.html are included below. -->
+<div class="twocols-4rows" role="region" aria-label="Specs list">
+<div class="spec-block" aria-label="Left specs column">
+<p><strong>FD5</strong> (0.31 MP) | 1997 | 640x480 | 1x zoom<br>
 Interlaced: Yes | Max Aperture: f2.0 | Manual Focus: No | Macro: Yes -
 Switch<br>
 Exposure: Auto only | White Balance: Auto only | Viewfinder: No |
 Memory: Floppy only (1x) | Pics/Disk: 30</p>
-<p style="color: rgb(255, 255, 0);">FD7 (0.31 MP) | 1997 | 640x480 |
-10x zoom<br>
+<p><strong>FD7</strong> (0.31 MP) | 1997 | 640x480 | 10x zoom<br>
 Interlaced: Yes | Max Aperture: f1.8-2.9 | Manual Focus: Ring | Macro:
 Yes - Auto<br>
 Exposure: Auto/Program AE | White Balance: Auto only | Viewfinder: No |
 Memory: Floppy only (1x) | Pics/Disk: 30</p>
-<p style="color: rgb(255, 255, 0);">FD51 (0.31 MP) | 1998 | 640x480 |
-1x zoom<br>
+<p><strong>FD51</strong> (0.31 MP) | 1998 | 640x480 | 1x zoom<br>
 Interlaced: Yes | Max Aperture: f2.0 | Manual Focus: No | Macro: Yes -
 Switch<br>
 Exposure: Auto only | White Balance: Auto only | Viewfinder: No |
 Memory: Floppy only (2x) | Pics/Disk: 30</p>
-<p style="color: rgb(255, 255, 0);">FD71 (0.31 MP) | 1998 | 640x480 |
-10x zoom<br>
+<p><strong>FD71</strong> (0.31 MP) | 1998 | 640x480 | 10x zoom<br>
 Interlaced: No | Max Aperture: f1.8-2.9 | Manual Focus: Ring | Macro:
 Yes - Switch<br>
 Exposure: Auto/Program AE | White Balance: Auto only | Viewfinder: Yes
 | Memory: Floppy only (2x) | Pics/Disk: 30</p>
-</div>
-<div>
-<p style="color: rgb(255, 255, 0);">FD81 (0.79 MP) | 1998 | 1024x768 |
-3x zoom<br>
+<p><strong>FD81</strong> (0.79 MP) | 1998 | 1024x768 | 3x zoom<br>
 Interlaced: No | Max Aperture: f2.0-2.1 | Manual Focus: Ring | Macro: No<br>
 Exposure: Auto/Program AE | White Balance: Auto only | Viewfinder: No |
 Memory: Floppy only (2x) | Pics/Disk: 10</p>
-<p style="color: rgb(255, 255, 0);">FD91 (0.79 MP) | 1998 | 1024x768 |
-14x zoom<br>
+<p><strong>FD91</strong> (0.79 MP) | 1998 | 1024x768 | 14x zoom<br>
 Interlaced: No | Max Aperture: f1.8-3.2 | Manual Focus: Ring | Macro: No<br>
 Exposure: Auto/Program AE/S/A | Spot: Button | White Balance:
 Outdoor/Indoor, One-push | Viewfinder: Yes | Memory: Floppy only (2x) |
 Pics/Disk: 10</p>
-<p style="color: rgb(255, 255, 0);">FD83 (1.11 MP) | 1999 | 1216x912 |
-3x zoom<br>
+<p><strong>FD73</strong> (0.31 MP) | 1999 | 640x480 | 10x zoom<br>
+Interlaced: No | Max Aperture: f1.8-2.9 | Manual Focus: No | Macro: No<br>
+Exposure: Auto/Program AE | White Balance: Auto only | Viewfinder: Yes
+| Memory: Floppy only (2x) | Pics/Disk: 30</p>
+<p><strong>FD83</strong> (1.11 MP) | 1999 | 1216x912 | 3x zoom<br>
 Interlaced: No | Max Aperture: f2.0-2.1 | Manual Focus: Ring | Macro:
 Yes - Menu<br>
 Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
 Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy only (4x) |
 Pics/Disk: 8</p>
-<p style="color: rgb(255, 255, 0);">FD88 (1.23 MP) | 1999 | 1280x960 |
-8x zoom<br>
+<p><strong>FD88</strong> (1.23 MP) | 1999 | 1280x960 | 8x zoom<br>
 Interlaced: No | Max Aperture: f2.8-3.0 | Manual Focus: Ring | Macro:
 Yes - Menu<br>
 Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
 Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy only (4x) |
 Pics/Disk: 6</p>
+<p><strong>FD85</strong> (1.23 MP) | 2000 | 1280x960 | 3x zoom<br>
+Interlaced: No | Max Aperture: f2.8-2.9 | Manual Focus: 5 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
+Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy &amp; MS adapter
+(4x) | Pics/Disk: 6</p>
+</div>
+<div class="spec-block" aria-label="Right specs column">
+<p><strong>FD90</strong> (1.63 MP) | 2000 | 1472x1104 | 8x zoom<br>
+Interlaced: No | Max Aperture: f2.8-3.0 | Manual Focus: Ring | Macro:
+Button<br>
+Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
+Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy &amp; MS adapter
+(4x) | Pics/Disk: 5</p>
+<p><strong>FD95</strong> (1.92 MP) | 2000 | 1600x1200 | 10x zoom<br>
+Interlaced: No | Max Aperture: f2.8 | Manual Focus: Ring | Macro: Button<br>
+Exposure: Auto/Program AE/S/A | Spot: Button | White Balance:
+Outdoor/Indoor, One-push | Viewfinder: Yes | Memory: Floppy &amp; MS
+adapter (4x) | Pics/Disk: 4</p>
+<p><strong>FD75</strong> (0.31 MP) | 2001 | 640x480 | 10x zoom<br>
+Interlaced: No | Max Aperture: f1.8-2.9 | Manual Focus: No | Macro: No<br>
+Exposure: Auto/Program AE | White Balance: Auto only | Viewfinder: Yes
+| Memory: Floppy only (2x) | Pics/Disk: 30</p>
+<p><strong>FD87</strong> (1.23 MP) | 2001 | 1280x960 | 3x zoom<br>
+Interlaced: No | Max Aperture: f2.8-2.9 | Manual Focus: 5 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
+Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy &amp; MS adapter
+(4x) | Pics/Disk: 6</p>
+<p><strong>FD92</strong> (1.63 MP) | 2001 | 1472x1104 | 8x zoom<br>
+Interlaced: No | Max Aperture: f2.8-3.0 | Manual Focus: 5 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
+Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy &amp; MS slot
+(4x) | USB: Yes | Pics/Disk: 5</p>
+<p><strong>FD97</strong> (1.92 MP) | 2001 | 1600x1200 | 10x zoom<br>
+Interlaced: No | Max Aperture: f2.8 | Manual Focus: Ring | Macro: Button<br>
+Exposure: Auto/Program AE/S/A | Spot: Button | White Balance:
+Outdoor/Indoor, One-push | Viewfinder: Yes | Memory: Floppy &amp; MS
+slot (4x) | USB: Yes | Pics/Disk: 4</p>
+<p><strong>FD100</strong> (1.23 MP) | 2002 | 1280x960 | 3x zoom<br>
+Interlaced: No | Max Aperture: f3.8-3.9 | Manual Focus: 5 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
+Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy &amp; MS slot
+(4x) | USB: Yes | Pics/Disk: 6</p>
+<p><strong>FD200</strong> (1.92 MP) | 2002 | 1600x1200 | 3x zoom<br>
+Interlaced: No | Max Aperture: f3.8-3.10 | Manual Focus: 5 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE | Spot: AE Mode | White Balance:
+Outdoor/Indoor, Hold | Viewfinder: No | Memory: Floppy &amp; MS slot
+(4x) | USB: Yes | Pics/Disk: 4</p>
+<p><strong>CD1000</strong> (1.92 MP) | 2000 | 1600x1200 | 10x zoom<br>
+Interlaced: No | Max Aperture: f2.8 | Manual Focus: Ring | Macro: Button<br>
+Exposure: Auto/Program AE/S/A | Spot: Button | White Balance:
+Outdoor/Indoor, One-push | Viewfinder: Yes | Memory: CD | USB: Yes |
+Pics/Disk: 160</p>
+</div>
+</div>
+<!-- Second two-column block to continue the full list (rest of CD-series & later models) -->
+<div class="twocols-4rows" role="region" aria-label="More specs">
+<div class="spec-block">
+<p><strong>CD200</strong> (1.92 MP) | 2001 | 1600x1200 | 3x zoom<br>
+Interlaced: No | Max Aperture: f2.8-2.9 | Manual Focus: 14 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE/S/A/M | Spot: Button | White Balance:
+Outdoor/Indoor, One-push | Viewfinder: No | Memory: CD | USB: Yes |
+Pics/Disk: 237</p>
+<p><strong>CD300</strong> (3.15 MP) | 2001 | 2048x1536 | 3x zoom<br>
+Interlaced: No | Max Aperture: f2.0-2.5 | Manual Focus: 14 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE/S/A/M | Spot: Button | White Balance:
+Outdoor/Indoor, One-push | Viewfinder: No | Memory: CD | USB: Yes |
+Pics/Disk: 147</p>
+<p><strong>CD250</strong> (1.92 MP) | 2002 | 1600x1200 | 3x zoom<br>
+Interlaced: No | Max Aperture: f3.8-3.9 | Manual Focus: 5 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE | Spot: Menu | White Balance:
+Daylight/Cloudy/Fluorescent/Incandescent | Viewfinder: No | Memory: CD
+| USB: Yes | Pics/Disk: 235</p>
+</div>
+<div class="spec-block">
+<p><strong>CD400</strong> (3.87 MP) | 2002 | 2272x1704 | 3x zoom<br>
+Interlaced: No | Max Aperture: f2.0-2.5 | Manual Focus: 14 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE/S/A/M | Spot: Button | White Balance:
+Daylight/Cloudy/Fluorescent/Incandescent, One-push | Viewfinder: No |
+Memory: CD | USB: Yes | Pics/Disk: 119</p>
+<p><strong>CD350</strong> (3.15 MP) | 2003 | 2048x1536 | 3x zoom<br>
+Interlaced: No | Max Aperture: f3.8-3.9 | Manual Focus: 5 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE | Spot: Menu | White Balance:
+Daylight/Cloudy/Fluorescent/Incandescent/Flash | Viewfinder: No |
+Memory: CD | USB: Yes | Pics/Disk: 145</p>
+<p><strong>CD500</strong> (5.04 MP) | 2003 | 2592x1944 | 3x zoom<br>
+Interlaced: No | Max Aperture: f2.0-2.5 | Manual Focus: 14 Presets |
+Macro: Button<br>
+Exposure: Auto/Program AE/S/A/M | Spot: Menu | White Balance:
+Daylight/Cloudy/Fluorescent/Incandescent/Flash, One-push | Viewfinder:
+No | Memory: CD | USB: Yes | Pics/Disk: 95</p>
 </div>
 </div>
 <div class="onecol-bottom">
-<p style="color: rgb(255, 255, 0);">(continued — full model list
-preserved from original page based on manuals information was pulled
-accuracy not verified)<br>
-</p>
-<p style="color: rgb(255, 255, 0);">See also: <a href="/resources.html"
-style="color: rgb(255, 0, 255);">Mavica Resources</a></p>
+<p>(continued — full model list preserved from original page
+based on manuals information; accuracy not verified)</p>
+<p>Sources: <a href="https://en.wikipedia.org/wiki/Sony_Mavica"
+target="_blank">WIKI Mavica</a>, <a
+href="https://www.sony.com/en/SonyInfo/CorporateInfo/History/sonyhistory-g.html"
+target="_blank">Sony History</a>, <a
+href="https://www.sony.co.uk/electronics/support/digital-cameras-mavica/faqs"
+target="_blank">Sony UK Support</a></p>
 </div>
-<aside class="rightbar" role="complementary" aria-label="Right sidebar">
-</aside>
-<div style="text-align: center;"><img src="../mavica/images/acroPIM.gif"
-alt="" style="width: 120px; height: 60px;"></div>
+</td>
+<!-- right sidebar --> <td class="rightbar" role="complementary"
+aria-label="Right sidebar">
+<div style="text-align: center;"><img
+src="../mavica/images/acroPIM.gif" alt=""
+style="width: 120px; height: 60px;"></div>
 <div style="margin-top: 12px;"><a class="camera-btn"
-href="/mavica/mvc-prototypes.html">Prototypes</a></div>
-</div>
+href="/mavica/mvc-prototypes.html" style="text-align: center;">Prototypes</a></div>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="footer">© 1998-2025 Mavica Camera Club / Captured On
 Floppy™️ • All rights reserved.</div>
 </body>
 </html>
+
