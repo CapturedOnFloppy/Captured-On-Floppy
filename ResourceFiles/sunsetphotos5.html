@@ -1,175 +1,116 @@
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Captured On Floppy - Old Archives</title>
+<meta charset="utf-8">
+<title>Captured On Floppy - Sunset Photos</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #f8f8ff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
-}
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size: 0.5em;
-color: #ccccee;
-}
-.navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-text-align: center;
-padding: 0.3em 0;
-}
-.navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.archive-section {
-margin: 3em auto 2em auto;
-max-width: 1100px;
-}
-.archive-title {
-color: #2a3d7f;
-font-size: 2em;
-text-align: center;
-margin-top: 1em;
-margin-bottom: 0.4em;
-}
-.archive-desc {
-font-size: 1.09em;
-color: #003366;
-text-align: center;
-margin-bottom: 2em;
-}
-.archive-table {
-width: 96%;
-margin: 2em auto 2em auto;
-border-collapse: collapse;
-background: #fff;
-font-size: 0.98em;
-}
-.archive-table th, .archive-table td {
-border: 1px solid #bbb;
-padding: 7px 7px;
-text-align: left;
-}
-.archive-table th {
-background: #e5e9f7;
-color: #222;
-}
-.archive-table caption {
-font-weight: bold;
-margin-bottom: 0.5em;
-color: #2a3d7f;
-font-size: 1em;
-text-align: left;
-padding-left: 5px;
-}
-@media (max-width: 1100px) {
-.archive-table { width: 99vw; font-size: 0.95em;}
-.archive-section { max-width: 99vw;}
-}
-@media (max-width: 750px) {
-.archive-table { width: 99vw; font-size: 0.92em;}
-.archive-section { max-width: 99vw;}
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
-}
+body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
+.banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
+.banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
+.navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
+.navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
+.layout-table { width:1100px; margin:1.6em auto; border-collapse:separate; border-spacing:0; }
+.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; }
+.sidebar-title { color:#FFFF00; font-weight:bold; text-align:center; margin-bottom:1.2em; font-size:1.2em; text-shadow:2px 2px 0 #FF00FF; letter-spacing:2px; }
+.camera-btn { display:block; width:90%; margin:0.4em auto; padding:0.9em 0.7em; background:#FFFF00; color:#000; font-weight:bold; border:2px outset #FF00FF; border-radius:10px; text-decoration:none; height:48px; text-align:left; box-shadow:2px 2px 6px #222; }
+.camera-year { color:#FF00FF; font-weight:bold; margin-left:0.7em; font-size:0.96em; }
+.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; width:740px; max-width:98%; margin:auto; }
+h2 { color:#FFD700; text-align:center; margin-top:0; text-shadow:1px 1px 0 #FF00FF; }
+.archive-section { max-width:980px; margin:0 auto; color:#FFFF00; }
+.archive-title { color:#FFD700; font-size:1.6em; text-align:center; margin-bottom:0.6em; }
+.archive-desc { color:#FFFF00; font-size:1.02em; line-height:1.5; }
+.archive-table { width:96%; margin:1em auto; border-collapse:collapse; background:#111; color:#ffff00; border:1px solid #FF00FF; }
+.archive-table th, .archive-table td { border:1px solid #FF00FF; padding:8px; text-align:left; vertical-align:top; }
+.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; }
+.footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
+@media (max-width:900px) { .layout-table { display:block; width:96vw; } .sidebar, .main-content, .rightbar { width:100% !important; display:block; padding:1em; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy Gallery
-<div class="subtitle">1997-2003 Floppy - Digital</div>
+<div class="banner">Captured On Floppy Gallery
+<div class="banner-sub">1997-2003 Floppy - Digital</div>
 </div>
-<nav class="navbar"></nav>
-<div style="text-align: center;"> <nav class="navbar"> <a
-href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
-href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a>
-<a href="/forums.html">Stash</a> </nav>
-</div>
-<nav class="navbar"></nav>
+<div class="navbar-wrapper"> <nav class="navbar"><a href="/index.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Home</a></nav> <nav
+class="navbar"><a href="/tech.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Tech</a></nav> <nav
+class="navbar"><a href="/gallery.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
+class="navbar"><a href="/resources.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
+<nav class="navbar"><a href="/forums.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Stash</a></nav> </div>
+<table class="layout-table">
+<tbody>
+<tr>
+<td class="sidebar" role="navigation" aria-label="Left menu">
+<div class="sidebar-title">Sony Mavica Cameras<br>
+<img style="width: 55px; height: 55px;" alt=""
+src="../mavica/images/mancirlce.gif"></div>
+<a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
+class="camera-year">1997</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd7.html">MVC-FD7 <span class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd51.html">MVC-FD51 <span
+class="camera-year">1997</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd71.html">MVC-FD71 <span class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd73.html">MVC-FD73 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd75.html">MVC-FD75 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd81.html">MVC-FD81 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd83.html">MVC-FD83 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd87.html">MVC-FD87 <span class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/sony-mavica-analog.html">Mavica
+Analog Series <span class="camera-year">1982–1986</span></a>
+<div style="text-align: center;"><img
+src="../mavica/images/windows5.gif" alt=""
+style="width: 160px; height: 90px; margin-top: 12px;"></div>
+</td>
+<td class="main-content" role="main" aria-label="Sunset Photos">
 <div class="archive-section">
-<div class="archive-title">Captured On Floppy Tip #5<br>
-Sunset Photos<br>
-</div>
-<div class="archive-desc"><br>
-With digital cameras like Mavica, it is possible to photograph sunsets
-in ways that traditional 35mm cameras cannot, or at least, with less
-effort. Animated sunsets are amazing animations because the color is
-constantly changing.<br>
+<div class="archive-title">Captured On Floppy Tip #5 — Sunset
+Photos</div>
+<div class="archive-desc"> With digital cameras like Mavica, it
+is possible to photograph sunsets in ways that traditional 35mm cameras
+cannot, or at least, with less effort. Animated sunsets are amazing
+animations because the color is constantly changing. <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For a good animation, you will want to
-have about 2 disks to capture all of the necessary images. Set up a
-tripod facing West. (or East if you plan on taking photographs of the
-sun hitting mountains, or other indirect objects) Zoom the camera to
-it's widest angle so you have a broad shot of the horizon. Now, focus
-on the subject and press the shutter button half way to setup the first
-shot. After it has been setup, switch to manual focus, and make sure
-you do not touch the focusing ring. If you do not switch to manual
-focus, the darker shots may be blurred due to the camera's autofocus
-trying to deal with the low light situation.<br>
+For a good animation, you will want to have about 2 disks to capture
+all of the necessary images. Set up a tripod facing West. (or East if
+you plan on taking photographs of the sun hitting mountains, or other
+indirect objects) Zoom the camera to it's widest angle so you have a
+broad shot of the horizon. Now, focus on the subject and press the
+shutter button half way to setup the first shot. After it has been
+setup, switch to manual focus, and make sure you do not touch the
+focusing ring. If you do not switch to manual focus, the darker shots
+may be blurred due to the camera's autofocus trying to deal with the
+low light situation. <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Once the Sun is close to setting, start
-taking pictures at one to 2 minute intervals. You may choose to use
-larger intervals, but the animation will be choppy. Continue taking
-pictures until the sun has set, and the color starts to fade. Once you
-start losing significant detail on the LCD screen, it is time to stop
-taking pictures.<br>
+Once the Sun is close to setting, start taking pictures at one to 2
+minute intervals. You may choose to use larger intervals, but the
+animation will be choppy. Continue taking pictures until the sun has
+set, and the color starts to fade. Once you start losing significant
+detail on the LCD screen, it is time to stop taking pictures. <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Now that the images have been captured,
-they can be arranged in order in form of a slideshow, or decreased in
-size and used in a GIF animation. For information about the actual
-animation process, please read the FD71 Animation article. It explains
-how to create an animation using Microsoft GIF Animator. If you would
-like to touch up your sunset photos, read the Sunset Photography
-article for instructions on making crystal clear Mavica sunset pictures
-without reducing the size of the image.<br>
+Now that the images have been captured, they can be arranged in order
+in form of a slideshow, or decreased in size and used in a GIF
+animation. For information about the actual animation process, please
+read the FD71 Animation article. It explains how to create an animation
+using Microsoft GIF Animator. If you would like to touch up your sunset
+photos, read the Sunset Photography article for instructions on making
+crystal clear Mavica sunset pictures without reducing the size of the
+image. <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Another fun thing to do is use the
-Mavica sunset images as a slideshow screensaver. <br>
-Archived 1998<br>
+Another fun thing to do is use the Mavica sunset images as a slideshow
+screensaver. <br>
 <br>
-</div>
-<!-- Table 1: Old Camera Resource Websites -->
-<table class="archive-table">
-<caption><br>
-</caption><thead><tr>
-<th>Future Proofing addon sections.<br>
-</th>
+Archived 1998 </div>
+<table class="archive-table" role="table" aria-label="Table 1">
+<thead> <tr>
+<th>Future Proofing addon sections.</th>
 <th><br>
 </th>
 <th><br>
@@ -177,22 +118,17 @@ Archived 1998<br>
 <th><br>
 </th>
 </tr>
+</thead> <tbody>
 <tr>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
-</thead><tbody>
 </tbody>
 </table>
-<table class="archive-table">
-<caption><br>
-</caption><thead><tr>
+<table class="archive-table" role="table" aria-label="Table 2">
+<thead> <tr>
 <th><br>
 </th>
 <th><br>
@@ -201,25 +137,13 @@ Archived 1998<br>
 </th>
 <th><br>
 </th>
-</tr>
-<tr>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
 </tr>
 </thead> <tbody>
 <!-- Add rows here -->
 </tbody>
 </table>
-<!-- Table 4: Old Private Websites -->
-<table class="archive-table">
-<caption><br>
-</caption><thead><tr>
+<table class="archive-table" role="table" aria-label="Table 3">
+<thead> <tr>
 <th><br>
 </th>
 <th><br>
@@ -228,56 +152,53 @@ Archived 1998<br>
 </th>
 <th><br>
 </th>
-</tr>
-<tr>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-</tr>
-</thead><tbody>
-</tbody>
-</table>
-<table class="archive-table">
-<caption><br>
-</caption><thead><tr>
-<th><br>
-</th>
-<th><br>
-</th>
-<th><br>
-</th>
-<th><br>
-</th>
-</tr>
-<tr>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
 </tr>
 </thead> <tbody>
 <!-- Add rows here -->
 </tbody>
 </table>
 </div>
-<div style="text-align: center;"><footer> Have an archive, site, or
-resource to add? Email:
-CapturedOnFloppy (@) Gmail.com</footer><br>
-<footer></footer></div>
-<footer>
+</td>
+<td class="rightbar" role="complementary"
+aria-label="Right sidebar">
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td style="text-align: center;"><img
+src="../mavica/images/acroPIM.gif" alt=""
+style="width: 120px; height: 60px;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><img
+src="../mavica/images/cameras6.gif" alt=""
+style="width: 54px; height: 54px;"></td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
 <br>
-</footer>
-<div style="text-align: center;"><footer>2025 Captured On Floppy — All
-rights reserved.
-</footer></div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<div class="camera-btn"></div>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="footer">Have an archive, site, or resource to add? Email:
+CapturedOnFloppy (at) Gmail.com<br>
+2025 Captured On Floppy — All rights reserved.</div>
 </body>
 </html>
