@@ -5,44 +5,108 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
-.banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
-.banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
-.navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
-.navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
-.layout { max-width:1100px; margin:1.6em auto; display:flex; gap:20px; }
-.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; }
-.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; flex:1; min-width:300px; }
-.comparison-table { width:96%; margin:1em auto; border-collapse:collapse; background:#111; color:#ffff00; border:1px solid #FF00FF; }
+/* Re-use the indexv2 styling to ensure the same structure and visual rhythm */
+body {
+background: #000;
+color: #ffff00;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 16px;
+margin: 0;
+padding: 0;
+}
+.banner {
+background: #222;
+color: #ffff00;
+padding: 1em 0 0.4em 0;
+text-align: center;
+font-size: 2em;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 0.07em;
+border-bottom: 4px solid #FF00FF;
+text-shadow: 2px 2px 0 #FF00FF;
+}
+.banner-sub { font-size: 0.7em; color: #FFD700; margin-bottom: 0.3em; }
+
+.navbar-wrapper { width: 100%; text-align: center; margin: 0 auto; }
+.navbar { background: #111; border-bottom: 2px solid #FF00FF; font-size: 1.1em; padding: 0.3em 0; display: inline-block; }
+.navbar a {
+color: #000; background: #ffff00; text-decoration: none;
+padding: 0.7em 2em; margin: 0 0.2em; font-weight: bold;
+border: 2px solid #FF00FF; border-radius: 7px;
+}
+.navbar a:hover, .navbar a:focus { text-decoration: underline; }
+
+/* Page layout uses the same table structure as indexv2.html */
+.layout-table { width: 1100px; margin: 2em auto; border-spacing: 0; border-collapse: separate; }
+.sidebar {
+background: #111; border-right: 4px solid #FF00FF; padding: 2.2em 1em 2em 1em;
+width: 220px; min-width: 160px; vertical-align: top; text-align: left;
+}
+.sidebar-title {
+font-weight: bold; color: #FFFF00; margin-bottom: 1.2em; font-size: 1.25em;
+text-align: center; text-shadow: 2px 2px 0 #FF00FF; letter-spacing: 2px;
+}
+.camera-btn {
+display: block; width: 90%; margin: 0.4em auto; padding: 0.9em 0.7em;
+background: #FFFF00; color: #000; font-weight: bold;
+border: 2px outset #FF00FF; border-radius: 10px; text-align: left;
+text-decoration: none; box-shadow: 2px 2px 6px #222;
+}
+.camera-year { color: #FF00FF; font-size: 0.96em; margin-left: 0.7em; font-weight: bold; }
+
+.main-content {
+background: #222; border-radius: 16px; box-shadow: 0 0 15px #FFFF00;
+min-height: 400px; font-size: 1.08em; color: #FFFF00; padding: 2.7em 2.5em;
+width: 100%; max-width: 740px; margin: auto;
+}
+.rightbar {
+background: #111; border-left: 4px solid #FF00FF; padding: 2.2em 1em 2em 1em;
+width: 220px; min-width: 160px; vertical-align: top; text-align: left;
+}
+
+/* Tables inside main-content */
+.comparison-table { width: 100%; border-collapse: collapse; margin: 1em 0; background:#111; color:#FFFF00; border:1px solid #FF00FF; }
 .comparison-table th, .comparison-table td { border:1px solid #FF00FF; padding:8px; text-align:left; vertical-align:top; }
-.notes { background:#111; color:#ffff00; padding:12px; border:1px solid #FF00FF; border-radius:8px; margin-top:12px; max-width:96%; }
-.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; }
-.footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
-a { color:#FF00FF; }
-@media (max-width:900px) { .layout { flex-direction:column; padding:0 12px; } .sidebar, .main-content, .rightbar { width:100% !important; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
+.comparison-table caption { color:#FFD700; font-weight:bold; padding:8px; }
+
+/* Notes box */
+.notes { background:#111; color:#FFFF00; padding:12px; border:1px solid #FF00FF; border-radius:8px; margin-top:12px; }
+
+/* Footer matches index */
+.footer { background: #111; color: #FF00FF; text-align: center; font-size: 0.95em; padding: 1em 0 1.5em 0; margin-top: 2em; border-top: 2px solid #FFFF00; }
+
+/* small responsive adjustments (copy of index behavior) */
+@media (max-width: 1200px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content, .rightbar { font-size: 0.97em; padding: 1em; }
+.main-content { max-width: 98vw; }
+}
+@media (max-width: 850px) {
+.layout-table { width: 99vw; display:block; }
+.sidebar, .main-content, .rightbar { width: 100% !important; display: block; }
+.navbar { width: 99vw; display: block; padding: 0.7em 0; }
+.navbar a { margin: 0.3em 0; width: 90vw; display:block; text-align:center; }
+}
 </style>
 </head>
 <body>
-<div class="banner">Captured On Floppy Gallery
+<div class="banner">Captured On Floppy
 <div class="banner-sub">1997-2003 Floppy - Digital</div>
 </div>
-<div class="navbar-wrapper"> <nav class="navbar"><a href="/index.html"
-style="text-decoration: none; color: rgb(0, 0, 0);">Home</a></nav> <nav
-class="navbar"><a href="/tech.html"
-style="text-decoration: none; color: rgb(0, 0, 0);">Tech</a></nav> <nav
-class="navbar"><a href="/gallery.html"
-style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
-class="navbar"><a href="/resources.html"
-style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
-<nav class="navbar"><a href="/forums.html"
-style="text-decoration: none; color: rgb(0, 0, 0);">Stash</a></nav> </div>
-<div class="layout"> <aside class="sidebar" role="navigation"
-aria-label="Left menu"> </aside>
-<div
-style="color: rgb(255, 255, 0); font-weight: bold; text-align: center; margin-bottom: 12px;">Sony
-Mavica Cameras<br>
-<img style="width: 55px; height: 55px;" alt=""
-src="../mavica/images/mancirlce.gif"></div>
+<div class="navbar-wrapper"> <nav class="navbar"> <a
+href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
+href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a>
+<a href="/forums.html">Stash</a> </nav>
+</div>
+<table class="layout-table" role="presentation" cellpadding="0"
+cellspacing="0">
+<tbody>
+<tr>
+<!-- Left Sidebar: same camera button list as index --> <td
+class="sidebar" role="navigation" aria-label="Left menu">
+<div class="sidebar-title"> Sony Mavica Cameras<br>
+<img style="width: 88px; height: 31px;" alt=""
+src="../images/anybrowser6.gif"> </div>
 <a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
 class="camera-year">1997</span></a> <a class="camera-btn"
 href="/mavica/mvc-fd7.html">MVC-FD7 <span class="camera-year">1997</span></a>
@@ -58,17 +122,45 @@ href="/mavica/mvc-fd83.html">MVC-FD83 <span class="camera-year">1999</span></a>
 <a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
 class="camera-year">1999</span></a> <a class="camera-btn"
 href="/mavica/mvc-fd87.html">MVC-FD87 <span class="camera-year">2000</span></a>
-<main class="main-content" role="main" aria-label="Tech overview"> </main>
-<h2 style="color: rgb(255, 215, 0); text-align: center;">Sony Mavica
-Model Comparison</h2>
-<p style="color: rgb(255, 255, 0); text-align: center;">A complete
-listing of Sony Mavica camera models, organized by technology series.</p>
-<!-- Example: one of the comparison tables from the original content -->
+<a class="camera-btn" href="/mavica/mvc-fd88.html">MVC-FD88 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd90.html">MVC-FD90 <span class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd91.html">MVC-FD91 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd92.html">MVC-FD92 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd95.html">MVC-FD95 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd97.html">MVC-FD97 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd100.html">MVC-FD100 <span
+class="camera-year">2001</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd200.html">MVC-FD200 <span class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-prototypes.html">MVC-Prototypes
+<span class="camera-year">87/90</span></a> <a class="camera-btn"
+href="/mavica/mvc-slr.html">MVC-Analog <span class="camera-year">90/92</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd200.html">MVC-CD200 <span class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd300.html">MVC-CD300 <span
+class="camera-year">2001</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd250.html">MVC-CD250 <span class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd400.html">MVC-CD400 <span
+class="camera-year">2002</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd350.html">MVC-CD350 <span class="camera-year">2003</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
+class="camera-year">2003-end</span></a> </td>
+<!-- Center: main content (tech tables) --> <td class="main-content"
+role="main" aria-label="Tech overview">
+<h2 style="color: rgb(255, 215, 0); text-align: center;">Sony
+Mavica Model Comparison</h2>
+<p style="color: rgb(255, 255, 0); text-align: center;">A
+complete listing of Sony Mavica camera models and a series-based
+comparison. This page follows the exact index structure (left menu,
+main-content, right sidebar).</p>
+<!-- Digital Floppy Disk Series -->
 <table class="comparison-table" role="table"
 aria-label="Digital Floppy Disk Series">
-<caption
-style="padding: 8px; color: rgb(255, 215, 0); font-weight: bold;">Digital
-Floppy Disk Series (MVC-FD, 1997–2001)</caption> <thead> <tr>
+<caption>Digital Floppy Disk Series (MVC-FD, 1997–2001)</caption>
+<thead> <tr>
 <th>Model</th>
 <th>Year</th>
 <th>Sensor</th>
@@ -94,12 +186,52 @@ Floppy Disk Series (MVC-FD, 1997–2001)</caption> <thead> <tr>
 <td>LCD screen</td>
 </tr>
 <tr>
+<td>MVC-FD51</td>
+<td>1997</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>Compact body</td>
+</tr>
+<tr>
 <td>MVC-FD71</td>
 <td>1998</td>
 <td>CCD</td>
 <td>Floppy</td>
 <td>0.3MP</td>
-<td>Enhanced autofocus</td>
+<td>Improved AF</td>
+</tr>
+<tr>
+<td>MVC-FD73</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>Refined controls</td>
+</tr>
+<tr>
+<td>MVC-FD75</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.3MP</td>
+<td>Budget-friendly</td>
+</tr>
+<tr>
+<td>MVC-FD81</td>
+<td>1998</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>0.8MP</td>
+<td>Higher res FD</td>
+</tr>
+<tr>
+<td>MVC-FD83</td>
+<td>1999</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>1.1MP</td>
+<td>Better image quality</td>
 </tr>
 <tr>
 <td>MVC-FD85</td>
@@ -107,26 +239,137 @@ Floppy Disk Series (MVC-FD, 1997–2001)</caption> <thead> <tr>
 <td>CCD</td>
 <td>Floppy</td>
 <td>1.3MP</td>
-<td>Better image quality</td>
+<td>Improved optics</td>
+</tr>
+<tr>
+<td>MVC-FD87</td>
+<td>2000</td>
+<td>CCD</td>
+<td>Floppy</td>
+<td>1.2MP</td>
+<td>Later FD model</td>
 </tr>
 </tbody>
 </table>
-<div class="notes"> <strong style="color: rgb(255, 215, 0);">Notes:</strong>
+<!-- CD / Mini-CD Series -->
+<table class="comparison-table" role="table"
+aria-label="CD Series">
+<caption>CD / Mini-CD Series (MVC-CD, 2000–2003)</caption> <thead>
+<tr>
+<th>Model</th>
+<th>Year</th>
+<th>Sensor</th>
+<th>Storage</th>
+<th>Resolution</th>
+<th>Notable Features</th>
+</tr>
+</thead> <tbody>
+<tr>
+<td>MVC-CD1000</td>
+<td>2000</td>
+<td>CCD</td>
+<td>Mini CD-R</td>
+<td>1.9MP</td>
+<td>CD storage</td>
+</tr>
+<tr>
+<td>MVC-CD200</td>
+<td>2001</td>
+<td>CCD</td>
+<td>Mini CD-R</td>
+<td>1.9MP</td>
+<td>Improved ergonomics</td>
+</tr>
+<tr>
+<td>MVC-CD300</td>
+<td>2001</td>
+<td>CCD</td>
+<td>Mini CD-R</td>
+<td>3.1MP</td>
+<td>Higher res</td>
+</tr>
+<tr>
+<td>MVC-CD250</td>
+<td>2002</td>
+<td>CCD</td>
+<td>Mini CD-R</td>
+<td>1.9MP</td>
+<td>Updated controls</td>
+</tr>
+<tr>
+<td>MVC-CD400</td>
+<td>2002</td>
+<td>CCD</td>
+<td>Mini CD-R</td>
+<td>3.8MP</td>
+<td>High-res CD era</td>
+</tr>
+<tr>
+<td>MVC-CD350</td>
+<td>2003</td>
+<td>CCD</td>
+<td>Mini CD-R</td>
+<td>3.1MP</td>
+<td>Refined CD models</td>
+</tr>
+<tr>
+<td>MVC-CD500</td>
+<td>2003</td>
+<td>CCD</td>
+<td>Mini CD-R</td>
+<td>5.0MP</td>
+<td>Top-end CD model</td>
+</tr>
+</tbody>
+</table>
+<!-- Memory Stick / Hybrid Models (summary row) -->
+<table class="comparison-table" role="table"
+aria-label="Memory Stick / Later Models">
+<caption>Memory Stick / Later Models</caption> <thead> <tr>
+<th>Model</th>
+<th>Year</th>
+<th>Sensor</th>
+<th>Storage</th>
+<th>Resolution</th>
+<th>Notable Features</th>
+</tr>
+</thead> <tbody>
+<tr>
+<td>FD/ CD Hybrids</td>
+<td>1999–2003</td>
+<td>CCD</td>
+<td>Floppy / MS / CD</td>
+<td>0.3–5.0MP</td>
+<td>Some models added Memory Stick support, USB, and
+improved LCDs</td>
+</tr>
+</tbody>
+</table>
+<div class="notes" role="note" aria-label="Tech notes"> <strong
+style="color: rgb(255, 215, 0);">Notes:</strong>
 <ul>
-<li style="color: rgb(255, 255, 0);">Resolution is approximate and
-may vary by model and region.</li>
-<li style="color: rgb(255, 255, 0);">"MS" indicates Memory Stick
-compatibility (in addition to floppy disks).</li>
-<li style="color: rgb(255, 255, 0);">The CD series used mini CD-R
-discs (~156MB).</li>
+<li style="color: rgb(255, 255, 0);">Resolution and features
+shown are approximate; confirm with official manuals for specifics.</li>
+<li style="color: rgb(255, 255, 0);">"MS" indicates Memory
+Stick compatibility (in addition to floppy or CD storage on some
+models).</li>
+<li style="color: rgb(255, 255, 0);">CD-series cameras use mini
+CD-R discs (~156MB) — avoid full-size CDs.</li>
 </ul>
 </div>
-<aside class="rightbar" role="complementary" aria-label="Right sidebar">
-</aside>
-<div style="text-align: center;"><img src="../mavica/images/acroPIM.gif"
-alt="" style="width: 120px; height: 60px;"></div>
-</div>
+</td>
+<!-- Right sidebar: simple badges and prototype link, kept consistent with index -->
+<td class="rightbar" role="complementary"
+aria-label="Right sidebar">
+<div style="text-align: center;"><img
+src="../mavica/images/acroPIM.gif" alt=""
+style="width: 120px; height: 60px;"></div>
+<div style="margin-top: 12px;"><a class="camera-btn"
+href="/mavica/mvc-prototypes.html" style="text-align: center;">Prototypes</a></div>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="footer">2025 Captured On Floppy — All rights reserved.</div>
 </body>
 </html>
-
