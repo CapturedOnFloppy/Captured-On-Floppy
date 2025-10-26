@@ -5,29 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
+/* Match indexv2 styling for consistent site layout */
 body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
 .banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
 .banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
 .navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
 .navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
-.layout { max-width:1100px; margin:1.6em auto; display:flex; gap:20px; }
-.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; }
-.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; flex:1; min-width:300px; }
-.photo-section { display:flex; gap:18px; flex-wrap:wrap; margin-bottom:14px; }
-.photo-box { background:#111; padding:10px; border-radius:8px; border:2px solid #FF00FF; width:320px; text-align:center; }
+.layout-table { width:1100px; margin:2em auto; border-collapse:separate; border-spacing:0; }
+.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; box-sizing:border-box; }
+.sidebar-title { color:#FFFF00; font-weight:bold; text-align:center; margin-bottom:1.2em; font-size:1.2em; text-shadow:2px 2px 0 #FF00FF; letter-spacing:2px; }
+.camera-btn { display:block; width:100%; margin:0.35em 0; padding:0.6em 0.8em; background:#FFFF00; color:#000; font-weight:bold; border:2px outset #FF00FF; border-radius:10px; text-decoration:none; box-sizing:border-box; text-align:left; }
+.camera-year { color:#FF00FF; font-weight:bold; margin-left:0.6em; font-size:0.95em; }
+.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; width:740px; max-width:98%; margin:auto; box-sizing:border-box; }
+h1 { color:#FFD700; margin-top:0; text-align:center; }
+.photo-section { display:flex; gap:18px; flex-wrap:wrap; margin-bottom:14px; justify-content:flex-start; }
+.photo-box { background:#111; padding:10px; border-radius:8px; border:2px solid #FF00FF; width:320px; text-align:center; box-sizing:border-box; }
+.photo-box img { width:100%; height:auto; border-radius:6px; border:1px solid #FF00FF; box-shadow:0 0 8px #222; display:block; margin:0 auto 8px; }
 .comparison-table { width:96%; margin:1em auto; border-collapse:collapse; background:#111; color:#ffff00; border:1px solid #FF00FF; }
 .comparison-table th, .comparison-table td { border:1px solid #FF00FF; padding:8px; text-align:left; vertical-align:top; }
-.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; }
+.onecol-bottom { background:#111; padding:12px; border:1px solid #FF00FF; border-radius:10px; margin-top:18px; color:#FFFF00; }
+.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; box-sizing:border-box; }
 .footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
 a { color:#FF00FF; }
-@media (max-width:900px) { .layout { flex-direction:column; padding:0 12px; } .sidebar, .main-content, .rightbar { width:100% !important; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
+@media (max-width:900px) {
+.layout-table { width:96vw; display:block; }
+.sidebar, .main-content, .rightbar { width:100% !important; display:block; padding:1em; }
+.navbar { display:block; width:90vw; margin:0.3em auto; }
+}
 </style>
 </head>
 <body>
 <div class="banner">Captured On Floppy™️
 <div class="banner-sub">Sony Mavica Interchangeable Parts Guide</div>
 </div>
-<div class="navbar-wrapper"> <nav class="navbar"><a href="/index.html"
+<div class="navbar-wrapper" role="navigation"
+aria-label="Top navigation"> <nav class="navbar"><a href="/index.html"
 style="text-decoration: none; color: rgb(0, 0, 0);">Home</a></nav> <nav
 class="navbar"><a href="/tech.html"
 style="text-decoration: none; color: rgb(0, 0, 0);">Tech</a></nav> <nav
@@ -36,47 +48,82 @@ style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
 class="navbar"><a href="/resources.html"
 style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
 </div>
-<div class="layout"> <aside class="sidebar" role="navigation"
-aria-label="Left menu"> </aside>
-<div
-style="color: rgb(255, 255, 0); font-weight: bold; text-align: center; margin-bottom: 12px;">Sony
-Mavica Cameras<br>
+<table class="layout-table" role="presentation" cellpadding="0"
+cellspacing="0">
+<tbody>
+<tr>
+<!-- Left Sidebar: All Mavica Models (same as index) --> <td
+class="sidebar" role="navigation" aria-label="Left menu">
+<div class="sidebar-title">Sony Mavica Cameras<br>
 <img style="width: 55px; height: 55px;" alt=""
 src="../mavica/images/mancirlce.gif"></div>
 <a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
 class="camera-year">1997</span></a> <a class="camera-btn"
 href="/mavica/mvc-fd7.html">MVC-FD7 <span class="camera-year">1997</span></a>
-<a class="camera-btn" href="/mavica/mvc-fd71.html">MVC-FD71 <span
+<a class="camera-btn" href="/mavica/mvc-fd51.html">MVC-FD51 <span
+class="camera-year">1997</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd71.html">MVC-FD71 <span class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd73.html">MVC-FD73 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd75.html">MVC-FD75 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd81.html">MVC-FD81 <span
 class="camera-year">1998</span></a> <a class="camera-btn"
 href="/mavica/mvc-fd83.html">MVC-FD83 <span class="camera-year">1999</span></a>
-<a class="camera-btn" href="/mavica/mvc-fd87.html">MVC-FD87 <span
+<a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd87.html">MVC-FD87 <span class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd88.html">MVC-FD88 <span
 class="camera-year">2000</span></a> <a class="camera-btn"
-href="/mavica/sony-mavica-analog.html">Mavica Analog Series <span
-class="camera-year">1982–1986</span></a> <main class="main-content"
-role="main" aria-label="Parts interchange"> </main>
-<h1 style="color: rgb(255, 215, 0); margin-top: 0pt;">Sony Mavica
-Interchangeable Parts Guide (Excluding Batteries)</h1>
-<div class="photo-section">
-<div class="photo-box"><img src="images/cd400f.jpg" alt="CD400 Front"
-style="width: 100%; height: auto;">
-<h3 style="color: rgb(255, 215, 0);">General Notes</h3>
-<ul style="text-align: left; color: rgb(255, 255, 0);">
-<li>Mechanical and electronic compatibility is usually best within
-the same generation and model family.</li>
+href="/mavica/mvc-fd90.html">MVC-FD90 <span class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd91.html">MVC-FD91 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd92.html">MVC-FD92 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd95.html">MVC-FD95 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd97.html">MVC-FD97 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd100.html">MVC-FD100 <span
+class="camera-year">2001</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd200.html">MVC-FD200 <span class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-prototypes.html">MVC-Prototypes
+<span class="camera-year">87/90</span></a> <a class="camera-btn"
+href="/mavica/mvc-slr.html">MVC-Analog <span class="camera-year">90/92</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd200.html">MVC-CD200 <span class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd300.html">MVC-CD300 <span
+class="camera-year">2001</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd250.html">MVC-CD250 <span class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd400.html">MVC-CD400 <span
+class="camera-year">2002</span></a> <a class="camera-btn"
+href="/mavica/mvc-cd350.html">MVC-CD350 <span class="camera-year">2003</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
+class="camera-year">2003-end</span></a> </td>
+<!-- Center: main content (keeps your original content intact) --> <td
+class="main-content" role="main" aria-label="Parts interchange">
+<h1>Sony Mavica Interchangeable Parts Guide (Excluding Batteries)</h1>
+<div class="photo-section" aria-hidden="false">
+<div class="photo-box"> <img src="images/cd400f.jpg"
+alt="CD400 Front">
+<h3 style="margin: 8px 0pt 6px; color: rgb(255, 215, 0);">General
+Notes</h3>
+<ul
+style="margin: 0pt 0pt 8px 1.1em; text-align: left; color: rgb(255, 255, 0);">
+<li>Mechanical and electronic compatibility is usually best
+within the same generation and model family.</li>
 <li>Parts like floppy drives, LCD screens, lens assemblies, and
 buttons are sometimes swappable within a series, but main boards and
 plastics often differ.</li>
-<li>CD and FD series are not compatible with each other for storage
-drives, boards, or shells.</li>
+<li>CD and FD series are not compatible with each other for
+storage drives, boards, or shells.</li>
 </ul>
 </div>
-<div class="photo-box"><img src="images/cd400r.jpg" alt="CD400 Rear"
-style="width: 100%; height: auto;"></div>
+<div class="photo-box"> <img src="images/cd400r.jpg"
+alt="CD400 Rear"> </div>
 </div>
-<!-- Example interchange table -->
+<!-- Example interchange table (keeps your original rows) -->
 <table class="comparison-table" role="table"
 aria-label="FD5/FD7/FD51 Series">
-<thead><tr>
+<thead> <tr>
 <th>Part</th>
 <th>Interchangeable?</th>
 <th>Notes</th>
@@ -99,25 +146,36 @@ aria-label="FD5/FD7/FD51 Series">
 </tr>
 </tbody>
 </table>
-<div class="onecol-bottom" style="color: rgb(255, 255, 0);">
-<h3>Collector Tips</h3>
+<div class="onecol-bottom" role="region"
+aria-label="Collector tips">
+<h3 style="color: rgb(255, 215, 0); margin-top: 0pt;">Collector
+Tips</h3>
 <ul style="text-align: left;">
 <li>Floppy drives and LCDs are the most likely to be compatible
 within a generation.</li>
 <li>Lens blocks and main boards are the least likely to swap
 successfully.</li>
-<li>Always check part numbers and ribbon connector orientation before
-swapping.</li>
+<li>Always check part numbers and ribbon connector orientation
+before swapping.</li>
 </ul>
-<p style="font-weight: bold; color: rgb(255, 215, 0);">Legend: Yes =
-Interchangeable within series, P = Partial (check sub-model), No = Not
-interchangeable</p>
+<p
+style="font-weight: bold; color: rgb(255, 215, 0); margin-top: 8px;">Legend:
+Yes = Interchangeable within series, P = Partial (check sub-model), No
+= Not interchangeable</p>
 </div>
-<aside class="rightbar" role="complementary" aria-label="Right sidebar">
-</aside>
-<div style="text-align: center;"><img src="../mavica/images/acroPIM.gif"
-alt="" style="width: 120px; height: 60px;"></div>
+</td>
+<!-- Right Sidebar: badges / accessories --> <td class="rightbar"
+role="complementary" aria-label="Right sidebar">
+<div style="text-align: center;"><img
+src="../mavica/images/acroPIM.gif" alt=""
+style="width: 120px; height: 60px;"></div>
+<div style="margin-top: 12px;"> <a class="camera-btn"
+href="/mavica/mvc-prototypes.html" style="text-align: center;">Prototypes</a>
 </div>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="footer">© 1998-2025 Mavica Camera Club / Captured On
 Floppy™️ • All rights reserved.</div>
 </body>
