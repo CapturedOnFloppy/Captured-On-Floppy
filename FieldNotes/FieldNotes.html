@@ -1,248 +1,347 @@
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Field Notes</title>
+<meta charset="utf-8">
+<title>Captured On Floppy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
 <style>
 body {
-background: #e0e8f0;
-color: #003366;
-font-family: 'Segoe UI', 'Arial', sans-serif;
+background: #000;
+color: #ffff00;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 16px;
 margin: 0;
 padding: 0;
 }
-.container {
-max-width: 840px;
-margin: 2em auto;
-background: #f7faff;
-border-radius: 12px;
-box-shadow: 0 0 24px rgba(0,48,96,0.08);
-padding: 2em;
-}
-h1 {
+.banner {
+background: #222;
+color: #ffff00;
+padding: 1em 0 0.4em 0;
 text-align: center;
-margin-bottom: 1.5em;
-color: #225588;
-letter-spacing: 1px;
+font-size: 2em;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 0.07em;
+border-bottom: 4px solid #FF00FF;
+text-shadow: 2px 2px 0 #FF00FF;
 }
-table {
+.banner-sub {
+font-size: 0.7em;
+color: #FFD700;
+margin-bottom: 0.3em;
+}
+.navbar-wrapper {
 width: 100%;
-border-collapse: collapse;
-background: #eaf0fa;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 0 6px rgba(0,48,96,0.06);
+text-align: center;
+margin: 0 auto;
 }
-th, td {
-padding: 1em 0.8em;
+.navbar {
+background: #111;
+border-bottom: 2px solid #FF00FF;
+font-size: 1.1em;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+padding: 0.3em 0;
+display: inline-block;
+text-align: center;
+}
+.navbar a {
+color: #000;
+background: #ffff00;
+text-decoration: none;
+padding: 0.7em 2em;
+margin: 0 0.2em;
+font-weight: bold;
+border: 2px solid #FF00FF;
+border-radius: 7px;
+transition: none;
+display: inline-block;
+}
+.navbar a:hover, .navbar a:focus {
+background: #ffff00;
+color: #000;
+text-decoration: underline;
+border-color: #FF00FF;
+}
+.layout-table {
+width: 1100px;
+margin: 2em auto;
+border-spacing: 0;
+border-collapse: separate;
+}
+.sidebar {
+background: #111;
+border-right: 4px solid #FF00FF;
+padding: 2.2em 1em 2em 1em;
+width: 220px;
+min-width: 160px;
+vertical-align: top;
 text-align: left;
-border-bottom: 1px solid #cfd7e6;
 }
-th {
-background: #d2dbee;
-color: #003366;
-font-weight: 600;
-font-size: 1.05em;
+.sidebar-title {
+font-weight: bold;
+color: #FFFF00;
+margin-bottom: 1.2em;
+font-size: 1.25em;
+text-align: center;
+text-shadow: 2px 2px 0 #FF00FF;
+letter-spacing: 2px;
 }
-tr:last-child td {
-border-bottom: none;
+.camera-btn {
+display: block;
+width: 90%;
+margin: 0.4em auto 0.4em auto;
+padding: 0.9em 0.7em;
+background: #FFFF00;
+color: #000;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 1em;
+font-weight: bold;
+border: 2px outset #FF00FF;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 2px 2px 6px #222;
+transition: none;
+text-align: left;
+text-decoration: none;
 }
-@media (max-width: 600px) {
-.container {
-padding: 1em;
+.camera-btn:hover {
+background: #FFFF00;
+color: #000;
+border-color: #FF00FF;
 }
-th, td {
-padding: 0.7em 0.4em;
+.camera-year {
+color: #FF00FF;
+font-size: 0.96em;
+margin-left: 0.7em;
+font-weight: bold;
 }
-h1 {
-font-size: 1.5em;
+.rightbar {
+background: #111;
+border-left: 4px solid #FF00FF;
+padding: 2.2em 1em 2em 1em;
+width: 220px;
+min-width: 160px;
+vertical-align: top;
+text-align: left;
+}
+.main-content {
+background: #222;
+border-radius: 16px;
+box-shadow: 0 0 15px #FFFF00;
+min-height: 400px;
+font-size: 1.08em;
+vertical-align: top;
+color: #FFFF00;
+padding: 2.7em 2.5em;
+width: 100%;
+max-width: 740px;
+margin: auto;
+}
+h2 { color: #FFFF00; text-align: center; text-shadow: 2px 2px 0 #FF00FF;}
+a, a:visited { color: #FF00FF; }
+a:hover { color: #FFFF00; }
+.footer {
+background: #111;
+color: #FF00FF;
+text-align: center;
+font-size: 0.95em;
+padding: 1em 0 1.5em 0;
+margin-top: 2em;
+border-top: 2px solid #FFFF00;
+}
+img { border-radius: 8px; border: 2px solid #FF00FF; margin: 12px 0; box-shadow: 0 0 10px #FFFF00; }
+
+/* Field Notes / blog styles */
+.fieldnotes-intro { text-align:center; margin-bottom:1.2em; }
+.fieldnotes-intro a.archive-link { color:#39FF14; font-weight:bold; text-decoration:none; }
+.fieldnotes-intro a.archive-link:hover { color:#FFFF00; }
+.post { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,0,255,0.12); padding:16px; margin-bottom:18px; border-radius:10px; }
+.post-title { color:#FFD700; font-size:1.2em; margin-bottom:6px; }
+.post-meta { color:#FF99FF; font-size:0.9em; margin-bottom:10px; }
+.post-body { color:#FFFF00; line-height:1.5; }
+.post img.inline { max-width:100%; height:auto; display:block; margin:10px auto; border-radius:6px; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content, .rightbar { font-size: 0.97em; padding: 1em; }
+.main-content { max-width: 98vw; }
+}
+@media (max-width: 850px) {
+.layout-table { width: 99vw; }
+.sidebar, .main-content, .rightbar { width: 100% !important; }
+.layout-table { display: block; }
+.sidebar, .main-content, .rightbar { display: block; }
+.navbar-wrapper { width: 100%; }
+.navbar {
+width: 99vw;
+display: block;
+text-align: center;
+padding: 0.7em 0;
+}
+.navbar a {
+margin: 0.3em 0;
+width: 90vw;
+text-align: center;
 }
 }
 </style>
 </head>
 <body>
-<div class="container">
-<h1>Field Notes</h1>
-<p
-style="text-align: center; color: rgb(68, 102, 153); margin-bottom: 2em;">
-Updates, discoveries, stories, and floppy camera adventures.<br>
-Established 9/9/2025<br>
-<a href="https://www.capturedonfloppy.com">HOME </a><br>
+<div class="banner">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Captured On Floppy
+<div style="text-align: center;" class="banner-sub">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1997-2003 Floppy - Digital</div>
+</div>
+<div class="navbar-wrapper"> <nav class="navbar"> <a
+href="/index.html">Home</a>&nbsp; <a href="/gallery.html">Gallery</a>
+<a href="/resources.html">Resources</a> <a href="/forums.html">Stash</a>
+<a href="FieldNotes/FieldNotes.html">Field Notes</a> </nav> </div>
+<table class="layout-table">
+<tbody>
+<tr>
+<!-- Left Sidebar: All Mavica Models as Neon Buttons --> <td
+class="sidebar">
+<div class="sidebar-title">Sony Mavica Cameras<br>
+<img style="width: 88px; height: 31px;" alt=""
+src="../images/anybrowser6.gif"><br>
+</div>
+<a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd7.html">MVC-FD7 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd51.html">MVC-FD51 <span
+class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd71.html">MVC-FD71 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd73.html">MVC-FD73 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd75.html">MVC-FD75 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd81.html">MVC-FD81 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd83.html">MVC-FD83 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd87.html">MVC-FD87 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd88.html">MVC-FD88 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd90.html">MVC-FD90 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd91.html">MVC-FD91 <span
+class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd92.html">MVC-FD92 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd95.html">MVC-FD95 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd97.html">MVC-FD97 <span
+class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd100.html">MVC-FD100 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd200.html">MVC-FD200 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-prototypes.html">MVC-Prototye
+<span class="camera-year">87/90</span></a>
+<a class="camera-btn" href="/mavica/mvc-slr.html">MVC-Analog <span
+class="camera-year">90/92</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd1000.html">MVC-CD1000 <span
+class="camera-year">2000</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd200.html">MVC-CD200 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd300.html">MVC-CD300 <span
+class="camera-year">2001</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd250.html">MVC-CD250 <span
+class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd400.html">MVC-CD400 <span
+class="camera-year">2002</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd350.html">MVC-CD350 <span
+class="camera-year">2003</span></a>
+<a class="camera-btn" href="/mavica/mvc-cd500.html">MVC-CD500 <span
+class="camera-year">2003-end</span></a>
+<a class="camera-btn" href="/mavica/sony-mavica-analog.html">Mavica
+Analog Series <span class="camera-year">1982–1986<br>
+<br>
+</span></a><a href="/mavica/sony-mavica-analog.html"><img
+style="border: 0px solid ; width: 100px; height: 36px;" alt=""
+src="../images/gh-pages-bo.gif"></a><br>
+</td>
+<!-- Main Content: Centered as Field Notes blog --> <td
+class="main-content" role="main" aria-label="Field Notes">
+<h2>Field Notes — Captured On Floppy</h2>
+<div class="fieldnotes-intro"> <a class="archive-link"
+href="archives/archiveindex.html">(Click Here For Our Classic Archives)</a>
+<div style="margin-top: 12px;"> <img src="images/logo.png"
+alt="Site Logo" width="150"><br>
+</div>
+<p style="margin-top: 12px; color: rgb(255, 255, 0);">For over 35
+years, I’ve lived and worked as both a professional and
+amateur photographer, my journey beginning in the late 1970s with
+studies in photography, television production, and computer programming.</p>
+</div>
+<!-- Post 1: Welcome / About --> <article class="post"
+id="post-welcome"> </article>
+<div class="post-title">Welcome — <br>
+</div>
+<div class="post-meta"><br>
+</div>
+<div class="post-body">
+<p>Site was created September 2025, however did not fit the
+desired look.<br>
+I had sites back in 1997 and decided a georcities look was desired.<br>
+The idea of this is to help preserve information. As well as create a
+personal place for my own updates and projects.<br>
 </p>
-<table>
-<thead> <tr>
-<th>Date</th>
-<th>Title</th>
-<th>Entry</th>
-</tr>
-</thead> <tbody>
-<tr>
-<td style="vertical-align: top;">10/09/25 <br>
-</td>
-<td style="vertical-align: top;">notified public<br>
-</td>
-<td style="vertical-align: top;">Upon doing so was contacted with
-others doing mavic site projects working to create a network on Monday.<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">10/08/25<br>
-</td>
-<td style="vertical-align: top;">Completed Index to fit new
-changes.<br>
-</td>
-<td style="vertical-align: top;">Released updates<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">10/07/25<br>
-</td>
-<td style="vertical-align: top;">Started addition of Stash, added
-resources, and archives<br>
-</td>
-<td style="vertical-align: top;">This was a major upgrade adding
-archives, this page, Stash and more to resources. <br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">10/06/25<br>
-</td>
-<td style="vertical-align: top;">Remodled Resources again<br>
-</td>
-<td style="vertical-align: top;">Strusture seemed out of place
-redid.<br>
+<div style="text-align: center; margin-top: 12px;"> <img
+class="inline" src="images/paul.png" alt="Paul Cordell" height="100"
+width="100"> <img class="inline" src="../images/cameraM.gif"
+alt="Camera graphic" style="width: 100px; height: 100px;"> </div>
+</div>
+<!-- Post 2: Quick Tip / Link to Sunset article --><article class="post"
+id="post-sunset-tip"></article><!-- Post 3: Repair Log / Battery Upgrade --><article
+class="post" id="post-battery-upgrade"></article>
+<div class="post-body"><br>
+<div style="text-align: center; margin-top: 12px;"> <img
+class="inline" src="images/step1.webp" alt="Battery step 1"
+style="max-width: 360px;"> </div>
+</div>
+<!-- Post 4: Short Notes / Links --><article class="post"
+id="post-links"></article>
+<div class="post-body"><br>
+</div>
+<!-- End of Field Notes list -->
+<div
+style="text-align: center; margin-top: 8px; color: rgb(255, 153, 255);">End
+of Field Notes — older entries are in the <a
+href="https://capturedonfloppy.com/FieldNotes/classicarchives.html">ClassicArchives</a></div>
+<!-- If you want to preserve the original 'welcome' text and full content, it's kept above as Post 1. All site graphics are preserved. --></td>
+<!-- Right Sidebar: Yellow Boxes Only (no words, no links) -->
+<td class="rightbar"><!-- 26 empty yellow boxes to match camera-btn count in sidebar -->
+<br>
+<br>
+<br>
+<br>
+<img style="width: 88px; height: 32px;" alt=""
+src="../mavica/images/gh-pages-bo.gif"><br>
+<br>
+<br>
+<br>
+<br>
 </td>
 </tr>
-<tr>
-<td style="vertical-align: top;">10/4/25 <br>
-</td>
-<td style="vertical-align: top;">Gallery synced <br>
-</td>
-<td style="vertical-align: top;">Made Gallery more pic friendly.<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">10/03/25<br>
-</td>
-<td style="vertical-align: top;">Resources we completed.<br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">10/02/25<br>
-</td>
-<td style="vertical-align: top;">Re-did Tech<br>
-</td>
-<td style="vertical-align: top;">Tech added and organized<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">10/01/25<br>
-</td>
-<td style="vertical-align: top;">Notified Community<br>
-</td>
-<td style="vertical-align: top;">Released Public<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/30/25<br>
-</td>
-<td style="vertical-align: top;">DEntal Work postphones opening<br>
-</td>
-<td style="vertical-align: top;">Today I enabled resources page.<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/27/25<br>
-</td>
-<td style="vertical-align: top;">worked on Tech<br>
-</td>
-<td style="vertical-align: top;">Techsite began<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/25/25<br>
-</td>
-<td style="vertical-align: top;">Setup external resources<br>
-</td>
-<td style="vertical-align: top;">Reddit, Instgram activated for
-linking.<br>
-</td>
-</tr>
-<tr>
-<td>9/24/25</td>
-<td>added side Cameras and finshed Front page <br>
-</td>
-<td>Front Page started to come together. <br>
-</td>
-</tr>
-<tr>
-<td>9/23/25<br>
-</td>
-<td>Added menus<br>
-</td>
-<td>Menu structure and mapping site begins.<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/20/25<br>
-</td>
-<td style="vertical-align: top;">Started Adding site details.<br>
-</td>
-<td style="vertical-align: top;">Had to start adding photos for
-all the cameras and special editing.<br>
-This took nearly 8 days .<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/18/25<br>
-</td>
-<td style="vertical-align: top;">Finished Cameras<br>
-</td>
-<td style="vertical-align: top;">The pages for Mavica Done, Now
-start rest of site.<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/8/25<br>
-</td>
-<td style="vertical-align: top;">Page setups<br>
-</td>
-<td style="vertical-align: top;">adding Camera details and specs
-on main index and page creation.<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/6/25<br>
-</td>
-<td style="vertical-align: top;">Began site design<br>
-</td>
-<td style="vertical-align: top;">Started adding all pages for all
-Mavicas. AS daughting task.<br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/3/25<br>
-</td>
-<td style="vertical-align: top;">Setup server<br>
-</td>
-<td style="vertical-align: top;">Aquired a live long server that
-will remain intact indefinetly. <br>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: top;">9/2/25<br>
-</td>
-<td style="vertical-align: top;">Aquired Domains<br>
-</td>
-<td style="vertical-align: top;">CapturedOnFloppy.com, Mavica
-Cameras.com and MavicaCamera.com<br>
-</td>
-</tr>
-<!-- Add new entries here -->
 </tbody>
 </table>
+<div class="footer"> 2025 Captured On Floppy — All rights reserved.<br>
+<img style="width: 250px; height: 47px;" alt="" src="../images/itc.gif"><br>
+<img style="width: 65px; height: 80px;" alt=""
+src="../images/2BWILMQBAHI2RHDH3WQYTLBW77TGJGTZ.gif"><br>
+Presented by <a href="https://paulcordell.com/">Paul Cordell
+Photography</a>, and This Old Mavica<br>
+contact: capturedonfloppy (at) Gmail&nbsp;.com<br>
+Do not send attachments, they will not be accepted.<br>
+<br>
+<img style="width: 88px; height: 31px;" alt=""
+src="../images/copyscape.gif"><br>
 </div>
 </body>
 </html>
+
