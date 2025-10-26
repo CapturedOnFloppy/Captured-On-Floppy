@@ -1,199 +1,63 @@
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>Sony Mavica Battery Cross Reference Guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #f8f8ff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
-}
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size: 0.5em;
-color: #ccccee;
-}
-.navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-text-align: center;
-padding: 0.3em 0;
-}
-.navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.layout-table {
-width: 1100px;
-margin: 2em auto;
-border-collapse: separate;
-border-spacing: 15px 0;
-}
-.sidebar {
-background: #e8eef8;
-border: 1px solid #b2c3e6;
-padding: 1em 1.4em;
-width: 220px;
-min-width: 160px;
-vertical-align: top;
-font-size: 0.97em;
-}
-.main-content {
-background: #fff;
-border: 1px solid #b2c3e6;
-padding: 1.7em 2em;
-min-height: 400px;
-font-size: 1.08em;
-vertical-align: top;
-}
-.sidebar-title {
-font-weight: bold;
-color: #003366;
-margin-bottom: 0.5em;
-font-size: 1.07em;
-text-align: center;
-}
-.camera-link {
-color: #003399;
-text-decoration: underline;
-display: inline-block;
-margin-bottom: 0.24em;
-}
-.camera-link:hover {
-color: #000066;
-background: #dbeafe;
-text-decoration: underline;
-}
-.camera-year {
-color: #666;
-font-size: 0.96em;
-margin-left: 0.7em;
-}
-.camera-brand {
-color: #444;
-font-weight: bold;
-margin-right: 0.35em;
-}
-.camera-model {
-color: #003399;
-font-weight: normal;
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
-}
-@media (max-width: 1200px) {
-.layout-table { width: 99vw; }
-.sidebar, .main-content { font-size: 0.97em; padding: 1em; }
-}
-@media (max-width: 850px) {
-.layout-table, .navbar { width: 99vw; }
-.sidebar, .main-content { width: 100% !important; }
-.layout-table { display: block; }
-.sidebar, .main-content { display: block; }
-}
-/* Battery table styles override */
-.battery-table {
-border-collapse: collapse;
-width: 100%;
-margin: 2em auto;
-font-size: 1em;
-}
-.battery-table th, .battery-table td {
-border: 1px solid #888;
-padding: 0.5em 1em;
-text-align: center;
-vertical-align: middle;
-}
-.battery-table th {
-background: #f0f0f0;
-}
-.battery-table caption {
-font-size: 1.2em;
-margin-bottom: 0.5em;
-font-weight: bold;
-}
-.battery-disclaimer {
-text-align: center;
-font-size: 1em;
-margin: 2em 0 1em 0;
-color: #333;
-}
+body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
+.banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
+.banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
+.navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
+.navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
+.layout-table { width:1100px; margin:1.6em auto; border-collapse:separate; border-spacing:0; }
+.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; }
+.sidebar-title { color:#FFFF00; font-weight:bold; text-align:center; margin-bottom:1.2em; font-size:1.2em; text-shadow:2px 2px 0 #FF00FF; letter-spacing:2px; }
+.camera-link { color:#000; background:#FFFF00; display:inline-block; padding:6px; margin-bottom:6px; border:2px solid #FF00FF; border-radius:8px; text-decoration:none; }
+.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; width:740px; max-width:98%; margin:auto; }
+.battery-table { width:96%; margin:1em auto; border-collapse:collapse; background:#111; color:#ffff00; border:1px solid #FF00FF; }
+.battery-table th, .battery-table td { padding:10px; border:1px solid #FF00FF; text-align:center; vertical-align:middle; }
+.battery-disclaimer { text-align:center; color:#FFD700; margin:0.6em 0; }
+.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; }
+.footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
+@media (max-width:900px) { .layout-table { display:block; width:96vw; } .sidebar, .main-content, .rightbar { width:100% !important; display:block; padding:1em; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy Coming Soon
-<div class="subtitle">1997-2003 Floppy - Digital</div>
+<div class="banner">Captured On Floppy — Battery Reference
+<div class="banner-sub">1997-2003 Floppy - Digital</div>
 </div>
-<nav class="navbar"> </nav>
-<div style="text-align: center;"><nav class="navbar"><a
-href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
-href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a></nav></div>
-<nav class="navbar"> </nav>
+<div class="navbar-wrapper"> <nav class="navbar"><a href="/index.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Home</a></nav> <nav
+class="navbar"><a href="/tech.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Tech</a></nav> <nav
+class="navbar"><a href="/gallery.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
+class="navbar"><a href="/resources.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
+</div>
 <table class="layout-table">
 <tbody>
 <tr>
-<!-- Left Sidebar --> <td class="sidebar">
-<div class="sidebar-title">Sony Mavica Resources</div>
+<td class="sidebar" role="navigation" aria-label="Left menu">
+<div class="sidebar-title">Sony Mavica Resources<br>
+<img style="width: 55px; height: 55px;" alt=""
+src="../mavica/images/mancirlce.gif"></div>
 <a class="camera-link" href="/mavica/manual.html">MAVICAMANUALS</a><br>
-<br>
-<a class="camera-link" href="/mavica/specs.html">MAVICA FULL SPECS</a>
-<br>
-<br>
-<a href="/mavica/batteryM.html">BATTERY REFERENCE</a><br>
+<a class="camera-link" href="/mavica/specs.html">MAVICA FULL SPECS</a><br>
+<a class="camera-link" href="/mavica/batteryM.html">BATTERY
+REFERENCE</a><br>
 </td>
-<!-- Main Content --> <td class="main-content">
-<div class="battery-disclaimer"> <strong>Sony Mavica Battery
-Cross Reference Guide.</strong><br>
-<small> Disclaimer: This information is based on my own use and
-research.<br>
-It would be impossible to ensure they all work.<br>
-As well as fit, as some will fit and function but are tight.<br>
-<br>
-Sony did very well making the Mavica compatible with chargers and
-batteries. But test before using.<br>
-<span style="text-decoration: underline;">Being Sony No Longer
-Supports the Cameras</span><br>
-<span style="text-decoration: underline;">Verification is
-Impossible</span> </small> </div>
-<table class="battery-table">
-<caption>Sony Mavica &amp; CD Camera Battery and Charger Types<br>
-<br>
-<img alt="" src="/mavica/images/logopage1.jpg"><br>
-</caption> <thead> <tr>
+<td class="main-content" role="main"
+aria-label="Battery Cross Reference">
+<div class="battery-disclaimer"><strong>Sony Mavica Battery Cross
+Reference Guide.</strong><br>
+<small>Disclaimer: This information is based on research and may
+not guarantee fit or function. Test before use.</small></div>
+<table class="battery-table" role="table"
+aria-label="Battery table">
+<caption style="color: rgb(255, 215, 0); padding-bottom: 8px;">Sony
+Mavica &amp; CD Camera Battery and Charger Types</caption> <thead> <tr>
 <th>Model</th>
 <th>Specific Model</th>
 <th>Battery Type(s)</th>
@@ -353,17 +217,15 @@ Impossible</span> </small> </div>
 </tbody>
 </table>
 </td>
-<!-- Right Sidebar --> <td class="sidebar">
-<div class="sidebar-title">Transitional Cameras</div>
-&nbsp; <span class="camera-brand"></span><br>
+<td class="rightbar" role="complementary"
+aria-label="Right sidebar">
+<div style="text-align: center;"><img
+src="../mavica/images/acroPIM.gif" alt=""
+style="width: 120px; height: 60px;"></div>
 </td>
 </tr>
 </tbody>
 </table>
-<div style="text-align: center;"><footer>2025 Captured On Floppy — All
-rights reserved.<br>
-<br>
-THIS OLD MAVICA PRESENTS<br>
-</footer></div>
+<div class="footer">2025 Captured On Floppy — All rights reserved.</div>
 </body>
 </html>
