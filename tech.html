@@ -1,243 +1,74 @@
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Captured On Floppy - Gallery</title>
+<meta charset="utf-8">
+<title>Captured On Floppy - Tech</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #f8f8ff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
-}
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size: 0.5em;
-color: #ccccee;
-}
-.navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-text-align: center;
-padding: 0.3em 0;
-}
-.navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.gallery-table {
-width: 90%;
-margin: 3em auto 2em auto;
-border-collapse: separate;
-border-spacing: 22px 20px;
-table-layout: fixed;
-}
-.gallery-cell {
-background: #fff;
-border: 1px solid #b2c3e6;
-padding: 1em;
-text-align: center;
-vertical-align: top;
-border-radius: 10px;
-box-shadow: 0 2px 8px #e8eef8;
-height: 340px;
-width: 240px;
-}
-.gallery-img {
-max-width: 210px;
-max-height: 210px;
-width: auto;
-height: auto;
-border-radius: 7px;
-border: 1px solid #ccc;
-background: #fafaff;
-margin-bottom: 0.7em;
-box-shadow: 0 1px 5px #e0e8f0;
-}
-.desc {
-font-size: 1em;
-color: #003366;
-min-height: 2.5em;
-margin-top: 0.8em;
-word-break: break-word;
-}
-.gallery-links {
-text-align: center;
-margin: 1.2em 0 0.5em 0;
-}
-.gallery-links a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-font-size: 1.1em;
-transition: background 0.2s, color 0.2s;
-}
-.gallery-links a:hover, .gallery-links a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.comparison-table {
-width: 96%;
-margin: 2em auto 2em auto;
-border-collapse: collapse;
-background: #fff;
-font-size: 0.98em;
-}
-.comparison-table th, .comparison-table td {
-border: 1px solid #bbb;
-padding: 7px 7px;
-text-align: left;
-}
-.comparison-table th {
-background: #e5e9f7;
-color: #222;
-}
-.comparison-table caption {
-font-weight: bold;
-margin-bottom: 0.5em;
-color: #2a3d7f;
-font-size: 1em;
-text-align: left;
-padding-left: 5px;
-}
-.comparison-section {
-margin: 3em auto 2em auto;
-max-width: 1100px;
-}
-.notes {
-font-size: 0.97em;
-margin-top: 2em;
-margin-bottom: 2em;
-background: #eef;
-padding: 1em;
-border-radius: 6px;
-max-width: 1100px;
-margin-left: auto;
-margin-right: auto;
-}
-@media (max-width: 1100px) {
-.gallery-table { width: 99vw; }
-.gallery-cell { width: 31vw; height: 33vw; }
-.gallery-img { max-width: 90%; }
-.comparison-table { width: 99vw; font-size: 0.95em;}
-.comparison-section, .notes { max-width: 99vw;}
-}
-@media (max-width: 750px) {
-.gallery-table { width: 99vw; }
-.gallery-cell { width: 95vw; height: auto; }
-.gallery-img { max-width: 93vw; }
-.comparison-table { width: 99vw; font-size: 0.92em;}
-.comparison-section, .notes { max-width: 99vw;}
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
-}
+body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
+.banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
+.banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
+.navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
+.navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
+.layout { max-width:1100px; margin:1.6em auto; display:flex; gap:20px; }
+.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; }
+.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; flex:1; min-width:300px; }
+.comparison-table { width:96%; margin:1em auto; border-collapse:collapse; background:#111; color:#ffff00; border:1px solid #FF00FF; }
+.comparison-table th, .comparison-table td { border:1px solid #FF00FF; padding:8px; text-align:left; vertical-align:top; }
+.notes { background:#111; color:#ffff00; padding:12px; border:1px solid #FF00FF; border-radius:8px; margin-top:12px; max-width:96%; }
+.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; }
+.footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
+a { color:#FF00FF; }
+@media (max-width:900px) { .layout { flex-direction:column; padding:0 12px; } .sidebar, .main-content, .rightbar { width:100% !important; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy Gallery
-<div class="subtitle">1997-2003 Floppy - Digital</div>
+<div class="banner">Captured On Floppy Gallery
+<div class="banner-sub">1997-2003 Floppy - Digital</div>
 </div>
-<nav class="navbar"></nav>
-<div style="text-align: center;"> <nav class="navbar"> <a
-href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
-href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a>
-<a href="/forums.html">Stash</a>
-</nav>
-</div>
-<nav class="navbar"></nav>
-<h2 style="text-align: center; margin-top: 2em;"> </h2>
-<h2 style="text-align: center; margin-top: 2em;"></h2>
-<!-- BEGIN Mavica Comparison Tables -->
-<div class="comparison-section">
-<div style="text-align: center;"> </div>
-<h2 style="color: rgb(42, 61, 127); text-align: center;">Sony Mavica
+<div class="navbar-wrapper"> <nav class="navbar"><a href="/index.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Home</a></nav> <nav
+class="navbar"><a href="/tech.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Tech</a></nav> <nav
+class="navbar"><a href="/gallery.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
+class="navbar"><a href="/resources.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
+<nav class="navbar"><a href="/forums.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Stash</a></nav> </div>
+<div class="layout"> <aside class="sidebar" role="navigation"
+aria-label="Left menu"> </aside>
+<div
+style="color: rgb(255, 255, 0); font-weight: bold; text-align: center; margin-bottom: 12px;">Sony
+Mavica Cameras<br>
+<img style="width: 55px; height: 55px;" alt=""
+src="../mavica/images/mancirlce.gif"></div>
+<a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
+class="camera-year">1997</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd7.html">MVC-FD7 <span class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd51.html">MVC-FD51 <span
+class="camera-year">1997</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd71.html">MVC-FD71 <span class="camera-year">1998</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd73.html">MVC-FD73 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd75.html">MVC-FD75 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd81.html">MVC-FD81 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd83.html">MVC-FD83 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd85.html">MVC-FD85 <span
+class="camera-year">1999</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd87.html">MVC-FD87 <span class="camera-year">2000</span></a>
+<main class="main-content" role="main" aria-label="Tech overview"> </main>
+<h2 style="color: rgb(255, 215, 0); text-align: center;">Sony Mavica
 Model Comparison</h2>
-<p style="text-align: center;">A complete listing of Sony Mavica camera
-models, organized by technology series.</p>
-<p style="text-align: center;"><br>
-</p>
-<table class="comparison-table">
-<caption>Analog Mavica Series (1982–1992)</caption> <thead> <tr>
-<th>Model</th>
-<th>Year(s)</th>
-<th>Type</th>
-<th>Storage</th>
-<th>Notes</th>
-</tr>
-</thead> <tbody>
-<tr>
-<td>MVC-Analog</td>
-<td>1982–1986</td>
-<td>Analog</td>
-<td>Video Floppy</td>
-<td>First prototypes</td>
-</tr>
-<tr>
-<td>MVC-Prototype</td>
-<td>1987/1990</td>
-<td>Analog</td>
-<td>Video Floppy</td>
-<td>Unreleased concept</td>
-</tr>
-<tr>
-<td>MVC-Analog90</td>
-<td>1990</td>
-<td>Analog</td>
-<td>Video Floppy</td>
-<td>Consumer release</td>
-</tr>
-<tr>
-<td>MVC-Analog92</td>
-<td>1992</td>
-<td>Analog</td>
-<td>Video Floppy</td>
-<td>Improved analog</td>
-</tr>
-</tbody>
-</table>
-<table class="comparison-table">
-<caption>Digital Floppy Disk Series (MVC-FD, 1997–2001)</caption> <thead>
-<tr>
+<p style="color: rgb(255, 255, 0); text-align: center;">A complete
+listing of Sony Mavica camera models, organized by technology series.</p>
+<!-- Example: one of the comparison tables from the original content -->
+<table class="comparison-table" role="table"
+aria-label="Digital Floppy Disk Series">
+<caption
+style="padding: 8px; color: rgb(255, 215, 0); font-weight: bold;">Digital
+Floppy Disk Series (MVC-FD, 1997–2001)</caption> <thead> <tr>
 <th>Model</th>
 <th>Year</th>
 <th>Sensor</th>
@@ -263,52 +94,12 @@ models, organized by technology series.</p>
 <td>LCD screen</td>
 </tr>
 <tr>
-<td>MVC-FD51</td>
-<td>1997</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>0.3MP</td>
-<td>Compact design</td>
-</tr>
-<tr>
 <td>MVC-FD71</td>
 <td>1998</td>
 <td>CCD</td>
 <td>Floppy</td>
 <td>0.3MP</td>
 <td>Enhanced autofocus</td>
-</tr>
-<tr>
-<td>MVC-FD73</td>
-<td>1998</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>0.3MP</td>
-<td>Entry-level</td>
-</tr>
-<tr>
-<td>MVC-FD75</td>
-<td>1999</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>0.3MP</td>
-<td>Budget model</td>
-</tr>
-<tr>
-<td>MVC-FD81</td>
-<td>1998</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>0.7MP</td>
-<td>Higher resolution</td>
-</tr>
-<tr>
-<td>MVC-FD83</td>
-<td>1999</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>0.7MP</td>
-<td>Improved lens</td>
 </tr>
 <tr>
 <td>MVC-FD85</td>
@@ -318,168 +109,24 @@ models, organized by technology series.</p>
 <td>1.3MP</td>
 <td>Better image quality</td>
 </tr>
-<tr>
-<td>MVC-FD87</td>
-<td>2000</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>1.3MP</td>
-<td>USB connectivity</td>
-</tr>
-<tr>
-<td>MVC-FD88</td>
-<td>2000</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>1.3MP</td>
-<td>6X zoom</td>
-</tr>
-<tr>
-<td>MVC-FD90</td>
-<td>2000</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>1.3MP</td>
-<td>Video recording</td>
-</tr>
-<tr>
-<td>MVC-FD91</td>
-<td>1998</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>0.8MP</td>
-<td>High zoom</td>
-</tr>
-<tr>
-<td>MVC-FD92</td>
-<td>1999</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>0.8MP</td>
-<td>Macro mode</td>
-</tr>
-<tr>
-<td>MVC-FD95</td>
-<td>1999</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>2.1MP</td>
-<td>Largest lens, 8X zoom</td>
-</tr>
-<tr>
-<td>MVC-FD97</td>
-<td>1999</td>
-<td>CCD</td>
-<td>Floppy</td>
-<td>2.1MP</td>
-<td>MPEG movie</td>
-</tr>
-<tr>
-<td>MVC-FD100</td>
-<td>2001</td>
-<td>CCD</td>
-<td>Floppy/MS</td>
-<td>1.6MP</td>
-<td>Memory Stick support</td>
-</tr>
-<tr>
-<td>MVC-FD200</td>
-<td>2001</td>
-<td>CCD</td>
-<td>Floppy/MS</td>
-<td>2.0MP</td>
-<td>Dual storage options</td>
-</tr>
 </tbody>
 </table>
-<table class="comparison-table">
-<caption>Digital CD Series (MVC-CD, 2000–2003)</caption> <thead> <tr>
-<th>Model</th>
-<th>Year</th>
-<th>Sensor</th>
-<th>Storage</th>
-<th>Resolution</th>
-<th>Notable Features</th>
-</tr>
-</thead> <tbody>
-<tr>
-<td>MVC-CD1000</td>
-<td>2000</td>
-<td>CCD</td>
-<td>CD-R</td>
-<td>2.1MP</td>
-<td>First CD Mavica</td>
-</tr>
-<tr>
-<td>MVC-CD200</td>
-<td>2001</td>
-<td>CCD</td>
-<td>CD-R</td>
-<td>2.1MP</td>
-<td>Improved autofocus</td>
-</tr>
-<tr>
-<td>MVC-CD250</td>
-<td>2002</td>
-<td>CCD</td>
-<td>CD-R</td>
-<td>2.0MP</td>
-<td>Compact body</td>
-</tr>
-<tr>
-<td>MVC-CD300</td>
-<td>2001</td>
-<td>CCD</td>
-<td>CD-R</td>
-<td>3.3MP</td>
-<td>Higher resolution</td>
-</tr>
-<tr>
-<td>MVC-CD350</td>
-<td>2003</td>
-<td>CCD</td>
-<td>CD-R</td>
-<td>3.2MP</td>
-<td>MPEG movie</td>
-</tr>
-<tr>
-<td>MVC-CD400</td>
-<td>2002</td>
-<td>CCD</td>
-<td>CD-R</td>
-<td>4.0MP</td>
-<td>Professional features</td>
-</tr>
-<tr>
-<td>MVC-CD500</td>
-<td>2003</td>
-<td>CCD</td>
-<td>CD-R</td>
-<td>5.0MP</td>
-<td>Highest resolution</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="notes"> <strong>Notes:</strong>
+<div class="notes"> <strong style="color: rgb(255, 215, 0);">Notes:</strong>
 <ul>
-<li style="color: red;">Resolution is approximate and may vary by
-model and region.</li>
-<li>"MS" indicates Memory Stick compatibility (in addition to floppy
-disks).</li>
-<li>Some analog models are rare prototypes or limited releases.</li>
-<li>The CD series used mini CD-R discs (~156MB).</li>
-<li>Most models feature video recording and LCD screens by 2000.</li>
+<li style="color: rgb(255, 255, 0);">Resolution is approximate and
+may vary by model and region.</li>
+<li style="color: rgb(255, 255, 0);">"MS" indicates Memory Stick
+compatibility (in addition to floppy disks).</li>
+<li style="color: rgb(255, 255, 0);">The CD series used mini CD-R
+discs (~156MB).</li>
 </ul>
-<p> <strong>See also:</strong>&nbsp; <a
-href="https://capturedonfloppy.com/resources.html">Mavica Resources</a>
-</p>
 </div>
-<!-- END Mavica Comparison Tables -->
-<div style="text-align: center;"> <footer> <br>
-<br>
-2025 Captured On Floppy — All rights reserved. </footer>
+<aside class="rightbar" role="complementary" aria-label="Right sidebar">
+</aside>
+<div style="text-align: center;"><img src="../mavica/images/acroPIM.gif"
+alt="" style="width: 120px; height: 60px;"></div>
 </div>
+<div class="footer">2025 Captured On Floppy — All rights reserved.</div>
 </body>
 </html>
 
