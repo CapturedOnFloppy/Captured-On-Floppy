@@ -1,243 +1,112 @@
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Captured On Floppy - Gallery</title>
+<meta charset="utf-8">
+<title>Mavica Buyers Guide — Captured On Floppy</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #f8f8ff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
-}
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size: 0.5em;
-color: #ccccee;
-}
-.navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-text-align: center;
-padding: 0.3em 0;
-}
-.navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.gallery-table {
-width: 90%;
-margin: 3em auto 2em auto;
-border-collapse: separate;
-border-spacing: 22px 20px;
-table-layout: fixed;
-}
-.gallery-cell {
-background: #fff;
-border: 1px solid #b2c3e6;
-padding: 1em;
-text-align: center;
-vertical-align: top;
-border-radius: 10px;
-box-shadow: 0 2px 8px #e8eef8;
-height: 340px;
-width: 240px;
-}
-.gallery-img {
-max-width: 210px;
-max-height: 210px;
-width: auto;
-height: auto;
-border-radius: 7px;
-border: 1px solid #ccc;
-background: #fafaff;
-margin-bottom: 0.7em;
-box-shadow: 0 1px 5px #e0e8f0;
-}
-.desc {
-font-size: 1em;
-color: #003366;
-min-height: 2.5em;
-margin-top: 0.8em;
-word-break: break-word;
-}
-.gallery-links {
-text-align: center;
-margin: 1.2em 0 0.5em 0;
-}
-.gallery-links a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-font-size: 1.1em;
-transition: background 0.2s, color 0.2s;
-}
-.gallery-links a:hover, .gallery-links a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-@media (max-width: 1100px) {
-.gallery-table { width: 99vw; }
-.gallery-cell { width: 31vw; height: 33vw; }
-.gallery-img { max-width: 90%; }
-}
-@media (max-width: 750px) {
-.gallery-table { width: 99vw; }
-.gallery-cell { width: 95vw; height: auto; }
-.gallery-img { max-width: 93vw; }
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
-}
+body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
+.banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
+.banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
+.navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
+.navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
+.main { max-width:1100px; margin:1.6em auto; padding:2em; display:block; }
+.gallery-table { width:100%; border-collapse:separate; border-spacing:22px 20px; }
+.gallery-cell { background:#111; border:2px solid #FF00FF; padding:1em; text-align:center; border-radius:10px; box-shadow:0 0 12px #FFFF00; width:18%; vertical-align:top; }
+.gallery-img { max-width:100%; border-radius:7px; border:1px solid #FF00FF; margin-bottom:0.7em; }
+.gallery-links { text-align:center; margin-bottom:12px; }
+.footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
+@media (max-width:900px) { .gallery-cell { display:block; width:95%; margin:10px auto; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy Gallery
-<div class="subtitle">1997-2003 Floppy - Digital</div>
+<div class="banner">Captured On Floppy Gallery
+<div class="banner-sub">1997-2003 Floppy - Digital</div>
 </div>
-<nav class="navbar"> </nav>
-<div style="text-align: center;"><nav class="navbar"><a
-href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
-href="/gallery.html">Gallery</a> <a href="/resources.html">Resources</a></nav></div>
-<nav class="navbar"> </nav>
-<h2 style="text-align: center; margin-top: 2em;">Mavica Buyers Guide<br>
-</h2>
-<div class="gallery-links"> <a href="https://www.flickr.com/"
-target="_blank">Flickr</a> <a href="https://www.reddit.com/"
-target="_blank">Reddit</a> <a href="https://www.youtube.com/"
-target="_blank">YouTube</a><br>
-<br>
-<br>
-<table
-style="text-align: left; width: 914px; margin-left: auto; margin-right: auto; height: 30px;"
-border="1" cellpadding="2" cellspacing="2">
+<div class="navbar-wrapper"> <nav class="navbar"><a href="/index.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Home</a></nav> <nav
+class="navbar"><a href="/tech.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Tech</a></nav> <nav
+class="navbar"><a href="/gallery.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
+class="navbar"><a href="/resources.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
+</div>
+<div class="main">
+<h2 style="color: rgb(255, 215, 0); text-align: center;">Mavica Buyers
+Guide</h2>
+<div class="gallery-links"><a class="navbar"
+href="https://www.flickr.com/" target="_blank"
+style="text-decoration: none; color: rgb(0, 0, 0);">Flickr</a> <a
+class="navbar" href="https://www.reddit.com/" target="_blank"
+style="text-decoration: none; color: rgb(0, 0, 0);">Reddit</a> <a
+class="navbar" href="https://www.youtube.com/" target="_blank"
+style="text-decoration: none; color: rgb(0, 0, 0);">YouTube</a></div>
+<p style="color: rgb(255, 255, 0); text-align: center;">Buying a Mavica
+can be challenging due to their ages. But if you look carefully you can
+find good deals. Here are some photos and references.<br>
+These are just my opinions, based on what I do to find deals and items
+that work<br>
+</p>
+<table class="gallery-table" role="table" aria-label="Buyer gallery">
 <tbody>
 <tr>
-<td style="vertical-align: top;">
-<div style="text-align: center;">Buying a mavica can be
-challenging due to their ages. But if you look carefully you can find good
-deals.<br>
-Here are some photos and references. Or you can watch m,my youtube
-video on buying a Mavica <br>
-<br>
-</div>
-<div style="text-align: center;"><a
-href="https://www.youtube.com/@CapturedOnFloppy">Mavica Buying Video
-Here.</a><br>
-</div>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/wornbutton.webp" alt="Worn button">
+<div style="color: rgb(255, 255, 0);">Worn buttons can mean over
+use. Ring and nail scratches on grips as well.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/nocap.webp" alt="No lens cap">
+<div style="color: rgb(255, 255, 0);">No lens cover; items sold
+without may indicate lens damage.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/seller.jpg" alt="Seller">
+<div style="color: rgb(255, 255, 0);">Watch listings on eBay for
+repeated relisting; it may signal issues.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/parts.webp" alt="Parts">
+<div style="color: rgb(255, 255, 0);">Screen damage can mean
+exposure to heat or moisture; notice underlying issues.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/rustyscrewsA.webp" alt="Rusty screws">
+<div style="color: rgb(255, 255, 0);">Disassembled or rusty
+screws can indicate prior repair attempts.</div>
+</td>
+</tr>
+<tr>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/Bagextras.webp" alt="Bag &amp; extras">
+<div style="color: rgb(255, 255, 0);">Bag and extras usually
+indicate care.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/lowsales.jpg" alt="Low sales">
+<div style="color: rgb(255, 255, 0);">Check seller feedback and
+sales history.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/multiitems.jpg" alt="Multi items">
+<div style="color: rgb(255, 255, 0);">Sellers listing many
+cameras may sell for parts.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/stickers.webp" alt="Original stickers">
+<div style="color: rgb(255, 255, 0);">Original stickers are
+sought after by enthusiasts.</div>
+</td>
+<td class="gallery-cell"><img class="gallery-img"
+src="images/impact.webp" alt="Impact">
+<div style="color: rgb(255, 255, 0);">Look for impact,
+cracks—hidden damage can exist.</div>
 </td>
 </tr>
 </tbody>
 </table>
-<br>
 </div>
-<table class="gallery-table">
-<tbody>
-<tr>
-<td class="gallery-cell"> <img src="images/wornbutton.webp"
-alt="Description 1" class="gallery-img">
-<div class="desc">Worn buttons can mean over use. Ring and nail
-scratches on grips as well.<br>
-This is a key area.<br>
-</div>
-</td>
-<td class="gallery-cell"> <img src="images/nocap.webp"
-alt="Description 2" class="gallery-img">
-<div class="desc">No lens cover, items sold with no lens cover
-could mean pitted or lens damages.<br>
-</div>
-</td>
-<td class="gallery-cell"> <img src="images/seller.jpg"
-alt="Description 3" class="gallery-img">
-<div class="desc">Click watch on Ebay, if items&nbsp; keep
-relisting, it may be too high or others say issues. <br>
-</div>
-</td>
-<td class="gallery-cell"> <img src="images/parts.webp"
-alt="Description 4" class="gallery-img">Screen damage can mean
-exposure to heat or moisture and why can be replaced, it should always
-be noticed underlying issues&nbsp;</td>
-<td class="gallery-cell"> <img src="/images/rustyscrewsA.webp"
-alt="Description 5" class="gallery-img">
-<div class="desc">Has been disasembled or rusty screws.<br>
-</div>
-</td>
-</tr>
-<tr>
-<td class="gallery-cell"> <img src="images/Bagextras.webp"
-alt="Description 6" class="gallery-img">
-<div class="desc">Bag and clean can mean well loved and cared for
-this was 14.00 and very clean<br>
-</div>
-</td>
-<td class="gallery-cell"> <img src="images/lowsales.jpg"
-alt="Description 7" class="gallery-img">
-<div class="desc">Ebay,Look for low reviews, and low sales. Look
-at what seller leaves for feedback<br>
-</div>
-</td>
-<td class="gallery-cell"> <img src="images/multiitems.jpg"
-alt="Description 8" class="gallery-img">
-<div class="desc">Those that sell allot of Cameras, and for parts<br>
-May know its indeed parts. So weigh the risks<br>
-</div>
-</td>
-<td class="gallery-cell"> <img src="images/stickers.webp"
-alt="Description 9" class="gallery-img">
-<div class="desc">Look For Original Stickers.<br>
-These are sought after by most enthusiasts<br>
-</div>
-</td>
-<td class="gallery-cell"> <img src="images/impact.webp"
-alt="Description 10" class="gallery-img">
-<div class="desc">Look for impact, cracks. Camera could look new
-but a crack could mean it bounced of concrete too.<br>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<div style="text-align: center;"><footer> 2025 Captured On Floppy — All
-rights reserved. </footer></div>
+<div class="footer">2025 Captured On Floppy — All rights reserved.</div>
 </body>
 </html>
-
