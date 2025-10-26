@@ -1,987 +1,124 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Captured On Floppy.com</title>
+<title>Sony Mavica Interchangeable Parts Guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../images/favicon-32x32.png" sizes="32x32">
 <style>
-body {
-background: #fff;
-color: #000;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-font-size: 16px;
-margin: 0;
-padding: 0;
-}
-.banner {
-background: #003366;
-color: #fff;
-padding: 0.7em 0;
-text-align: center;
-font-size: 2em;
-font-family: Arial, Helvetica, sans-serif;
-letter-spacing: 0.07em;
-border-bottom: 4px solid #6699cc;
-}
-.banner .subtitle {
-font-size:0.5em;
-color:#cce;
-}
-.navbar {
-background: #e0e8f0;
-border-bottom: 2px solid #6699cc;
-font-size: 1.1em;
-font-family: Verdana, Arial, Helvetica, sans-serif;
-text-align: center;
-padding: 0.3em 0;
-}
-.navbar a {
-display: inline-block;
-color: #003366;
-background: #d6e2f5;
-text-decoration: none;
-padding: 0.7em 2em;
-margin: 0 0.2em;
-font-weight: bold;
-border: 1px solid #6699cc;
-border-radius: 7px;
-transition: background 0.2s, color 0.2s;
-}
-.navbar a:hover, .navbar a:focus {
-background: #c7daf5;
-color: #000;
-text-decoration: underline;
-}
-.main-content {
-background: #fff;
-max-width: 900px;
-margin: 2em auto 2em auto;
-border: 1px solid #b2c3e6;
-border-radius: 8px;
-padding: 2em 2em 2em 2em;
-box-shadow: 0 2px 8px rgba(102,153,204,0.06);
-}
-.photo-section {
-display: flex;
-gap: 32px;
-margin-bottom: 2em;
-flex-wrap: wrap;
-justify-content: flex-start;
-align-items: flex-start;
-}
-.photo-box {
-flex: 1 1 380px;
-max-width: 48%;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1em;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.photo-box img {
-max-width: 100%;
-border: 1px solid #b2c3e6;
-background: #fff;
-margin-bottom: 0.7em;
-width: 100%;
-height: auto;
-}
-.photo-caption {
-font-size: 1em;
-color: #444;
-margin-bottom: 0;
-text-align: center;
-}
-.twocols-4rows {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2em 2em;
-margin-bottom: 2em;
-}
-.twocols-4rows > div {
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.2em 1em;
-min-height: 120px;
-font-size: 1em;
-}
-.onecol-bottom {
-margin-top: 2em;
-background: #f8f8ff;
-border: 1px solid #c0d0ef;
-border-radius: 7px;
-padding: 1.5em 1.2em;
-font-size: 1.05em;
-}
-.main-content h1, .main-content h2, .main-content h3 {
-color: #003366;
-margin-top: 1.5em;
-}
-@media (max-width: 650px) {
-.twocols-4rows {
-grid-template-columns: 1fr;
-}
-.photo-section {
-flex-direction: column;
-gap: 12px;
-}
-.photo-box {
-max-width: 100%;
-}
-}
-footer {
-background: #e0e8f0;
-color: #003366;
-text-align: center;
-font-size: 0.95em;
-padding: 1em 0 1.5em 0;
-margin-top: 2em;
-border-top: 2px solid #6699cc;
-}
+body { background:#000; color:#ffff00; font-family:Verdana, Arial, Helvetica, sans-serif; margin:0; padding:0; font-size:16px; }
+.banner { background:#222; color:#ffff00; padding:1em 0 0.4em 0; text-align:center; font-size:2em; border-bottom:4px solid #FF00FF; text-shadow:2px 2px 0 #FF00FF; }
+.banner-sub { font-size:0.7em; color:#FFD700; margin-bottom:0.3em; }
+.navbar-wrapper { text-align:center; margin:0 auto; padding:0.4em 0 0.6em 0; }
+.navbar { display:inline-block; background:#ffff00; color:#000; padding:0.6em 1em; font-weight:bold; border:2px solid #FF00FF; border-radius:7px; margin:0 0.2em; text-decoration:none; }
+.layout { max-width:1100px; margin:1.6em auto; display:flex; gap:20px; }
+.sidebar { background:#111; border-right:4px solid #FF00FF; padding:2.2em 1em; width:220px; vertical-align:top; text-align:left; }
+.main-content { background:#222; color:#FFFF00; padding:2.5em; border-radius:16px; box-shadow:0 0 15px #FFFF00; flex:1; min-width:300px; }
+.photo-section { display:flex; gap:18px; flex-wrap:wrap; margin-bottom:14px; }
+.photo-box { background:#111; padding:10px; border-radius:8px; border:2px solid #FF00FF; width:320px; text-align:center; }
+.comparison-table { width:96%; margin:1em auto; border-collapse:collapse; background:#111; color:#ffff00; border:1px solid #FF00FF; }
+.comparison-table th, .comparison-table td { border:1px solid #FF00FF; padding:8px; text-align:left; vertical-align:top; }
+.rightbar { background:#111; border-left:4px solid #FF00FF; width:220px; padding:2.2em 1em; vertical-align:top; text-align:left; }
+.footer { text-align:center; padding:14px 0; color:#FF00FF; border-top:2px solid #FFFF00; background:#111; margin-top:1.6em; }
+a { color:#FF00FF; }
+@media (max-width:900px) { .layout { flex-direction:column; padding:0 12px; } .sidebar, .main-content, .rightbar { width:100% !important; } .navbar { display:block; width:90vw; margin:0.3em auto; } }
 </style>
 </head>
 <body>
-<div class="banner"> Captured On Floppy<small><small><small>™</small></small></small>️
-<div class="subtitle">Photos Captured On Floppy Drive Cameras Guild
-&amp; Resources</div>
+<div class="banner">Captured On Floppy™️
+<div class="banner-sub">Sony Mavica Interchangeable Parts Guide</div>
 </div>
-<div style="text-align: center;">&nbsp;<nav class="navbar"><a
-href="/index.html">Home</a> <a href="/tech.html">Tech</a> <a
-href="/gallery.html">Gallery</a>
-<a href="/resources.html">Resources</a></nav></div>
-<nav class="navbar"></nav>
-<div class="main-content">
-<h1 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 0px ! important; margin-bottom: 16px; font-size: 2em; line-height: 1.25; letter-spacing: normal; text-transform: none; font-style: normal; text-decoration: none; text-align: start; outline-color: invert ! important; outline-style: none ! important; outline-width: medium ! important; orphans: 2; text-indent: 0px; widows: 2; word-spacing: 0px; white-space: normal; margin-right: 0px; margin-left: 0px; padding-bottom: 0.3em;">Sony
-Mavica Interchangeable Parts Guide<br>
-(Excluding Batteries)</h1>
-<h1></h1>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top;"><span
-style="color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: medium; font-style: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">Mavica
-Cameras Only<br>
-</span></td>
-</tr>
-</tbody>
-</table>
-<br>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2"
-cellspacing="2">
-<tbody>
-<tr>
-<td style="vertical-align: top; text-align: center;"> <a
-style="font-weight: bold;"
-href="https://www.flickr.com/groups/capturedonfloppy/" target="_blank">Flickr</a>
-<span style="font-weight: bold;">&nbsp; &nbsp;</span> <a
-style="font-weight: bold;"
-href="https://www.instagram.com/capturedonfloppy/">Instagram</a>&nbsp;&nbsp;
-<a style="font-weight: bold;" href="https://x.com/FloppyCameras">Twitter</a>&nbsp;&nbsp;
-<a href="https://www.reddit.com/r/CapturedonFloppy/"><span
-style="text-decoration: underline; font-weight: bold;">Floppy Reddit</span></a>&nbsp;&nbsp;
-<a style="font-weight: bold;"
-href="https://www.youtube.com/@CapturedOnFloppy">Floppy Youtube</a> <a
-href="https://www.floppycameras.com"><span
-style="font-weight: bold; text-decoration: underline;">FloppyCameras.com</span></a><br>
-</td>
-<td style="vertical-align: top;"><br>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="navbar-wrapper"> <nav class="navbar"><a href="/index.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Home</a></nav> <nav
+class="navbar"><a href="/tech.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Tech</a></nav> <nav
+class="navbar"><a href="/gallery.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Gallery</a></nav> <nav
+class="navbar"><a href="/resources.html"
+style="text-decoration: none; color: rgb(0, 0, 0);">Resources</a></nav>
+</div>
+<div class="layout"> <aside class="sidebar" role="navigation"
+aria-label="Left menu"> </aside>
+<div
+style="color: rgb(255, 255, 0); font-weight: bold; text-align: center; margin-bottom: 12px;">Sony
+Mavica Cameras<br>
+<img style="width: 55px; height: 55px;" alt=""
+src="../mavica/images/mancirlce.gif"></div>
+<a class="camera-btn" href="/mavica/mvc-fd5.html">MVC-FD5 <span
+class="camera-year">1997</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd7.html">MVC-FD7 <span class="camera-year">1997</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd71.html">MVC-FD71 <span
+class="camera-year">1998</span></a> <a class="camera-btn"
+href="/mavica/mvc-fd83.html">MVC-FD83 <span class="camera-year">1999</span></a>
+<a class="camera-btn" href="/mavica/mvc-fd87.html">MVC-FD87 <span
+class="camera-year">2000</span></a> <a class="camera-btn"
+href="/mavica/sony-mavica-analog.html">Mavica Analog Series <span
+class="camera-year">1982–1986</span></a> <main class="main-content"
+role="main" aria-label="Parts interchange"> </main>
+<h1 style="color: rgb(255, 215, 0); margin-top: 0pt;">Sony Mavica
+Interchangeable Parts Guide (Excluding Batteries)</h1>
 <div class="photo-section">
-<div class="photo-box"> <img src="images/cd400f.jpg" alt="Photo 1"
-height="240" width="320">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">General
-Notes</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#general-notes"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<ul
-style="margin: 0px 0px 16px; padding: 0px 0px 0px 2em; list-style-type: none; list-style-image: none; list-style-position: outside; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<li style="padding: 0px;"><strong style="font-weight: 600;">Mechanical
-and electronic compatibility</strong>&nbsp;is usually best within
-the&nbsp;<em style="">same generation</em>&nbsp;and&nbsp;<em style="">model
-family</em>.</li>
-<li style="padding: 0px; margin-top: 0.25em;">Parts like floppy
-drives, LCD screens, lens assemblies, and buttons are sometimes
-swappable within a series, but model-specific plastics and firmware may
-limit full compatibility.</li>
-<li style="padding: 0px; margin-top: 0.25em;"><strong
-style="font-weight: 600;">CD and FD series are not compatible</strong>&nbsp;with
-each other for storage drives, boards, or shells.</li>
+<div class="photo-box"><img src="images/cd400f.jpg" alt="CD400 Front"
+style="width: 100%; height: auto;">
+<h3 style="color: rgb(255, 215, 0);">General Notes</h3>
+<ul style="text-align: left; color: rgb(255, 255, 0);">
+<li>Mechanical and electronic compatibility is usually best within
+the same generation and model family.</li>
+<li>Parts like floppy drives, LCD screens, lens assemblies, and
+buttons are sometimes swappable within a series, but main boards and
+plastics often differ.</li>
+<li>CD and FD series are not compatible with each other for storage
+drives, boards, or shells.</li>
 </ul>
 </div>
-<div class="photo-box"> <img src="images/cd400r.jpg" alt="Photo 2"
-height="240" width="320">
-<p class="photo-caption"><br>
-</p>
+<div class="photo-box"><img src="images/cd400r.jpg" alt="CD400 Rear"
+style="width: 100%; height: auto;"></div>
 </div>
-</div>
-<div class="twocols-4rows">
-<div>
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">FD5/FD7/FD51
-Series (1997)</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#fd5fd7fd51-series-1997"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<table
-style="overflow: auto; border-collapse: collapse; color: rgb(90, 92, 91); font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(228, 234, 236); border-spacing: 0px; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Part</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Interchangeable?</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Notes</th>
+<!-- Example interchange table -->
+<table class="comparison-table" role="table"
+aria-label="FD5/FD7/FD51 Series">
+<thead><tr>
+<th>Part</th>
+<th>Interchangeable?</th>
+<th>Notes</th>
 </tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Floppy
-Drive</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(FD5/FD7/FD51)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Uses
-standard 1.44MB mechanism</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">LCD
-Screen</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-size and connector</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Button/Keypads</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-physical layout</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Main
-Board</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No
-(part-numbered)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Firmware/model-specific</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Lens
-Assembly</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Different
-specs</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Shell/Housing</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Cosmetic/model
-labeling differs</td>
-</tr>
-</tbody>
-</table>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">FD71/FD73/FD81/FD83/FD85/FD75
-Family (1998–1999)</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#fd71fd73fd81fd83fd85fd75-family-19981999"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 34.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<table
-style="overflow: auto; border-collapse: collapse; color: rgb(90, 92, 91); font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(228, 234, 236); border-spacing: 0px; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Part</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Interchangeable?</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Notes</th>
-</tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Floppy
-Drive</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(all models)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Standard
-Sony drive, easy swap</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">LCD
-Screen</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(most models)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD71/73/81/83/85/75
-share screens</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Button/Keypads</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-design</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Lens
-Assembly</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Partial</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD81/83/85
-(3x/6x) sometimes; check specs</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Main
-Board</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Model-specific</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Shell
-Parts</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Partial
-(81/83/85)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Cosmetic
-differences, fit may vary</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Flash
-Assembly</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(most models)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-design</td>
-</tr>
-</tbody>
-</table>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">FD87/FD88/FD90/FD92/FD95/FD97
-Family (1999–2000)</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#fd87fd88fd90fd92fd95fd97-family-19992000"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 34.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<table
-style="overflow: auto; border-collapse: collapse; color: rgb(90, 92, 91); font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(228, 234, 236); border-spacing: 0px; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Part</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Interchangeable?</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Notes</th>
-</tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Floppy
-Drive</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(all models)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Physically
-compatible</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">LCD
-Screen</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(all models)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-form factor and ribbon</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Button/Keypads</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-physical layout</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Lens
-Assembly</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Partial</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD95/97/92
-(8x/10x), FD87/88/90 (6x) may swap among close siblings</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Main
-Board</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Different
-chipsets/firmware</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Memory
-Stick Slot</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(hybrid models)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD92/95/97</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Shell/Housing</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Partial
-(FD95/97/92)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Cosmetic/model-specific,
-but close fit</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Flash
-Assembly</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(all models)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">FD100/FD200/FD300
-(2001–2002, Hybrid Models)</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#fd100fd200fd300-20012002-hybrid-models"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 34.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<table
-style="overflow: auto; border-collapse: collapse; color: rgb(90, 92, 91); font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(228, 234, 236); border-spacing: 0px; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Part</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Interchangeable?</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Notes</th>
-</tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Floppy
-Drive</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">As
-before</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">LCD
-Screen</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-size</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Memory
-Stick Slot</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"><br>
-</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Button/Keypads</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"><br>
-</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Main
-Board</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"><br>
-</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Shell/Housing</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"><br>
-</td>
-</tr>
-</tbody>
-</table>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">CD
-Series (CD1000, CD200, CD250, CD350, CD400, CD500)</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#cd-series-cd1000-cd200-cd250-cd350-cd400-cd500"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 34.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<table
-style="overflow: auto; border-collapse: collapse; color: rgb(90, 92, 91); font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(228, 234, 236); border-spacing: 0px; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Part</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Interchangeable?</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Notes</th>
-</tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">CD
-Drive</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Partial</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">CD200/250/350
-similar; CD1000 is unique</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">LCD
-Screen</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(200/250/350)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Same
-screen, ribbon, housing</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Button/Keypads</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Yes
-(200/250/350)</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"><br>
-</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Lens
-Assembly</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Zeiss
-lenses (CD400/500) are exclusive</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Main
-Board</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Firmware/model-specific</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Flash
-Assembly</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Partial</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">CD400/500
-share; others differ</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Shell/Housing</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Model-specific</td>
-</tr>
-</tbody>
-</table>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">MVC-300,
-Prototypes, SLR</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#mvc-300-prototypes-slr"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<table
-style="overflow: auto; border-collapse: collapse; color: rgb(90, 92, 91); font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(228, 234, 236); border-spacing: 0px; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Part</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Interchangeable?</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Notes</th>
-</tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Most
-Parts</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Unique,
-rare, collector-only components</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Floppy/CD
-Drive</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">Proprietary/early
-design</td>
-</tr>
-</tbody>
-</table>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">Collector
-Tips</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#collector-tips"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<ul
-style="margin: 0px 0px 16px; padding: 0px 0px 0px 2em; list-style-type: none; list-style-image: none; list-style-position: outside; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<li style="padding: 0px;"><strong style="font-weight: 600;">Floppy
-Drives and LCDs</strong>&nbsp;are the most likely to be compatible
-within a generation.</li>
-<li style="padding: 0px; margin-top: 0.25em;"><strong
-style="font-weight: 600;">Lens blocks</strong>&nbsp;and&nbsp;<strong
-style="font-weight: 600;">main boards</strong>&nbsp;are the least
-likely to swap successfully.</li>
-<li style="padding: 0px; margin-top: 0.25em;">Always check part
-numbers and ribbon connector orientation before swapping.</li>
-<li style="padding: 0px; margin-top: 0.25em;">Cosmetic parts (doors,
-covers) often have slight differences between models, even within a
-series.</li>
-</ul>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;">
-<div
-style="font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; position: relative; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);">
-<h2 tabindex="-1" class="heading-element"
-style="font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-weight: 600; color: rgb(78, 121, 167); margin-top: 24px; margin-bottom: 16px; font-size: 1.5em; line-height: 1.25; letter-spacing: 0px; text-transform: none; font-style: normal; text-decoration: none; text-align: inherit; padding-bottom: 0.3em;">Summary
-Table</h2>
-<a class="anchor"
-href="https://github.com/copilot/c/fbd77f57-fdf8-4231-aff6-d360c7b29ab3#summary-table"
-style="margin: auto; color: rgb(9, 105, 218); text-decoration: underline; float: left; padding-right: 4px; line-height: 1; position: absolute; top: 19.0938px; left: -28px; width: 28px; height: 28px; opacity: 0;"><svg
-class="octicon octicon-link" viewbox="0 0 16 16" width="16" height="16"><path
-d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
-<table tabindex="0"
-style="overflow: auto; border-collapse: collapse; color: rgb(90, 92, 91); font-family: -apple-system,BlinkMaxSystemFont,&quot;Seoge UI&quot;,Roboto,&quot;Helvetica Neue&quot;,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; background-color: rgb(228, 234, 236); border-spacing: 0px; margin-top: 0px; margin-bottom: 16px; display: block; max-width: 100%;">
-<thead style=""><tr style="background-color: rgb(255, 255, 255);">
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;">Series/Generation</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;"
-align="center">Floppy/CD Drive</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;"
-align="center">LCD</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;"
-align="center">Keypads</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;"
-align="center">Lens</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;"
-align="center">Main Board</th>
-<th
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px; text-align: left; font-weight: 600;"
-align="center">Shell</th>
-</tr>
-</thead><tbody style="">
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD5/FD7/FD51</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD71/73/81/83/85/75</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">P</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">P</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD87/88/90/92/95/97</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">P</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">P</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">FD100/200/300</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-</tr>
-<tr style="background-color: rgb(255, 255, 255);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">CD200/250/350</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">P</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-</tr>
-<tr style="background-color: rgb(246, 248, 250);">
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;">CD400/500</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">P</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">Yes</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-<td
-style="border: 1px solid rgb(209, 217, 224); padding: 6px 13px;"
-align="center">No</td>
-</tr>
-</tbody>
-</table>
-<p
-style="margin-top: 0px; margin-bottom: 16px; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; color: rgb(31, 35, 40); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; background-color: rgb(255, 255, 255);"><strong
-style="font-weight: 600;">Legend:</strong><br style="">
-Yes = Interchangeable within series,<br style="">
-P = Partial (check sub-model, may fit),<br style="">
-No = Not interchangeable<br style="">
-<br style="">
-<span style="font-weight: bold;">Not responsible for your repairs or
-anything you do this is a guide, test before doing anything on this
-list. </span><br>
-</p>
-<br>
-<br>
-<hr
-style="border: 0px none ; margin: 24px 0px; padding: 0px; background: rgb(209, 217, 224) none repeat scroll 0% 50%; overflow: hidden; height: 0.25em; font-size: 16px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; white-space: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,&quot;Noto Sans&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;"><br>
-<p><br>
-</p>
-</div>
-<div><br>
-</div>
-</div>
-<div class="onecol-bottom"><br>
-<br>
-</div>
-</div>
-<div style="text-align: center;"><!-- Example of a self-hosted image -->
-<img style="width: 177px; height: 177px;" src="mavica/images/logopage1.jpg"
-alt="Captured On Floppy Logo">
-<table
-style="text-align: left; width: 100%; margin-left: auto; margin-right: auto;"
-border="1" cellpadding="2" cellspacing="2">
-<tbody>
+</thead> <tbody>
 <tr>
-<td style="vertical-align: top; text-align: center;"> This site
-is 100% designed in
-1990's HTML technology. Hand Built HTML Website by <a
-style="font-weight: bold;" href="https://paulcordell.com/">Paul
-Cordell Photography</a> keeping it Classic.<br>
-</td>
+<td>Floppy Drive</td>
+<td>Yes (FD5/FD7/FD51)</td>
+<td>Uses standard 1.44MB mechanism</td>
+</tr>
+<tr>
+<td>LCD Screen</td>
+<td>Yes</td>
+<td>Same size and connector</td>
+</tr>
+<tr>
+<td>Main Board</td>
+<td>No</td>
+<td>Firmware/model-specific</td>
 </tr>
 </tbody>
 </table>
-<footer><br>
-<br>
-© 1998-2025 Mavica Camera Club / Captured On Floppy™️ • All
-rights reserved.<br>
-<br>
-<br>
-</footer></div>
+<div class="onecol-bottom" style="color: rgb(255, 255, 0);">
+<h3>Collector Tips</h3>
+<ul style="text-align: left;">
+<li>Floppy drives and LCDs are the most likely to be compatible
+within a generation.</li>
+<li>Lens blocks and main boards are the least likely to swap
+successfully.</li>
+<li>Always check part numbers and ribbon connector orientation before
+swapping.</li>
+</ul>
+<p style="font-weight: bold; color: rgb(255, 215, 0);">Legend: Yes =
+Interchangeable within series, P = Partial (check sub-model), No = Not
+interchangeable</p>
+</div>
+<aside class="rightbar" role="complementary" aria-label="Right sidebar">
+</aside>
+<div style="text-align: center;"><img src="../mavica/images/acroPIM.gif"
+alt="" style="width: 120px; height: 60px;"></div>
+</div>
+<div class="footer">© 1998-2025 Mavica Camera Club / Captured On
+Floppy™️ • All rights reserved.</div>
 </body>
 </html>
